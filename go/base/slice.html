@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>基础知识 · Lsc'Go</title>
+        <title>Slice · Lsc'Go</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -77,10 +77,10 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="variable.html" />
+    <link rel="next" href="../command/mod.md" />
     
     
-    <link rel="prev" href="../../" />
+    <link rel="prev" href="array.html" />
     
 
     </head>
@@ -131,7 +131,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.2" data-path="./">
+        <li class="chapter " data-level="1.2" data-path="./">
             
                 <a href="./">
             
@@ -223,7 +223,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.7" data-path="slice.html">
+        <li class="chapter active" data-level="1.2.7" data-path="slice.html">
             
                 <a href="slice.html">
             
@@ -316,7 +316,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../.." >基础知识</a>
+        <a href="../.." >Slice</a>
     </h1>
 </div>
 
@@ -331,8 +331,66 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <footer class="page-footer"><span class="copyright">Copyright &#xA9; Lsc 2019 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
-2021-06-26 09:31:18
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#&#x5207;&#x7247;&#x521D;&#x59CB;&#x5316;"><b>1. </b>&#x5207;&#x7247;&#x521D;&#x59CB;&#x5316;</a></li><li><span class="title-icon "></span><a href="#&#x5207;&#x7247;&#x64CD;&#x4F5C;"><b>2. </b>&#x5207;&#x7247;&#x64CD;&#x4F5C;</a></li></ul></div><a href="#&#x5207;&#x7247;&#x521D;&#x59CB;&#x5316;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><ul>
+<li>&#x5207;&#x7247;&#x662F;&#x5BF9;&#x5E95;&#x5C42;&#x6570;&#x7EC4;&#x4E00;&#x4E2A;&#x8FDE;&#x7EED;&#x7247;&#x6BB5;&#x7684;&#x5F15;&#x7528;&#xFF0C;&#x6240;&#x4EE5;&#x5207;&#x7247;&#x662F;&#x4E00;&#x4E2A;&#x5F15;&#x7528;&#x7C7B;&#x578B;</li>
+<li>&#x4E3A;&#x521D;&#x59CB;&#x5316;&#x7684;&#x5207;&#x7247;&#x7684;&#x503C;&#x4E3A;nil&#xFF0C;&#x957F;&#x5EA6;&#x4E3A;0&#xFF0C;&#x5BB9;&#x91CF;&#x4E3A;0</li>
+<li>&#x4F7F;&#x7528;&#x5185;&#x7F6E;&#x51FD;&#x6570;make()&#x7ED9;&#x5207;&#x7247;&#x521D;&#x59CB;&#x5316;<code>var slice1 []type = make([]type, len,cap)</code></li>
+<li>len&#x503C;&#x4E0D;&#x80FD;&#x6BD4;cap&#x503C;&#x5927;</li>
+</ul>
+<h1 id="&#x5207;&#x7247;&#x521D;&#x59CB;&#x5316;"><a name="&#x5207;&#x7247;&#x521D;&#x59CB;&#x5316;" class="anchor-navigation-ex-anchor" href="#&#x5207;&#x7247;&#x521D;&#x59CB;&#x5316;"><i class="fa fa-link" aria-hidden="true"></i></a>1. &#x5207;&#x7247;&#x521D;&#x59CB;&#x5316;</h1>
+<h5 id="a&#x4ECE;&#x6570;&#x7EC4;&#x6216;&#x8005;&#x5207;&#x7247;&#x4E2D;&#x751F;&#x6210;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x5207;&#x7247;"><a name="a&#x4ECE;&#x6570;&#x7EC4;&#x6216;&#x8005;&#x5207;&#x7247;&#x4E2D;&#x751F;&#x6210;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x5207;&#x7247;" class="anchor-navigation-ex-anchor" href="#a&#x4ECE;&#x6570;&#x7EC4;&#x6216;&#x8005;&#x5207;&#x7247;&#x4E2D;&#x751F;&#x6210;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x5207;&#x7247;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="a&#x4ECE;&#x6570;&#x7EC4;&#x6216;&#x8005;&#x5207;&#x7247;&#x4E2D;&#x751F;&#x6210;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x5207;&#x7247;" class="plugin-anchor" href="#a&#x4ECE;&#x6570;&#x7EC4;&#x6216;&#x8005;&#x5207;&#x7247;&#x4E2D;&#x751F;&#x6210;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x5207;&#x7247;"><i class="fa fa-link" aria-hidden="true"></i></a>a)&#x4ECE;&#x6570;&#x7EC4;&#x6216;&#x8005;&#x5207;&#x7247;&#x4E2D;&#x751F;&#x6210;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x5207;&#x7247;</h5>
+<p>a[low : high : max] max-low&#x7684;&#x7ED3;&#x679C;&#x8868;&#x793A;&#x5BB9;&#x91CF;&#xFF0C;high-low&#x7684;&#x7ED3;&#x679C;&#x8868;&#x793A;&#x957F;&#x5EA6;</p>
+<pre><code class="lang-go">arr := [<span class="hljs-number">8</span>]<span class="hljs-keyword">int</span>{<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>, <span class="hljs-number">7</span>, <span class="hljs-number">8</span>}
+
+s := arr[<span class="hljs-number">1</span>:<span class="hljs-number">3</span>:<span class="hljs-number">6</span>] <span class="hljs-comment">// s=[2 3], len=2, cap=5</span>
+</code></pre>
+<h5 id="b&#x901A;&#x8FC7;&#x5185;&#x7F6E;&#x51FD;&#x6570;make&#x521B;&#x5EFA;"><a name="b&#x901A;&#x8FC7;&#x5185;&#x7F6E;&#x51FD;&#x6570;make&#x521B;&#x5EFA;" class="anchor-navigation-ex-anchor" href="#b&#x901A;&#x8FC7;&#x5185;&#x7F6E;&#x51FD;&#x6570;make&#x521B;&#x5EFA;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="b&#x901A;&#x8FC7;&#x5185;&#x7F6E;&#x51FD;&#x6570;make&#x521B;&#x5EFA;" class="plugin-anchor" href="#b&#x901A;&#x8FC7;&#x5185;&#x7F6E;&#x51FD;&#x6570;make&#x521B;&#x5EFA;"><i class="fa fa-link" aria-hidden="true"></i></a>b)&#x901A;&#x8FC7;&#x5185;&#x7F6E;&#x51FD;&#x6570;make&#x521B;&#x5EFA;</h5>
+<pre><code class="lang-go"><span class="hljs-comment">// len=10, cap=10</span>
+a := <span class="hljs-built_in">make</span>([]<span class="hljs-keyword">int</span>, <span class="hljs-number">10</span>)
+
+<span class="hljs-comment">// len=8, cap=10</span>
+b := <span class="hljs-built_in">make</span>([]<span class="hljs-keyword">int</span>, <span class="hljs-number">8</span>, <span class="hljs-number">10</span>)
+</code></pre>
+<h1 id="&#x5207;&#x7247;&#x64CD;&#x4F5C;"><a name="&#x5207;&#x7247;&#x64CD;&#x4F5C;" class="anchor-navigation-ex-anchor" href="#&#x5207;&#x7247;&#x64CD;&#x4F5C;"><i class="fa fa-link" aria-hidden="true"></i></a>2. &#x5207;&#x7247;&#x64CD;&#x4F5C;</h1>
+<table>
+<thead>
+<tr>
+<th>&#x51FD;&#x6570;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>len</td>
+<td>&#x83B7;&#x53D6;&#x5207;&#x7247;&#x957F;&#x5EA6;</td>
+</tr>
+<tr>
+<td>cap</td>
+<td>&#x83B7;&#x53D6;&#x5207;&#x7247;&#x5E95;&#x5C42;&#x6570;&#x7EC4;&#x5BB9;&#x91CF;</td>
+</tr>
+<tr>
+<td>append</td>
+<td>&#x5BF9;&#x5207;&#x7247;&#x8FFD;&#x52A0;&#x5143;&#x7D20;</td>
+</tr>
+<tr>
+<td>copy</td>
+<td>&#x590D;&#x5236;&#x4E00;&#x4E2A;&#x5207;&#x7247;</td>
+</tr>
+</tbody>
+</table>
+<p>&#x6DFB;&#x52A0;&#x591A;&#x4E2A;&#x5143;&#x7D20;</p>
+<pre><code class="lang-go">a := []<span class="hljs-keyword">string</span>{<span class="hljs-string">&quot;hello&quot;</span>}        <span class="hljs-comment">// [hello]</span>
+a = <span class="hljs-built_in">append</span>(a, <span class="hljs-string">&quot;liu&quot;</span>, <span class="hljs-string">&quot;shuai&quot;</span>) <span class="hljs-comment">// [hello liu shuai]</span>
+</code></pre>
+<p>&#x628A;&#x4E00;&#x4E2A;&#x5207;&#x7247;&#x5185;&#x5BB9;&#x6DFB;&#x52A0;&#x5230;&#x5F53;&#x524D;&#x5207;&#x7247;</p>
+<pre><code class="lang-go">b := []<span class="hljs-keyword">string</span>{<span class="hljs-string">&quot;cai&quot;</span>, <span class="hljs-string">&quot;ye&quot;</span>}
+a = <span class="hljs-built_in">append</span>(a, b...) <span class="hljs-comment">// [hello liu shuai cai ye]</span>
+</code></pre>
+<p>&#x5C06;&#x5B57;&#x7B26;&#x4E32;&#x9644;&#x52A0;&#x5230;&#x5B57;&#x8282;&#x7247;</p>
+<pre><code class="lang-go">s := <span class="hljs-built_in">append</span>([]<span class="hljs-keyword">byte</span>(<span class="hljs-string">&quot;hello &quot;</span>), <span class="hljs-string">&quot;world&quot;</span>...) <span class="hljs-comment">// hello world</span>
+</code></pre>
+<footer class="page-footer"><span class="copyright">Copyright &#xA9; Lsc 2019 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
+2021-01-29 09:49:30
 </span></footer><script>var _hmt = _hmt || [];(function() {var hm = document.createElement('script');hm.src = '//hm.baidu.com/hm.js?181780a9962d5f58cb82c8ce32b1ff71';var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(hm, s);})();</script>
                                 
                                 </section>
@@ -360,12 +418,12 @@
 
             
                 
-                <a href="../../" class="navigation navigation-prev " aria-label="Previous page: 资源列表">
+                <a href="array.html" class="navigation navigation-prev " aria-label="Previous page: 数组">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="variable.html" class="navigation navigation-next " aria-label="Next page: 变量">
+                <a href="../command/mod.md" class="navigation navigation-next " aria-label="Next page: 管理工具-gomod">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -376,7 +434,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"基础知识","level":"1.2","depth":1,"next":{"title":"变量","level":"1.2.1","depth":2,"path":"go/base/variable.md","ref":"go/base/variable.md","articles":[]},"previous":{"title":"资源列表","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"neutral"},"config":{"plugins":["fontsettings","highlight","-livereload","-search","search-pro","sharing","anchors","anchor-navigation-ex","ba","-expandable-chapters","expandable-chapters-small","toggle-chapters","splitter","tbfed-pagefooter","code","copy-code-button","-todo","-advanced-emoji","-chapter-fold"],"styles":{"website":"styles/website.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy Lsc 2019","modify_label":"修订时间：","modify_format":"2021-MM-DD HH:mm:ss"},"splitter":{},"search-pro":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":false},"fontsettings":{"family":"sans","size":2,"theme":"night"},"highlight":{},"anchor-navigation-ex":{"mode":"float","pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"isRewritePageTitle":false,"showLevel":true,"showGoTop":true,"printLog":false,"multipleH1":true,"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false}},"expandable-chapters-small":{},"copy-code-button":{},"sharing":{"all":["facebook","google","twitter","weibo","instapaper"],"facebook":true,"google":false,"instapaper":false,"twitter":true,"vk":false,"weibo":true},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{},"toggle-chapters":{},"ba":{"token":"181780a9962d5f58cb82c8ce32b1ff71"}},"theme":"default","author":"LiuShuaicai","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Lsc'Go","language":"zh-hans","links":{"sidebar":{"Lsc'Home":"http://blog.liushuaicai.com"}},"gitbook":"3.2.3","description":"为了自己的野心要不断努力！","theme-default":{"showLevel":true}},"file":{"path":"go/base/README.md","mtime":"2019-06-26T01:31:18.037Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-01-30T07:10:04.778Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Slice","level":"1.2.7","depth":2,"next":{"title":"管理工具-gomod","level":"1.2.8","depth":2,"path":"go/command/mod.md","ref":"go/command/mod.md","articles":[]},"previous":{"title":"数组","level":"1.2.6","depth":2,"path":"go/base/array.md","ref":"go/base/array.md","articles":[]},"dir":"ltr"},"config":{"plugins":["fontsettings","highlight","-livereload","-search","search-pro","sharing","anchors","anchor-navigation-ex","ba","-expandable-chapters","expandable-chapters-small","toggle-chapters","splitter","tbfed-pagefooter","code","copy-code-button","-todo","-advanced-emoji","-chapter-fold"],"styles":{"website":"styles/website.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy Lsc 2019","modify_label":"修订时间：","modify_format":"2021-MM-DD HH:mm:ss"},"splitter":{},"search-pro":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":false},"fontsettings":{"family":"sans","size":2,"theme":"night"},"highlight":{},"anchor-navigation-ex":{"mode":"float","pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"isRewritePageTitle":false,"showLevel":true,"showGoTop":true,"printLog":false,"multipleH1":true,"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false}},"expandable-chapters-small":{},"copy-code-button":{},"sharing":{"all":["facebook","google","twitter","weibo","instapaper"],"facebook":true,"google":false,"instapaper":false,"twitter":true,"vk":false,"weibo":true},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{},"toggle-chapters":{},"ba":{"token":"181780a9962d5f58cb82c8ce32b1ff71"}},"theme":"default","author":"LiuShuaicai","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Lsc'Go","language":"zh-hans","links":{"sidebar":{"Lsc'Home":"http://blog.liushuaicai.com"}},"gitbook":"3.2.3","description":"为了自己的野心要不断努力！","theme-default":{"showLevel":true}},"file":{"path":"go/base/slice.md","mtime":"2022-01-29T01:49:30.910Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-01-30T07:10:04.778Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
