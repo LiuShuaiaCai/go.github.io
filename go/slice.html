@@ -1,0 +1,580 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>切片(slice) · Lsc'Go</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="LiuShuaicai">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-toggle-chapters/toggle.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../styles/website.css">
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="map.html" />
+    
+    
+    <link rel="prev" href="array.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="http://blog.liushuaicai.com" target="_blank" class="custom-link">Lsc'Home</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    资源列表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="variable/">
+            
+                <a href="variable/">
+            
+                    
+                    变量
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="variable/type.html">
+            
+                <a href="variable/type.html">
+            
+                    
+                    数据类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="variable/format.html">
+            
+                <a href="variable/format.html">
+            
+                    
+                    格式化输出
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="variable/conversion.html">
+            
+                <a href="variable/conversion.html">
+            
+                    
+                    数据类型转换
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="constant.html">
+            
+                <a href="constant.html">
+            
+                    
+                    常量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="array.html">
+            
+                <a href="array.html">
+            
+                    
+                    数组(array)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.5" data-path="slice.html">
+            
+                <a href="slice.html">
+            
+                    
+                    切片(slice)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="map.html">
+            
+                <a href="map.html">
+            
+                    
+                    字典(map)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="channel.html">
+            
+                <a href="channel.html">
+            
+                    
+                    管道(channel)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="gpm/">
+            
+                <a href="gpm/">
+            
+                    
+                    GPM模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="escape.html">
+            
+                <a href="escape.html">
+            
+                    
+                    变量逃逸分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="uintptr.html">
+            
+                <a href="uintptr.html">
+            
+                    
+                    uintptr与unsafe.Pointer的关系
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="env.html">
+            
+                <a href="env.html">
+            
+                    
+                    ENV配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="pprof.html">
+            
+                <a href="pprof.html">
+            
+                    
+                    分析工具-pprof
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >切片(slice)</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#slice&#x6570;&#x636E;&#x7ED3;&#x6784;"><b>1. </b>slice&#x6570;&#x636E;&#x7ED3;&#x6784;</a></li><li><span class="title-icon "></span><a href="#&#x5207;&#x7247;&#x521D;&#x59CB;&#x5316;"><b>2. </b>&#x5207;&#x7247;&#x521D;&#x59CB;&#x5316;</a></li><li><span class="title-icon "></span><a href="#&#x5207;&#x7247;&#x64CD;&#x4F5C;"><b>3. </b>&#x5207;&#x7247;&#x64CD;&#x4F5C;</a></li><li><span class="title-icon "></span><a href="#&#x5207;&#x7247;&#x6269;&#x5BB9;"><b>4. </b>&#x5207;&#x7247;&#x6269;&#x5BB9;</a></li></ul></div><a href="#slice&#x6570;&#x636E;&#x7ED3;&#x6784;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><ul>
+<li>&#x5207;&#x7247;&#x662F;&#x5BF9;&#x5E95;&#x5C42;&#x6570;&#x7EC4;&#x4E00;&#x4E2A;&#x8FDE;&#x7EED;&#x7247;&#x6BB5;&#x7684;&#x5F15;&#x7528;&#xFF0C;&#x6240;&#x4EE5;&#x5207;&#x7247;&#x662F;&#x4E00;&#x4E2A;&#x5F15;&#x7528;&#x7C7B;&#x578B;</li>
+<li>&#x4E3A;&#x521D;&#x59CB;&#x5316;&#x7684;&#x5207;&#x7247;&#x7684;&#x503C;&#x4E3A;nil&#xFF0C;&#x957F;&#x5EA6;&#x4E3A;0&#xFF0C;&#x5BB9;&#x91CF;&#x4E3A;0</li>
+<li>&#x4F7F;&#x7528;&#x5185;&#x7F6E;&#x51FD;&#x6570;make()&#x7ED9;&#x5207;&#x7247;&#x521D;&#x59CB;&#x5316;<code>var slice1 []type = make([]type, len,cap)</code></li>
+<li>len&#x503C;&#x4E0D;&#x80FD;&#x6BD4;cap&#x503C;&#x5927;</li>
+<li>&#x521B;&#x5EFA;&#x5207;&#x7247;&#x65F6;&#x53EF;&#x8DDF;&#x636E;&#x5B9E;&#x9645;&#x9700;&#x8981;&#x9884;&#x5206;&#x914D;&#x5BB9;&#x91CF;,&#x5C3D;&#x91CF;&#x907F;&#x514D;&#x8FFD;&#x52A0;&#x8FC7;&#x7A0B;&#x4E2D;&#x6269;&#x5BB9;&#x64CD;&#x4F5C;,&#x6709;&#x5229;&#x4E8E;&#x63D0;&#x5347;&#x6027;&#x80FD;</li>
+<li>&#x8C28;&#x614E;&#x4F7F;&#x7528;&#x591A;&#x4E2A;&#x5207;&#x7247;&#x64CD;&#x4F5C;&#x540C;&#x4E00;&#x4E2A;&#x6570;&#x7EC4;,&#x4EE5;&#x9632;&#x8BFB;&#x5199;&#x51B2;&#x7A81;</li>
+</ul>
+<h1 id="slice&#x6570;&#x636E;&#x7ED3;&#x6784;"><a name="slice&#x6570;&#x636E;&#x7ED3;&#x6784;" class="anchor-navigation-ex-anchor" href="#slice&#x6570;&#x636E;&#x7ED3;&#x6784;"><i class="fa fa-link" aria-hidden="true"></i></a>1. slice&#x6570;&#x636E;&#x7ED3;&#x6784;</h1>
+<p>&#x6E90;&#x7801;&#x5305;<code>src/runtime/slice.go:slice</code>&#x4E2D;&#x5B9A;&#x4E49;&#x4E86;slice&#x7684;&#x6570;&#x636E;&#x7ED3;&#x6784;&#xFF0C;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-go"><span class="hljs-keyword">type</span> slice <span class="hljs-keyword">struct</span> {
+    array unsafe.Pointer <span class="hljs-comment">// &#x6307;&#x5411;&#x4E00;&#x4E2A;&#x6570;&#x7EC4;&#x5143;&#x7D20;&#x7684;&#x5730;&#x5740;</span>
+    <span class="hljs-built_in">len</span>   <span class="hljs-keyword">int</span>            <span class="hljs-comment">// &#x957F;&#x5EA6;</span>
+    <span class="hljs-built_in">cap</span>   <span class="hljs-keyword">int</span>            <span class="hljs-comment">// &#x5E95;&#x5C42;&#x6570;&#x7EC4;&#x7684;&#x5BB9;&#x91CF;</span>
+}
+</code></pre>
+<h1 id="&#x5207;&#x7247;&#x521D;&#x59CB;&#x5316;"><a name="&#x5207;&#x7247;&#x521D;&#x59CB;&#x5316;" class="anchor-navigation-ex-anchor" href="#&#x5207;&#x7247;&#x521D;&#x59CB;&#x5316;"><i class="fa fa-link" aria-hidden="true"></i></a>2. &#x5207;&#x7247;&#x521D;&#x59CB;&#x5316;</h1>
+<h4 id="a-&#x4ECE;&#x6570;&#x7EC4;&#x6216;&#x8005;&#x5207;&#x7247;&#x4E2D;&#x751F;&#x6210;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x5207;&#x7247;"><a name="a-&#x4ECE;&#x6570;&#x7EC4;&#x6216;&#x8005;&#x5207;&#x7247;&#x4E2D;&#x751F;&#x6210;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x5207;&#x7247;" class="anchor-navigation-ex-anchor" href="#a-&#x4ECE;&#x6570;&#x7EC4;&#x6216;&#x8005;&#x5207;&#x7247;&#x4E2D;&#x751F;&#x6210;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x5207;&#x7247;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="a-&#x4ECE;&#x6570;&#x7EC4;&#x6216;&#x8005;&#x5207;&#x7247;&#x4E2D;&#x751F;&#x6210;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x5207;&#x7247;" class="plugin-anchor" href="#a-&#x4ECE;&#x6570;&#x7EC4;&#x6216;&#x8005;&#x5207;&#x7247;&#x4E2D;&#x751F;&#x6210;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x5207;&#x7247;"><i class="fa fa-link" aria-hidden="true"></i></a>a) &#x4ECE;&#x6570;&#x7EC4;&#x6216;&#x8005;&#x5207;&#x7247;&#x4E2D;&#x751F;&#x6210;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x5207;&#x7247;</h4>
+<p>a[low : high : max] max-low&#x7684;&#x7ED3;&#x679C;&#x8868;&#x793A;&#x5BB9;&#x91CF;&#xFF0C;high-low&#x7684;&#x7ED3;&#x679C;&#x8868;&#x793A;&#x957F;&#x5EA6;</p>
+<pre><code class="lang-go">arr := [<span class="hljs-number">8</span>]<span class="hljs-keyword">int</span>{<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>, <span class="hljs-number">7</span>, <span class="hljs-number">8</span>}
+
+s := arr[<span class="hljs-number">1</span>:<span class="hljs-number">3</span>] <span class="hljs-comment">// s=[2 3], len=2, cap=7</span>
+<span class="hljs-comment">// s := arr[1:3:6] // s=[2 3], len=2, cap=5</span>
+</code></pre>
+<p>&#x53D8;&#x91CF;&#x7ED3;&#x6784;&#x5982;&#x4E0B;&#x56FE;&#x6240;&#x793A;&#xFF1A;
+<img src="images/slice.jpg" alt="slice">
+GDB&#x8C03;&#x8BD5;&#x5982;&#x4E0B;&#xFF1A;
+<img src="images/gdb-slice.jpg" alt="gdb-slice"></p>
+<h4 id="b-&#x901A;&#x8FC7;&#x5185;&#x7F6E;&#x51FD;&#x6570;make&#x521B;&#x5EFA;"><a name="b-&#x901A;&#x8FC7;&#x5185;&#x7F6E;&#x51FD;&#x6570;make&#x521B;&#x5EFA;" class="anchor-navigation-ex-anchor" href="#b-&#x901A;&#x8FC7;&#x5185;&#x7F6E;&#x51FD;&#x6570;make&#x521B;&#x5EFA;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="b-&#x901A;&#x8FC7;&#x5185;&#x7F6E;&#x51FD;&#x6570;make&#x521B;&#x5EFA;" class="plugin-anchor" href="#b-&#x901A;&#x8FC7;&#x5185;&#x7F6E;&#x51FD;&#x6570;make&#x521B;&#x5EFA;"><i class="fa fa-link" aria-hidden="true"></i></a>b) &#x901A;&#x8FC7;&#x5185;&#x7F6E;&#x51FD;&#x6570;make&#x521B;&#x5EFA;</h4>
+<pre><code class="lang-go"><span class="hljs-comment">// len=10, cap=10</span>
+a := <span class="hljs-built_in">make</span>([]<span class="hljs-keyword">int</span>, <span class="hljs-number">10</span>)
+
+<span class="hljs-comment">// len=8, cap=10</span>
+b := <span class="hljs-built_in">make</span>([]<span class="hljs-keyword">int</span>, <span class="hljs-number">8</span>, <span class="hljs-number">10</span>)
+</code></pre>
+<h1 id="&#x5207;&#x7247;&#x64CD;&#x4F5C;"><a name="&#x5207;&#x7247;&#x64CD;&#x4F5C;" class="anchor-navigation-ex-anchor" href="#&#x5207;&#x7247;&#x64CD;&#x4F5C;"><i class="fa fa-link" aria-hidden="true"></i></a>3. &#x5207;&#x7247;&#x64CD;&#x4F5C;</h1>
+<table>
+<thead>
+<tr>
+<th>&#x51FD;&#x6570;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>len</td>
+<td>&#x83B7;&#x53D6;&#x5207;&#x7247;&#x957F;&#x5EA6;</td>
+</tr>
+<tr>
+<td>cap</td>
+<td>&#x83B7;&#x53D6;&#x5207;&#x7247;&#x5E95;&#x5C42;&#x6570;&#x7EC4;&#x5BB9;&#x91CF;</td>
+</tr>
+<tr>
+<td>append</td>
+<td>&#x5BF9;&#x5207;&#x7247;&#x8FFD;&#x52A0;&#x5143;&#x7D20;</td>
+</tr>
+<tr>
+<td>copy</td>
+<td>&#x590D;&#x5236;&#x4E00;&#x4E2A;&#x5207;&#x7247;</td>
+</tr>
+</tbody>
+</table>
+<p>&#x6DFB;&#x52A0;&#x591A;&#x4E2A;&#x5143;&#x7D20;</p>
+<pre><code class="lang-go">a := []<span class="hljs-keyword">string</span>{<span class="hljs-string">&quot;hello&quot;</span>}        <span class="hljs-comment">// [hello]</span>
+a = <span class="hljs-built_in">append</span>(a, <span class="hljs-string">&quot;liu&quot;</span>, <span class="hljs-string">&quot;shuai&quot;</span>) <span class="hljs-comment">// [hello liu shuai]</span>
+</code></pre>
+<p>&#x628A;&#x4E00;&#x4E2A;&#x5207;&#x7247;&#x5185;&#x5BB9;&#x6DFB;&#x52A0;&#x5230;&#x5F53;&#x524D;&#x5207;&#x7247;</p>
+<pre><code class="lang-go">b := []<span class="hljs-keyword">string</span>{<span class="hljs-string">&quot;cai&quot;</span>, <span class="hljs-string">&quot;ye&quot;</span>}
+a = <span class="hljs-built_in">append</span>(a, b...) <span class="hljs-comment">// [hello liu shuai cai ye]</span>
+</code></pre>
+<p>&#x5C06;&#x5B57;&#x7B26;&#x4E32;&#x9644;&#x52A0;&#x5230;&#x5B57;&#x8282;&#x7247;</p>
+<pre><code class="lang-go">s := <span class="hljs-built_in">append</span>([]<span class="hljs-keyword">byte</span>(<span class="hljs-string">&quot;hello &quot;</span>), <span class="hljs-string">&quot;world&quot;</span>...) <span class="hljs-comment">// hello world</span>
+</code></pre>
+<h1 id="&#x5207;&#x7247;&#x6269;&#x5BB9;"><a name="&#x5207;&#x7247;&#x6269;&#x5BB9;" class="anchor-navigation-ex-anchor" href="#&#x5207;&#x7247;&#x6269;&#x5BB9;"><i class="fa fa-link" aria-hidden="true"></i></a>4. &#x5207;&#x7247;&#x6269;&#x5BB9;</h1>
+<p>&#x6269;&#x5BB9;&#x5224;&#x65AD;&#x6D41;&#x7A0B;&#x5982;&#x4E0B;&#xFF08;<code>/usr/local/go/src/runtime/slice.go:growslice</code>&#xFF09;&#xFF1A;
+<img src="images/slice-append.jpg" alt="slice-append"></p>
+<h4 id="41&#x3001;&#x4E0D;&#x9700;&#x8981;&#x6269;&#x5BB9;"><a name="41&#x3001;&#x4E0D;&#x9700;&#x8981;&#x6269;&#x5BB9;" class="anchor-navigation-ex-anchor" href="#41&#x3001;&#x4E0D;&#x9700;&#x8981;&#x6269;&#x5BB9;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="41&#x3001;&#x4E0D;&#x9700;&#x8981;&#x6269;&#x5BB9;" class="plugin-anchor" href="#41&#x3001;&#x4E0D;&#x9700;&#x8981;&#x6269;&#x5BB9;"><i class="fa fa-link" aria-hidden="true"></i></a>4.1&#x3001;&#x4E0D;&#x9700;&#x8981;&#x6269;&#x5BB9;</h4>
+<pre><code class="lang-go">s := <span class="hljs-built_in">make</span>([]<span class="hljs-keyword">int</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>)
+fmt.Printf(<span class="hljs-string">&quot;len=%d, cap=%d, address=%x \n&quot;</span>, <span class="hljs-built_in">len</span>(s), <span class="hljs-built_in">cap</span>(s), *(*<span class="hljs-keyword">uintptr</span>)(unsafe.Pointer(&amp;s)))
+<span class="hljs-comment">// len=1, cap=2, address=c00005ced8</span>
+
+s = <span class="hljs-built_in">append</span>(s, <span class="hljs-number">1</span>)
+fmt.Printf(<span class="hljs-string">&quot;len=%d, cap=%d, address=%x \n&quot;</span>, <span class="hljs-built_in">len</span>(s), <span class="hljs-built_in">cap</span>(s), *(*<span class="hljs-keyword">uintptr</span>)(unsafe.Pointer(&amp;s)))
+<span class="hljs-comment">// len=2, cap=2, address=c00005ced8</span>
+</code></pre>
+<h4 id="42&#x3001;&#x5982;&#x679C;&#x671F;&#x671B;&#x5BB9;&#x91CF;&#x5927;&#x4E8E;&#x5F53;&#x524D;&#x5BB9;&#x91CF;&#x7684;&#x4E24;&#x500D;&#x5C31;&#x4F1A;&#x4F7F;&#x7528;&#x671F;&#x671B;&#x5BB9;&#x91CF;"><a name="42&#x3001;&#x5982;&#x679C;&#x671F;&#x671B;&#x5BB9;&#x91CF;&#x5927;&#x4E8E;&#x5F53;&#x524D;&#x5BB9;&#x91CF;&#x7684;&#x4E24;&#x500D;&#x5C31;&#x4F1A;&#x4F7F;&#x7528;&#x671F;&#x671B;&#x5BB9;&#x91CF;" class="anchor-navigation-ex-anchor" href="#42&#x3001;&#x5982;&#x679C;&#x671F;&#x671B;&#x5BB9;&#x91CF;&#x5927;&#x4E8E;&#x5F53;&#x524D;&#x5BB9;&#x91CF;&#x7684;&#x4E24;&#x500D;&#x5C31;&#x4F1A;&#x4F7F;&#x7528;&#x671F;&#x671B;&#x5BB9;&#x91CF;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="42&#x3001;&#x5982;&#x679C;&#x671F;&#x671B;&#x5BB9;&#x91CF;&#x5927;&#x4E8E;&#x5F53;&#x524D;&#x5BB9;&#x91CF;&#x7684;&#x4E24;&#x500D;&#x5C31;&#x4F1A;&#x4F7F;&#x7528;&#x671F;&#x671B;&#x5BB9;&#x91CF;" class="plugin-anchor" href="#42&#x3001;&#x5982;&#x679C;&#x671F;&#x671B;&#x5BB9;&#x91CF;&#x5927;&#x4E8E;&#x5F53;&#x524D;&#x5BB9;&#x91CF;&#x7684;&#x4E24;&#x500D;&#x5C31;&#x4F1A;&#x4F7F;&#x7528;&#x671F;&#x671B;&#x5BB9;&#x91CF;"><i class="fa fa-link" aria-hidden="true"></i></a>4.2&#x3001;&#x5982;&#x679C;&#x671F;&#x671B;&#x5BB9;&#x91CF;&#x5927;&#x4E8E;&#x5F53;&#x524D;&#x5BB9;&#x91CF;&#x7684;&#x4E24;&#x500D;&#x5C31;&#x4F1A;&#x4F7F;&#x7528;&#x671F;&#x671B;&#x5BB9;&#x91CF;</h4>
+<pre><code class="lang-go">s := <span class="hljs-built_in">make</span>([]<span class="hljs-keyword">int</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>)
+fmt.Printf(<span class="hljs-string">&quot;len=%d, cap=%d, address=%x \n&quot;</span>, <span class="hljs-built_in">len</span>(s), <span class="hljs-built_in">cap</span>(s), *(*<span class="hljs-keyword">uintptr</span>)(unsafe.Pointer(&amp;s)))
+<span class="hljs-comment">// len=1, cap=2, address=c00005ced8</span>
+
+s = <span class="hljs-built_in">append</span>(s, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>)
+fmt.Printf(<span class="hljs-string">&quot;len=%d, cap=%d, address=%x \n&quot;</span>, <span class="hljs-built_in">len</span>(s), <span class="hljs-built_in">cap</span>(s), *(*<span class="hljs-keyword">uintptr</span>)(unsafe.Pointer(&amp;s)))
+<span class="hljs-comment">// len=5, cap=6, address=c00001a180</span>
+</code></pre>
+<h4 id="43&#x3001;&#x5982;&#x679C;&#x5F53;&#x524D;&#x5207;&#x7247;&#x7684;&#x957F;&#x5EA6;&#x5C0F;&#x4E8E;-1024-&#x5C31;&#x4F1A;&#x5C06;&#x5BB9;&#x91CF;&#x7FFB;&#x500D;"><a name="43&#x3001;&#x5982;&#x679C;&#x5F53;&#x524D;&#x5207;&#x7247;&#x7684;&#x957F;&#x5EA6;&#x5C0F;&#x4E8E;-1024-&#x5C31;&#x4F1A;&#x5C06;&#x5BB9;&#x91CF;&#x7FFB;&#x500D;" class="anchor-navigation-ex-anchor" href="#43&#x3001;&#x5982;&#x679C;&#x5F53;&#x524D;&#x5207;&#x7247;&#x7684;&#x957F;&#x5EA6;&#x5C0F;&#x4E8E;-1024-&#x5C31;&#x4F1A;&#x5C06;&#x5BB9;&#x91CF;&#x7FFB;&#x500D;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="43&#x3001;&#x5982;&#x679C;&#x5F53;&#x524D;&#x5207;&#x7247;&#x7684;&#x957F;&#x5EA6;&#x5C0F;&#x4E8E;-1024-&#x5C31;&#x4F1A;&#x5C06;&#x5BB9;&#x91CF;&#x7FFB;&#x500D;" class="plugin-anchor" href="#43&#x3001;&#x5982;&#x679C;&#x5F53;&#x524D;&#x5207;&#x7247;&#x7684;&#x957F;&#x5EA6;&#x5C0F;&#x4E8E;-1024-&#x5C31;&#x4F1A;&#x5C06;&#x5BB9;&#x91CF;&#x7FFB;&#x500D;"><i class="fa fa-link" aria-hidden="true"></i></a>4.3&#x3001;&#x5982;&#x679C;&#x5F53;&#x524D;&#x5207;&#x7247;&#x7684;&#x957F;&#x5EA6;&#x5C0F;&#x4E8E; 1024 &#x5C31;&#x4F1A;&#x5C06;&#x5BB9;&#x91CF;&#x7FFB;&#x500D;</h4>
+<pre><code class="lang-go">s := <span class="hljs-built_in">make</span>([]<span class="hljs-keyword">int</span>, <span class="hljs-number">6</span>, <span class="hljs-number">8</span>)
+fmt.Printf(<span class="hljs-string">&quot;len=%d, cap=%d, address=%x \n&quot;</span>, <span class="hljs-built_in">len</span>(s), <span class="hljs-built_in">cap</span>(s), *(*<span class="hljs-keyword">uintptr</span>)(unsafe.Pointer(&amp;s)))
+<span class="hljs-comment">// len=6, cap=8, address=c000092ea8</span>
+
+s = <span class="hljs-built_in">append</span>(s, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>)
+fmt.Printf(<span class="hljs-string">&quot;len=%d, cap=%d, address=%x \n&quot;</span>, <span class="hljs-built_in">len</span>(s), <span class="hljs-built_in">cap</span>(s), *(*<span class="hljs-keyword">uintptr</span>)(unsafe.Pointer(&amp;s)))
+<span class="hljs-comment">// len=9, cap=16, address=c0000ba000</span>
+</code></pre>
+<h4 id="44&#x3001;&#x5982;&#x679C;&#x5F53;&#x524D;&#x5207;&#x7247;&#x7684;&#x957F;&#x5EA6;&#x5927;&#x4E8E;-1024-&#x5C31;&#x4F1A;&#x6BCF;&#x6B21;&#x589E;&#x52A0;-14-&#x7684;&#x5BB9;&#x91CF;&#xFF0C;&#x76F4;&#x5230;&#x65B0;&#x5BB9;&#x91CF;&#x5927;&#x4E8E;&#x671F;&#x671B;&#x5BB9;&#x91CF;"><a name="44&#x3001;&#x5982;&#x679C;&#x5F53;&#x524D;&#x5207;&#x7247;&#x7684;&#x957F;&#x5EA6;&#x5927;&#x4E8E;-1024-&#x5C31;&#x4F1A;&#x6BCF;&#x6B21;&#x589E;&#x52A0;-14-&#x7684;&#x5BB9;&#x91CF;&#xFF0C;&#x76F4;&#x5230;&#x65B0;&#x5BB9;&#x91CF;&#x5927;&#x4E8E;&#x671F;&#x671B;&#x5BB9;&#x91CF;" class="anchor-navigation-ex-anchor" href="#44&#x3001;&#x5982;&#x679C;&#x5F53;&#x524D;&#x5207;&#x7247;&#x7684;&#x957F;&#x5EA6;&#x5927;&#x4E8E;-1024-&#x5C31;&#x4F1A;&#x6BCF;&#x6B21;&#x589E;&#x52A0;-14-&#x7684;&#x5BB9;&#x91CF;&#xFF0C;&#x76F4;&#x5230;&#x65B0;&#x5BB9;&#x91CF;&#x5927;&#x4E8E;&#x671F;&#x671B;&#x5BB9;&#x91CF;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="44&#x3001;&#x5982;&#x679C;&#x5F53;&#x524D;&#x5207;&#x7247;&#x7684;&#x957F;&#x5EA6;&#x5927;&#x4E8E;-1024-&#x5C31;&#x4F1A;&#x6BCF;&#x6B21;&#x589E;&#x52A0;-14-&#x7684;&#x5BB9;&#x91CF;&#xFF0C;&#x76F4;&#x5230;&#x65B0;&#x5BB9;&#x91CF;&#x5927;&#x4E8E;&#x671F;&#x671B;&#x5BB9;&#x91CF;" class="plugin-anchor" href="#44&#x3001;&#x5982;&#x679C;&#x5F53;&#x524D;&#x5207;&#x7247;&#x7684;&#x957F;&#x5EA6;&#x5927;&#x4E8E;-1024-&#x5C31;&#x4F1A;&#x6BCF;&#x6B21;&#x589E;&#x52A0;-14-&#x7684;&#x5BB9;&#x91CF;&#xFF0C;&#x76F4;&#x5230;&#x65B0;&#x5BB9;&#x91CF;&#x5927;&#x4E8E;&#x671F;&#x671B;&#x5BB9;&#x91CF;"><i class="fa fa-link" aria-hidden="true"></i></a>4.4&#x3001;&#x5982;&#x679C;&#x5F53;&#x524D;&#x5207;&#x7247;&#x7684;&#x957F;&#x5EA6;&#x5927;&#x4E8E; 1024 &#x5C31;&#x4F1A;&#x6BCF;&#x6B21;&#x589E;&#x52A0; 1/4 &#x7684;&#x5BB9;&#x91CF;&#xFF0C;&#x76F4;&#x5230;&#x65B0;&#x5BB9;&#x91CF;&#x5927;&#x4E8E;&#x671F;&#x671B;&#x5BB9;&#x91CF;</h4>
+<pre><code class="lang-go">s := <span class="hljs-built_in">make</span>([]<span class="hljs-keyword">int</span>, <span class="hljs-number">1024</span>)
+fmt.Printf(<span class="hljs-string">&quot;len=%d, cap=%d, address=%x \n&quot;</span>, <span class="hljs-built_in">len</span>(s), <span class="hljs-built_in">cap</span>(s), *(*<span class="hljs-keyword">uintptr</span>)(unsafe.Pointer(&amp;s)))
+<span class="hljs-comment">// len=1024, cap=1024, address=c000075ee8</span>
+
+s = <span class="hljs-built_in">append</span>(s, <span class="hljs-number">1</span>)
+fmt.Printf(<span class="hljs-string">&quot;len=%d, cap=%d, address=%x \n&quot;</span>, <span class="hljs-built_in">len</span>(s), <span class="hljs-built_in">cap</span>(s), *(*<span class="hljs-keyword">uintptr</span>)(unsafe.Pointer(&amp;s)))
+<span class="hljs-comment">// len=1025, cap=1280, address=c000100000</span>
+</code></pre>
+<footer class="page-footer"><span class="copyright">Copyright &#xA9; Lsc 2019 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
+2021-02-16 15:05:02
+</span></footer><script>var _hmt = _hmt || [];(function() {var hm = document.createElement('script');hm.src = '//hm.baidu.com/hm.js?181780a9962d5f58cb82c8ce32b1ff71';var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(hm, s);})();</script>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="array.html" class="navigation navigation-prev " aria-label="Previous page: 数组(array)">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="map.html" class="navigation navigation-next " aria-label="Next page: 字典(map)">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"切片(slice)","level":"1.5","depth":1,"next":{"title":"字典(map)","level":"1.6","depth":1,"path":"go/map.md","ref":"go/map.md","articles":[]},"previous":{"title":"数组(array)","level":"1.4","depth":1,"path":"go/array.md","ref":"go/array.md","articles":[]},"dir":"ltr"},"config":{"plugins":["fontsettings","highlight","-livereload","-search","search-pro","sharing","anchors","anchor-navigation-ex","ba","-expandable-chapters","expandable-chapters-small","toggle-chapters","splitter","tbfed-pagefooter","code","copy-code-button","-todo","-advanced-emoji","-chapter-fold"],"styles":{"website":"styles/website.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy Lsc 2019","modify_label":"修订时间：","modify_format":"2021-MM-DD HH:mm:ss"},"splitter":{},"search-pro":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":false},"fontsettings":{"family":"sans","size":2,"theme":"night"},"highlight":{},"anchor-navigation-ex":{"mode":"float","pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"isRewritePageTitle":false,"showLevel":true,"showGoTop":true,"printLog":false,"multipleH1":true,"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false}},"expandable-chapters-small":{},"copy-code-button":{},"sharing":{"all":["facebook","google","twitter","weibo","instapaper"],"facebook":true,"google":false,"instapaper":false,"twitter":true,"vk":false,"weibo":true},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{},"toggle-chapters":{},"ba":{"token":"181780a9962d5f58cb82c8ce32b1ff71"}},"theme":"default","author":"LiuShuaicai","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Lsc'Go","language":"zh-hans","links":{"sidebar":{"Lsc'Home":"http://blog.liushuaicai.com"}},"gitbook":"3.2.3","description":"为了自己的野心要不断努力！","theme-default":{"showLevel":true}},"file":{"path":"go/slice.md","mtime":"2022-02-16T07:05:02.713Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-02-16T13:47:10.437Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-toggle-chapters/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+
+    </body>
+</html>
+

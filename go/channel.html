@@ -1,0 +1,675 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>管道(channel) · Lsc'Go</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="LiuShuaicai">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-toggle-chapters/toggle.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../styles/website.css">
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="gpm/" />
+    
+    
+    <link rel="prev" href="map.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="http://blog.liushuaicai.com" target="_blank" class="custom-link">Lsc'Home</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    资源列表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="variable/">
+            
+                <a href="variable/">
+            
+                    
+                    变量
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="variable/type.html">
+            
+                <a href="variable/type.html">
+            
+                    
+                    数据类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="variable/format.html">
+            
+                <a href="variable/format.html">
+            
+                    
+                    格式化输出
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="variable/conversion.html">
+            
+                <a href="variable/conversion.html">
+            
+                    
+                    数据类型转换
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="constant.html">
+            
+                <a href="constant.html">
+            
+                    
+                    常量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="array.html">
+            
+                <a href="array.html">
+            
+                    
+                    数组(array)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="slice.html">
+            
+                <a href="slice.html">
+            
+                    
+                    切片(slice)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="map.html">
+            
+                <a href="map.html">
+            
+                    
+                    字典(map)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.7" data-path="channel.html">
+            
+                <a href="channel.html">
+            
+                    
+                    管道(channel)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="gpm/">
+            
+                <a href="gpm/">
+            
+                    
+                    GPM模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="escape.html">
+            
+                <a href="escape.html">
+            
+                    
+                    变量逃逸分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="uintptr.html">
+            
+                <a href="uintptr.html">
+            
+                    
+                    uintptr与unsafe.Pointer的关系
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="env.html">
+            
+                <a href="env.html">
+            
+                    
+                    ENV配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="pprof.html">
+            
+                <a href="pprof.html">
+            
+                    
+                    分析工具-pprof
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >管道(channel)</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#channel&#x7684;&#x6570;&#x636E;&#x7ED3;&#x6784;"><b>1. </b>channel&#x7684;&#x6570;&#x636E;&#x7ED3;&#x6784;</a></li><li><span class="title-icon "></span><a href="#&#x521B;&#x5EFA;&#x65B9;&#x5F0F;"><b>2. </b>&#x521B;&#x5EFA;&#x65B9;&#x5F0F;</a></li><li><span class="title-icon "></span><a href="#&#x5199;&#x5165;&#x65B9;&#x5F0F;"><b>3. </b>&#x5199;&#x5165;&#x65B9;&#x5F0F;</a></li><li><span class="title-icon "></span><a href="#&#x8BFB;&#x53D6;&#x65B9;&#x5F0F;"><b>4. </b>&#x8BFB;&#x53D6;&#x65B9;&#x5F0F;</a></li><ul><li><span class="title-icon "></span><a href="#&#x7ED3;&#x5408;select&#x4F7F;&#x7528;"><b>4.1. </b>&#x7ED3;&#x5408;select&#x4F7F;&#x7528;</a></li><li><span class="title-icon "></span><a href="#&#x7ED3;&#x5408;for-range&#x4F7F;&#x7528;"><b>4.2. </b>&#x7ED3;&#x5408;for-range&#x4F7F;&#x7528;</a></li></ul><li><span class="title-icon "></span><a href="#&#x53C2;&#x8003;&#x6587;&#x7AE0;"><b>5. </b>&#x53C2;&#x8003;&#x6587;&#x7AE0;</a></li></ul></div><a href="#channel&#x7684;&#x6570;&#x636E;&#x7ED3;&#x6784;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><ul>
+<li>goroutine&#x4E4B;&#x95F4;&#x7684;&#x901A;&#x4FE1;&#x65B9;&#x5F0F;</li>
+<li>&#x5148;&#x8FDB;&#x5148;&#x51FA;&#xFF0C;&#x4FDD;&#x8BC1;&#x6536;&#x53D1;&#x6570;&#x636E;&#x7684;&#x987A;&#x5E8F;</li>
+</ul>
+<h1 id="channel&#x7684;&#x6570;&#x636E;&#x7ED3;&#x6784;"><a name="channel&#x7684;&#x6570;&#x636E;&#x7ED3;&#x6784;" class="anchor-navigation-ex-anchor" href="#channel&#x7684;&#x6570;&#x636E;&#x7ED3;&#x6784;"><i class="fa fa-link" aria-hidden="true"></i></a>1. channel&#x7684;&#x6570;&#x636E;&#x7ED3;&#x6784;</h1>
+<p>channel&#x7684;&#x6570;&#x636E;&#x7ED3;&#x6784;&#x7531;<code>src/runtime/chan.go:hchan</code>&#x5B9A;&#x4E49;&#x3002;</p>
+<pre><code class="lang-go"><span class="hljs-keyword">type</span> hchan <span class="hljs-keyword">struct</span> {
+    qcount   <span class="hljs-keyword">uint</span>           <span class="hljs-comment">// &#x961F;&#x5217;&#x4E2D;&#x5143;&#x7D20;&#x7684;&#x4E2A;&#x6570;</span>
+    dataqsiz <span class="hljs-keyword">uint</span>           <span class="hljs-comment">// &#x73AF;&#x5F62;&#x961F;&#x5217;&#x7684;&#x5927;&#x5C0F;&#xFF0C;&#x521D;&#x59CB;&#x5316;&#x7F13;&#x51B2;&#x7C7B;&#x578B;channel&#x7684;&#x8BBE;&#x7F6E;</span>
+    buf      unsafe.Pointer <span class="hljs-comment">// &#x73AF;&#x5F62;&#x961F;&#x5217;&#x5B58;&#x653E;&#x6570;&#x636E;&#x7684;&#x6570;&#x7EC4;&#x6307;&#x9488;</span>
+    elemsize <span class="hljs-keyword">uint16</span>         <span class="hljs-comment">// &#x6BCF;&#x4E2A;&#x5143;&#x7D20;&#x7684;&#x5927;&#x5C0F;</span>
+    closed   <span class="hljs-keyword">uint32</span>         <span class="hljs-comment">// &#x5173;&#x95ED;&#x72B6;&#x6001;&#x7684;&#x6807;&#x793A;</span>
+    elemtype *_type <span class="hljs-comment">// &#x5143;&#x7D20;&#x7684;&#x7C7B;&#x578B;</span>
+    sendx    <span class="hljs-keyword">uint</span>   <span class="hljs-comment">// &#x5143;&#x7D20;&#x5199;&#x5165;&#x65F6;&#x5B58;&#x653E;&#x961F;&#x5217;&#x4E2D;&#x7684;&#x4F4D;&#x7F6E;</span>
+    recvx    <span class="hljs-keyword">uint</span>   <span class="hljs-comment">// &#x961F;&#x5217;&#x4E2D;&#x8BFB;&#x53D6;&#x5143;&#x7D20;&#x7684;&#x4F4D;&#x7F6E;</span>
+    recvq    waitq  <span class="hljs-comment">// &#x7B49;&#x5F85;&#x8BFB;&#x6D88;&#x606F;&#x7684;goroutine&#x7684;&#x961F;&#x5217;</span>
+    sendq    waitq  <span class="hljs-comment">// &#x7B49;&#x5F85;&#x5199;&#x6D88;&#x606F;&#x7684;goroutine&#x7684;&#x961F;&#x5217;</span>
+
+    <span class="hljs-comment">//&#x9501;&#x4FDD;&#x62A4;hchan&#x4E2D;&#x7684;&#x6240;&#x6709;&#x5B57;&#x6BB5;&#xFF0C;&#x4EE5;&#x53CA;&#x8BE5;&#x901A;&#x9053;&#x4E0A;&#x88AB;&#x5C4F;&#x853D;&#x7684;sudogs&#x4E2D;&#x7684;&#x51E0;&#x4E2A;&#x5B57;&#x6BB5;&#x3002;</span>
+    lock mutex <span class="hljs-comment">// &#x4E92;&#x65A5;&#x9501;&#xFF0C;chan&#x4E0D;&#x5141;&#x8BB8;&#x5E76;&#x53D1;&#x8BFB;&#x5199;</span>
+}
+
+<span class="hljs-comment">// &#x7B49;&#x5F85;&#x961F;&#x5217;&#x7684;&#x6570;&#x636E;&#x7ED3;&#x6784;</span>
+<span class="hljs-keyword">type</span> waitq <span class="hljs-keyword">struct</span> {
+    first *sudog    <span class="hljs-comment">// &#x961F;&#x5217;&#x4E2D;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;g</span>
+    last  *sudog    <span class="hljs-comment">// &#x961F;&#x5217;&#x4E2D;&#x7684;&#x6700;&#x540E;&#x4E00;&#x4E2A;g</span>
+}
+</code></pre>
+<p>sudog&#x8868;&#x793A;&#x7B49;&#x5F85;&#x5217;&#x8868;&#x4E2D;&#x7684;g&#xFF0C;&#x4F8B;&#x5982;&#x5728;&#x901A;&#x9053;&#x4E0A;&#x53D1;&#x9001;/&#x63A5;&#x6536;&#xFF0C;&#x7531;<code>src/runtime/runtime2.go:sudog</code>&#x5B9A;&#x4E49;&#xFF0C;&#x5176;&#x7ED3;&#x6784;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-go"><span class="hljs-keyword">type</span> sudog <span class="hljs-keyword">struct</span> {
+    g *g            <span class="hljs-comment">// goroutine&#x6307;&#x9488;</span>
+    next *sudog     <span class="hljs-comment">// &#x4E0B;&#x4E00;&#x4E2A;g</span>
+    prev *sudog     <span class="hljs-comment">// &#x4E0A;&#x4E00;&#x4E2A;g</span>
+    elem unsafe.Pointer <span class="hljs-comment">// &#x6570;&#x636E;&#x5143;&#x7D20;&#xFF0C;&#x53EF;&#x80FD;&#x5728;&#x5806;&#x4E0A;</span>
+    <span class="hljs-comment">//&#x4EE5;&#x4E0B;&#x5B57;&#x6BB5;&#x6C38;&#x8FDC;&#x4E0D;&#x4F1A;&#x540C;&#x65F6;&#x8BBF;&#x95EE;&#x3002;</span>
+    <span class="hljs-comment">//&#x5BF9;&#x4E8E;channels&#xFF0C;waitlink&#x4EC5;&#x7531;g&#x8BBF;&#x95EE;&#x3002;</span>
+    <span class="hljs-comment">//&#x5BF9;&#x4E8E;&#x4FE1;&#x53F7;&#x91CF;&#xFF0C;&#x6240;&#x6709;&#x5B57;&#x6BB5;&#xFF08;&#x5305;&#x62EC;&#x4E0A;&#x9762;&#x7684;&#x5B57;&#x6BB5;&#xFF09;&#x53EA;&#x6709;&#x5728;&#x6301;&#x6709;&#x4FE1;&#x53F7;&#x6839;&#x9501;&#x65F6;&#x624D;&#x80FD;&#x8BBF;&#x95EE;&#x3002;</span>
+    acquiretime <span class="hljs-keyword">int64</span>
+    releasetime <span class="hljs-keyword">int64</span>
+    ticket      <span class="hljs-keyword">uint32</span>
+    isSelect <span class="hljs-keyword">bool</span>    <span class="hljs-comment">// g&#x6B63;&#x5728;&#x53C2;&#x52A0;&#x4E00;&#x4E2A;select</span>
+    success <span class="hljs-keyword">bool</span>    <span class="hljs-comment">// &#x8868;&#x793A;&#x901A;&#x8FC7;&#x901A;&#x9053;c&#x8FDB;&#x884C;&#x7684;&#x901A;&#x4FE1;&#x662F;&#x5426;&#x6210;&#x529F;&#x3002;&#x5982;&#x679C;goroutine&#x56E0;&#x4E3A;&#x901A;&#x8FC7;&#x901A;&#x9053;c&#x4F20;&#x9012;&#x4E86;&#x503C;&#x800C;&#x88AB;&#x5524;&#x9192;&#xFF0C;&#x5219;&#x4E3A;true&#xFF1B;&#x5982;&#x679C;goroutine&#x56E0;&#x4E3A;&#x901A;&#x9053;c&#x5173;&#x95ED;&#x800C;&#x88AB;&#x5524;&#x9192;&#xFF0C;&#x5219;&#x4E3A;false</span>
+    parent   *sudog <span class="hljs-comment">// semaRoot binary tree</span>
+    waitlink *sudog <span class="hljs-comment">// g.waiting list or semaRoot</span>
+    waittail *sudog <span class="hljs-comment">// semaRoot</span>
+    c        *hchan <span class="hljs-comment">// channel</span>
+}
+</code></pre>
+<h1 id="&#x521B;&#x5EFA;&#x65B9;&#x5F0F;"><a name="&#x521B;&#x5EFA;&#x65B9;&#x5F0F;" class="anchor-navigation-ex-anchor" href="#&#x521B;&#x5EFA;&#x65B9;&#x5F0F;"><i class="fa fa-link" aria-hidden="true"></i></a>2. &#x521B;&#x5EFA;&#x65B9;&#x5F0F;</h1>
+<ul>
+<li>&#x4F7F;&#x7528;&#x5173;&#x952E;&#x5B57;chan&#x58F0;&#x660E;&#x4E00;&#x4E2A;&#x901A;&#x9053;</li>
+<li>&#x4F7F;&#x7528;&#x64CD;&#x4F5C;&#x7B26; &lt;- &#x7528;&#x4E8E;&#x6307;&#x5B9A;&#x901A;&#x9053;&#x7684;&#x65B9;&#x5411;&#xFF0C;&#x53D1;&#x9001;&#x6216;&#x63A5;&#x6536;&#x3002;&#x5982;&#x679C;&#x672A;&#x6307;&#x5B9A;&#x65B9;&#x5411;&#xFF0C;&#x5219;&#x4E3A;&#x53CC;&#x5411;&#x901A;&#x9053;</li>
+</ul>
+<pre><code class="lang-go"><span class="hljs-comment">// &#x65E0;&#x7F13;&#x51B2;channel</span>
+c := <span class="hljs-built_in">make</span>(<span class="hljs-keyword">chan</span> chantype)
+<span class="hljs-comment">// &#x7F13;&#x51B2;channel</span>
+c := <span class="hljs-built_in">make</span>(<span class="hljs-keyword">chan</span> chantype, buffersize)
+</code></pre>
+<p>&#x770B;&#x4E0B;&#x9762;&#x8FD9;&#x4E2A;&#x4F8B;&#x5B50;&#xFF1A;</p>
+<pre><code class="lang-go"><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span> {
+    c := <span class="hljs-built_in">make</span>(<span class="hljs-keyword">chan</span> <span class="hljs-keyword">int</span>, <span class="hljs-number">2</span>)
+    fmt.Println(c)
+}
+</code></pre>
+<p>c&#x5BF9;&#x5E94;&#x7684;&#x6570;&#x636E;&#x7ED3;&#x6784;&#x5982;&#x4E0B;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x73AF;&#x5F62;&#x961F;&#x5217;&#x7684;&#x5927;&#x5C0F;&#x4E3A;dataqsiz = 2&#xFF1A;</p>
+<pre><code class="lang-go">(gdb) set <span class="hljs-built_in">print</span> pretty on
+(gdb) p *c
+$<span class="hljs-number">5</span> = {
+  qcount = <span class="hljs-number">0</span>,
+  dataqsiz = <span class="hljs-number">2</span>,
+  buf = <span class="hljs-number">0xc000074060</span>,
+  elemsize = <span class="hljs-number">8</span>,
+  closed = <span class="hljs-number">0</span>,
+  elemtype = <span class="hljs-number">0x485860</span>,
+  sendx = <span class="hljs-number">0</span>,
+  recvx = <span class="hljs-number">0</span>,
+  recvq = {
+    first = <span class="hljs-number">0x0</span>,
+    last = <span class="hljs-number">0x0</span>
+  },
+  sendq = {
+    first = <span class="hljs-number">0x0</span>,
+    last = <span class="hljs-number">0x0</span>
+  },
+  lock = {
+    lockRankStruct = {&lt;No data fields&gt;},
+    key = <span class="hljs-number">0</span>
+  }
+}
+</code></pre>
+<h1 id="&#x5199;&#x5165;&#x65B9;&#x5F0F;"><a name="&#x5199;&#x5165;&#x65B9;&#x5F0F;" class="anchor-navigation-ex-anchor" href="#&#x5199;&#x5165;&#x65B9;&#x5F0F;"><i class="fa fa-link" aria-hidden="true"></i></a>3. &#x5199;&#x5165;&#x65B9;&#x5F0F;</h1>
+<p>&#x6211;&#x4EEC;&#x5F00;&#x59CB;&#x5F80;channel&#x4E2D;&#x5199;&#x5165;&#x6570;&#x636E;&#xFF0C;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-go"><span class="hljs-keyword">package</span> main
+
+<span class="hljs-keyword">import</span> <span class="hljs-string">&quot;fmt&quot;</span>
+
+<span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span> {
+    c := <span class="hljs-built_in">make</span>(<span class="hljs-keyword">chan</span> <span class="hljs-keyword">int</span>, <span class="hljs-number">2</span>)
+    <span class="hljs-comment">// &#x5199;&#x5165;&#x7B2C;1&#x4E2A;&#x6570;&#x636E;</span>
+    c &lt;- <span class="hljs-number">1</span>
+    <span class="hljs-comment">// &#x5199;&#x5165;&#x7B2C;2&#x4E2A;&#x6570;&#x636E;</span>
+    c &lt;- <span class="hljs-number">2</span>
+
+    fmt.Println(c)
+}
+</code></pre>
+<p>&#x73B0;&#x5728;&#x7B2C;8&#x884C;&#x6253;&#x4E0B;&#x65AD;&#x70B9;&#xFF0C;&#x770B;&#x4E00;&#x4E0B;&#x6570;&#x636E;&#x7ED3;&#x6784;&#xFF1A;</p>
+<pre><code class="lang-go">(gdb) b <span class="hljs-number">8</span>
+Breakpoint <span class="hljs-number">1</span> at <span class="hljs-number">0x47e30e</span>: file /data/chan2.<span class="hljs-keyword">go</span>, line <span class="hljs-number">8.</span>
+(gdb) r
+Starting program: /data/chan2
+
+Breakpoint <span class="hljs-number">1</span>, main.main () at /data/chan2.<span class="hljs-keyword">go</span>:<span class="hljs-number">8</span>
+<span class="hljs-number">8</span>        c &lt;- <span class="hljs-number">1</span>
+(gdb) p *c
+$<span class="hljs-number">1</span> = {qcount = <span class="hljs-number">0</span>, dataqsiz = <span class="hljs-number">2</span>, buf = <span class="hljs-number">0xc0000aa060</span>, elemsize = <span class="hljs-number">8</span>, closed = <span class="hljs-number">0</span>, elemtype = <span class="hljs-number">0x485860</span>, sendx = <span class="hljs-number">0</span>, recvx = <span class="hljs-number">0</span>,
+  recvq = {first = <span class="hljs-number">0x0</span>, last = <span class="hljs-number">0x0</span>}, sendq = {first = <span class="hljs-number">0x0</span>, last = <span class="hljs-number">0x0</span>}, lock = {lockRankStruct = {&lt;No data fields&gt;},
+    key = <span class="hljs-number">0</span>}}
+</code></pre>
+<p>&#x73B0;&#x5728;&#x961F;&#x5217;&#x4E2D;&#x8FD8;&#x6CA1;&#x6709;&#x6570;&#x636E;&#xFF1A;qcount = 0&#x3002;&#x7EE7;&#x7EED;&#x5F80;&#x4E0B;&#x6267;&#x884C;&#xFF1A;</p>
+<pre><code class="lang-go">(gdb) p *c
+$<span class="hljs-number">13</span> = {qcount = <span class="hljs-number">1</span>, dataqsiz = <span class="hljs-number">2</span>, buf = <span class="hljs-number">0xc0000aa060</span>, elemsize = <span class="hljs-number">8</span>, closed = <span class="hljs-number">0</span>, elemtype = <span class="hljs-number">0x485860</span>, sendx = <span class="hljs-number">1</span>, recvx = <span class="hljs-number">0</span>,
+  recvq = {first = <span class="hljs-number">0x0</span>, last = <span class="hljs-number">0x0</span>}, sendq = {first = <span class="hljs-number">0x0</span>, last = <span class="hljs-number">0x0</span>}, lock = {lockRankStruct = {&lt;No data fields&gt;},
+    key = <span class="hljs-number">0</span>}}
+</code></pre>
+<p>&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x961F;&#x5217;&#x4E2D;&#x6709;1&#x4E2A;&#x5143;&#x7D20;&#xFF08;qcount = 1&#xFF09;&#xFF0C;&#x5199;&#x5165;&#x7D22;&#x5F15;&#x503C;&#x4E3A;1&#xFF08;sendx = 1&#xFF09;,buf&#x7684;&#x6570;&#x636E;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-go">(gdb) p *<span class="hljs-number">0xc0000aa060</span>
+$<span class="hljs-number">5</span> = <span class="hljs-number">1</span>
+</code></pre>
+<h1 id="&#x8BFB;&#x53D6;&#x65B9;&#x5F0F;"><a name="&#x8BFB;&#x53D6;&#x65B9;&#x5F0F;" class="anchor-navigation-ex-anchor" href="#&#x8BFB;&#x53D6;&#x65B9;&#x5F0F;"><i class="fa fa-link" aria-hidden="true"></i></a>4. &#x8BFB;&#x53D6;&#x65B9;&#x5F0F;</h1>
+<p>&#x4E24;&#x79CD;&#x8BFB;&#x53D6;&#x65B9;&#x5F0F;&#xFF1A;</p>
+<pre><code class="lang-go">v := &lt;-c
+v, ok := &lt;-c
+</code></pre>
+<p>&#x4E3E;&#x4E2A;&#x4F8B;&#x5B50;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-go"><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span> {
+    c := <span class="hljs-built_in">make</span>(<span class="hljs-keyword">chan</span> <span class="hljs-keyword">int</span>, <span class="hljs-number">2</span>)
+    <span class="hljs-keyword">go</span> <span class="hljs-function"><span class="hljs-keyword">func</span><span class="hljs-params">()</span></span> {
+        <span class="hljs-comment">// &#x6253;&#x5370;&#x901A;&#x9053;&#x6570;&#x636E;</span>
+        fmt.Println(&lt;-c)
+    }()
+
+    <span class="hljs-comment">// &#x5199;&#x5165;&#x6570;&#x636E;</span>
+    c &lt;- <span class="hljs-number">8</span>
+
+    time.Sleep(time.Second)
+}
+</code></pre>
+<h2 id="&#x7ED3;&#x5408;select&#x4F7F;&#x7528;"><a name="&#x7ED3;&#x5408;select&#x4F7F;&#x7528;" class="anchor-navigation-ex-anchor" href="#&#x7ED3;&#x5408;select&#x4F7F;&#x7528;"><i class="fa fa-link" aria-hidden="true"></i></a>4.1. &#x7ED3;&#x5408;select&#x4F7F;&#x7528;</h2>
+<pre><code class="lang-go"><span class="hljs-keyword">package</span> main
+
+<span class="hljs-keyword">import</span> (
+    <span class="hljs-string">&quot;fmt&quot;</span>
+    <span class="hljs-string">&quot;time&quot;</span>
+)
+
+<span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span> {
+    c1 := <span class="hljs-built_in">make</span>(<span class="hljs-keyword">chan</span> <span class="hljs-keyword">int</span>, <span class="hljs-number">2</span>)
+    c2 := <span class="hljs-built_in">make</span>(<span class="hljs-keyword">chan</span> <span class="hljs-keyword">int</span>, <span class="hljs-number">2</span>)
+    <span class="hljs-keyword">go</span> <span class="hljs-function"><span class="hljs-keyword">func</span><span class="hljs-params">()</span></span> {
+        <span class="hljs-keyword">for</span> {
+            <span class="hljs-keyword">select</span> {
+            <span class="hljs-keyword">case</span> v1 := &lt;-c1:
+                fmt.Println(<span class="hljs-string">&quot;&#x901A;&#x9053;c1&#xFF1A;&quot;</span>, v1)
+            <span class="hljs-keyword">case</span> v2 := &lt;-c2:
+                fmt.Println(<span class="hljs-string">&quot;&#x901A;&#x9053;c2&#xFF1A;&quot;</span>, v2)
+            <span class="hljs-keyword">case</span> &lt;-time.After(time.Second):
+                fmt.Println(<span class="hljs-string">&quot;&#x8D85;&#x65F6;&quot;</span>)
+            }
+        }
+    }()
+
+    <span class="hljs-comment">// &#x5199;&#x5165;&#x6570;&#x636E;</span>
+    c1 &lt;- <span class="hljs-number">6</span>
+    c2 &lt;- <span class="hljs-number">8</span>
+
+    time.Sleep(<span class="hljs-number">3</span> * time.Second)
+}
+</code></pre>
+<h2 id="&#x7ED3;&#x5408;for-range&#x4F7F;&#x7528;"><a name="&#x7ED3;&#x5408;for-range&#x4F7F;&#x7528;" class="anchor-navigation-ex-anchor" href="#&#x7ED3;&#x5408;for-range&#x4F7F;&#x7528;"><i class="fa fa-link" aria-hidden="true"></i></a>4.2. &#x7ED3;&#x5408;for-range&#x4F7F;&#x7528;</h2>
+<pre><code class="lang-go"><span class="hljs-keyword">package</span> main
+
+<span class="hljs-keyword">import</span> (
+    <span class="hljs-string">&quot;fmt&quot;</span>
+    <span class="hljs-string">&quot;time&quot;</span>
+)
+
+<span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span> {
+    c := <span class="hljs-built_in">make</span>(<span class="hljs-keyword">chan</span> <span class="hljs-keyword">int</span>, <span class="hljs-number">2</span>)
+
+    <span class="hljs-keyword">go</span> <span class="hljs-function"><span class="hljs-keyword">func</span><span class="hljs-params">()</span></span> {
+        <span class="hljs-keyword">for</span> v := <span class="hljs-keyword">range</span> c {
+            fmt.Println(<span class="hljs-string">&quot;range :&quot;</span>, v)
+        }
+    }()
+
+    c &lt;- <span class="hljs-number">1</span>
+    c &lt;- <span class="hljs-number">2</span>
+    c &lt;- <span class="hljs-number">3</span>
+
+    time.Sleep(time.Second)
+}
+</code></pre>
+<h1 id="&#x53C2;&#x8003;&#x6587;&#x7AE0;"><a name="&#x53C2;&#x8003;&#x6587;&#x7AE0;" class="anchor-navigation-ex-anchor" href="#&#x53C2;&#x8003;&#x6587;&#x7AE0;"><i class="fa fa-link" aria-hidden="true"></i></a>5. &#x53C2;&#x8003;&#x6587;&#x7AE0;</h1>
+<p><a href="https://zhuanlan.zhihu.com/p/382230240" target="_blank">GO &#x4E2D; Chan &#x5B9E;&#x73B0;&#x539F;&#x7406;</a></p>
+<p><a href="https://segmentfault.com/a/1190000019172554" target="_blank">Go channel &#x5B9E;&#x73B0;&#x539F;&#x7406;&#x5206;&#x6790;</a></p>
+<p><a href="https://blog.csdn.net/u010853261/article/details/85231944" target="_blank">Golang-Channel&#x539F;&#x7406;&#x89E3;&#x6790;</a> </p>
+<footer class="page-footer"><span class="copyright">Copyright &#xA9; Lsc 2019 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
+2021-02-16 14:57:03
+</span></footer><script>var _hmt = _hmt || [];(function() {var hm = document.createElement('script');hm.src = '//hm.baidu.com/hm.js?181780a9962d5f58cb82c8ce32b1ff71';var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(hm, s);})();</script>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="map.html" class="navigation navigation-prev " aria-label="Previous page: 字典(map)">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="gpm/" class="navigation navigation-next " aria-label="Next page: GPM模型">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"管道(channel)","level":"1.7","depth":1,"next":{"title":"GPM模型","level":"1.8","depth":1,"path":"go/gpm/README.md","ref":"go/gpm/README.md","articles":[]},"previous":{"title":"字典(map)","level":"1.6","depth":1,"path":"go/map.md","ref":"go/map.md","articles":[]},"dir":"ltr"},"config":{"plugins":["fontsettings","highlight","-livereload","-search","search-pro","sharing","anchors","anchor-navigation-ex","ba","-expandable-chapters","expandable-chapters-small","toggle-chapters","splitter","tbfed-pagefooter","code","copy-code-button","-todo","-advanced-emoji","-chapter-fold"],"styles":{"website":"styles/website.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy Lsc 2019","modify_label":"修订时间：","modify_format":"2021-MM-DD HH:mm:ss"},"splitter":{},"search-pro":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":false},"fontsettings":{"family":"sans","size":2,"theme":"night"},"highlight":{},"anchor-navigation-ex":{"mode":"float","pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"isRewritePageTitle":false,"showLevel":true,"showGoTop":true,"printLog":false,"multipleH1":true,"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false}},"expandable-chapters-small":{},"copy-code-button":{},"sharing":{"all":["facebook","google","twitter","weibo","instapaper"],"facebook":true,"google":false,"instapaper":false,"twitter":true,"vk":false,"weibo":true},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{},"toggle-chapters":{},"ba":{"token":"181780a9962d5f58cb82c8ce32b1ff71"}},"theme":"default","author":"LiuShuaicai","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Lsc'Go","language":"zh-hans","links":{"sidebar":{"Lsc'Home":"http://blog.liushuaicai.com"}},"gitbook":"3.2.3","description":"为了自己的野心要不断努力！","theme-default":{"showLevel":true}},"file":{"path":"go/channel.md","mtime":"2022-02-16T06:57:03.808Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-02-16T13:47:10.437Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-toggle-chapters/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+
+    </body>
+</html>
+
