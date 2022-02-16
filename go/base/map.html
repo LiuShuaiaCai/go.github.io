@@ -1,0 +1,1075 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>字典(map) · Lsc'Go</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="LiuShuaicai">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-toggle-chapters/toggle.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../../styles/website.css">
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../command/mod.md" />
+    
+    
+    <link rel="prev" href="slice.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="http://blog.liushuaicai.com" target="_blank" class="custom-link">Lsc'Home</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    资源列表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    基础知识
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="variable.html">
+            
+                <a href="variable.html">
+            
+                    
+                    变量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="type.html">
+            
+                <a href="type.html">
+            
+                    
+                    数据类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="format.html">
+            
+                <a href="format.html">
+            
+                    
+                    格式化输出
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="conversion.html">
+            
+                <a href="conversion.html">
+            
+                    
+                    数据类型转换
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="constant.html">
+            
+                <a href="constant.html">
+            
+                    
+                    常量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="array.html">
+            
+                <a href="array.html">
+            
+                    
+                    数组(array)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="slice.html">
+            
+                <a href="slice.html">
+            
+                    
+                    切片(slice)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.8" data-path="map.html">
+            
+                <a href="map.html">
+            
+                    
+                    字典(map)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="../command/mod.md">
+            
+                <span>
+            
+                    
+                    管理工具-gomod
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../middle/">
+            
+                <a href="../middle/">
+            
+                    
+                    加强学习
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../middle/escape.html">
+            
+                <a href="../middle/escape.html">
+            
+                    
+                    变量逃逸分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../middle/uintptr.html">
+            
+                <a href="../middle/uintptr.html">
+            
+                    
+                    uintptr与unsafe.Pointer的关系
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >字典(map)</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#map&#x6570;&#x636E;&#x7ED3;&#x6784;"><b>1. </b>map&#x6570;&#x636E;&#x7ED3;&#x6784;</a></li><li><span class="title-icon "></span><a href="#&#x521D;&#x59CB;&#x5316;"><b>2. </b>&#x521D;&#x59CB;&#x5316;</a></li><li><span class="title-icon "></span><a href="#hash&#x503C;&#x5B9A;&#x4F4D;"><b>3. </b>hash&#x503C;&#x5B9A;&#x4F4D;</a></li><li><span class="title-icon "></span><a href="#&#x67E5;&#x627E;&#x8FC7;&#x7A0B;---mapaccess"><b>4. </b>&#x67E5;&#x627E;&#x8FC7;&#x7A0B; - mapaccess</a></li><li><span class="title-icon "></span><a href="#&#x5206;&#x914D;&#x8FC7;&#x7A0B;---mapassign"><b>5. </b>&#x5206;&#x914D;&#x8FC7;&#x7A0B; - mapassign</a></li><li><span class="title-icon "></span><a href="#&#x6269;&#x5BB9;&#x8FC7;&#x7A0B;"><b>6. </b>&#x6269;&#x5BB9;&#x8FC7;&#x7A0B;</a></li></ul></div><a href="#map&#x6570;&#x636E;&#x7ED3;&#x6784;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><ul>
+<li>map&#x662F;&#x65E0;&#x5E8F;&#x96C6;&#x5408;</li>
+<li>map&#x662F;&#x5F15;&#x7528;&#x7C7B;&#x578B;</li>
+<li>&#x4E3A;&#x521D;&#x59CB;&#x5316;&#x7684;map&#x503C;&#x4E3A;nil</li>
+<li>key &#x53EF;&#x4EE5;&#x662F;&#x4EFB;&#x610F;&#x53EF;&#x4EE5;&#x7528; == &#x6216;&#x8005; != &#x64CD;&#x4F5C;&#x7B26;&#x6BD4;&#x8F83;&#x7684;&#x7C7B;&#x578B;&#xFF0C;&#x6BD4;&#x5982; string&#x3001;int&#x3001;float&#x3001;&#x6307;&#x9488;&#x3001;&#x63A5;&#x53E3;&#x7C7B;&#x578B;&#x3002;&#x6240;&#x4EE5;&#x6570;&#x7EC4;&#x3001;&#x51FD;&#x6570;&#x3001;&#x5B57;&#x5178;&#x3001;&#x5207;&#x7247;&#x548C;&#x7ED3;&#x6784;&#x4F53;&#x4E0D;&#x80FD;&#x4F5C;&#x4E3A;key(&#x542B;&#x6709;&#x6570;&#x7EC4;&#x5207;&#x7247;&#x7684;&#x7ED3;&#x6784;&#x4F53;&#x4E0D;&#x80FD;&#x4F5C;&#x4E3A;key&#xFF0C;&#x53EA;&#x5305;&#x542B;&#x5185;&#x5EFA;&#x7C7B;&#x578B;&#x7684;struct&#x662F;&#x53EF;&#x4EE5;&#x4F5C;&#x4E3A;key&#x7684;&#xFF09;</li>
+</ul>
+<h1 id="map&#x6570;&#x636E;&#x7ED3;&#x6784;"><a name="map&#x6570;&#x636E;&#x7ED3;&#x6784;" class="anchor-navigation-ex-anchor" href="#map&#x6570;&#x636E;&#x7ED3;&#x6784;"><i class="fa fa-link" aria-hidden="true"></i></a>1. map&#x6570;&#x636E;&#x7ED3;&#x6784;</h1>
+<p>map&#x5E95;&#x5C42;&#x6570;&#x636E;&#x7ED3;&#x6784;&#x4F7F;&#x7528;&#x54C8;&#x5E0C;&#x8868;&#xFF0C;&#x5E76;&#x4F7F;&#x7528;&#x94FE;&#x8868;&#x67E5;&#x627E;&#x6CD5;&#x89E3;&#x51B3;&#x51B2;&#x7A81;&#xFF0C;&#x4E00;&#x4E2A;&#x54C8;&#x5E0C;&#x8868;&#x91CC;&#x53EF;&#x4EE5;&#x6709;&#x591A;&#x4E2A;&#x54C8;&#x5E0C;&#x8868;&#x7ED3;&#x70B9;&#xFF08;bucket&#xFF09;&#xFF0C;&#x6BCF;&#x4E2A;bucket&#x4FDD;&#x5B58;&#x4E86;&#x4E00;&#x4E2A;&#x6216;&#x8005;&#x4E00;&#x7EC4;&#x952E;&#x503C;&#x5BF9;&#x3002;</p>
+<h4 id="map&#x6570;&#x636E;&#x7ED3;&#x6784;&#x7531;usrlocalgosrcruntimemapgohmap&#x5B9A;&#x4E49;"><a name="map&#x6570;&#x636E;&#x7ED3;&#x6784;&#x7531;usrlocalgosrcruntimemapgohmap&#x5B9A;&#x4E49;" class="anchor-navigation-ex-anchor" href="#map&#x6570;&#x636E;&#x7ED3;&#x6784;&#x7531;usrlocalgosrcruntimemapgohmap&#x5B9A;&#x4E49;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="map&#x6570;&#x636E;&#x7ED3;&#x6784;&#x7531;usrlocalgosrcruntimemapgohmap&#x5B9A;&#x4E49;" class="plugin-anchor" href="#map&#x6570;&#x636E;&#x7ED3;&#x6784;&#x7531;usrlocalgosrcruntimemapgohmap&#x5B9A;&#x4E49;"><i class="fa fa-link" aria-hidden="true"></i></a>map&#x6570;&#x636E;&#x7ED3;&#x6784;&#x7531;<code>/usr/local/go/src/runtime/map.go:hmap</code>&#x5B9A;&#x4E49;</h4>
+<pre><code class="lang-go"><span class="hljs-keyword">type</span> hmap <span class="hljs-keyword">struct</span> {
+    count     <span class="hljs-keyword">int</span>   <span class="hljs-comment">// &#x5F53;&#x524D;&#x4FDD;&#x5B58;&#x5143;&#x7D20;&#x7684;&#x4E2A;&#x6570;&#xFF0C;&#x5FC5;&#x987B;&#x653E;&#x5728;struct&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x4F4D;&#x7F6E;&#xFF0C;&#x56E0;&#x4E3A;&#x5185;&#x7F6E;&#x7684;len&#x51FD;&#x6570;&#x4F1A;&#x901A;&#x8FC7;unsafe.Pointer&#x4F1A;&#x4ECE;&#x8FD9;&#x91CC;&#x8BFB;&#x53D6;</span>
+    flags     <span class="hljs-keyword">uint8</span>
+    B         <span class="hljs-keyword">uint8</span>  <span class="hljs-comment">// bucket&#x7684;&#x6570;&#x91CF;&#x662F;2^B, &#x6700;&#x591A;&#x53EF;&#x4EE5;&#x653E; loadFactor * 2^B &#x4E2A;&#x5143;&#x7D20;&#xFF0C;&#x518D;&#x591A;&#x5C31;&#x8981; hashGrow &#x4E86;</span>
+    noverflow <span class="hljs-keyword">uint16</span> <span class="hljs-comment">// &#x6EA2;&#x51FA;&#x6876;&#x7684;&#x5927;&#x81F4;&#x6570;&#x91CF;</span>
+    hash0     <span class="hljs-keyword">uint32</span> <span class="hljs-comment">// &#x6563;&#x5217;&#x79CD;&#x5B50;</span>
+
+    buckets    unsafe.Pointer <span class="hljs-comment">// bucket&#x6570;&#x7EC4;&#x6307;&#x9488;&#xFF0C;&#x6570;&#x7EC4;&#x5927;&#x5C0F;&#x4E3A;2^B&#xFF0C;&#x5982;&#x679C;count=0&#xFF0C;&#x5219;&#x4E3A;nil</span>
+    oldbuckets unsafe.Pointer <span class="hljs-comment">// &#x65E7;&#x7684;&#x6876;&#x6570;&#x7EC4;&#x6307;&#x9488;&#xFF0C;&#x53EA;&#x6709;&#x5728;&#x6269;&#x5BB9;&#x65F6;&#x4E3A;&#x975E;&#x7A7A;</span>
+    nevacuate  <span class="hljs-keyword">uintptr</span>        <span class="hljs-comment">// &#x6269;&#x5BB9;&#x8FDB;&#x5EA6;&#xFF0C;&#x8BB0;&#x5F55;&#x4E0B;&#x4E00;&#x4E2A;&#x8981;&#x8FC1;&#x79FB;&#x7684;&#x65E7;&#x6876;&#x7F16;&#x53F7;</span>
+    extra *mapextra <span class="hljs-comment">// &#x5F53;key&#x548C;value&#x90FD;&#x53EF;&#x4EE5;&#x5185;&#x8054;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5C31;&#x4F1A;&#x7528;&#x5230;&#x8FD9;&#x4E2A;&#x5B57;&#x6BB5;</span>
+}
+</code></pre>
+<h4 id="mapextra&#x6570;&#x636E;&#x7ED3;&#x6784;&#xFF0C;&#x5B58;&#x50A8;&#x6EA2;&#x51FA;&#x6876;&#x4FE1;&#x606F;"><a name="mapextra&#x6570;&#x636E;&#x7ED3;&#x6784;&#xFF0C;&#x5B58;&#x50A8;&#x6EA2;&#x51FA;&#x6876;&#x4FE1;&#x606F;" class="anchor-navigation-ex-anchor" href="#mapextra&#x6570;&#x636E;&#x7ED3;&#x6784;&#xFF0C;&#x5B58;&#x50A8;&#x6EA2;&#x51FA;&#x6876;&#x4FE1;&#x606F;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="mapextra&#x6570;&#x636E;&#x7ED3;&#x6784;&#xFF0C;&#x5B58;&#x50A8;&#x6EA2;&#x51FA;&#x6876;&#x4FE1;&#x606F;" class="plugin-anchor" href="#mapextra&#x6570;&#x636E;&#x7ED3;&#x6784;&#xFF0C;&#x5B58;&#x50A8;&#x6EA2;&#x51FA;&#x6876;&#x4FE1;&#x606F;"><i class="fa fa-link" aria-hidden="true"></i></a>mapextra&#x6570;&#x636E;&#x7ED3;&#x6784;&#xFF0C;&#x5B58;&#x50A8;&#x6EA2;&#x51FA;&#x6876;&#x4FE1;&#x606F;</h4>
+<pre><code class="lang-go"><span class="hljs-keyword">type</span> mapextra <span class="hljs-keyword">struct</span> {
+    overflow    *[]*bmap    <span class="hljs-comment">// &#x5F53;&#x524D;&#x5DF2;&#x7ECF;&#x4F7F;&#x7528;&#x7684;&#x6EA2;&#x51FA;&#x6876;&#x5730;&#x5740;</span>
+    oldoverflow *[]*bmap    <span class="hljs-comment">// &#x6269;&#x5BB9;&#x65F6;&#xFF0C;&#x65E7;&#x6876;&#x4F7F;&#x7528;&#x7684;&#x6EA2;&#x51FA;&#x6876;&#x5730;&#x5740;</span>
+    nextOverflow *bmap      <span class="hljs-comment">// &#x4E0B;&#x4E00;&#x4E2A;&#x7A7A;&#x95F2;&#x7684;&#x6EA2;&#x51FA;&#x6876;&#x5730;&#x5740;</span>
+}
+</code></pre>
+<h5 id="&#x4EC0;&#x4E48;&#x65F6;&#x5019;&#x80FD;&#x7528;&#x5230;mapextra"><a name="&#x4EC0;&#x4E48;&#x65F6;&#x5019;&#x80FD;&#x7528;&#x5230;mapextra" class="anchor-navigation-ex-anchor" href="#&#x4EC0;&#x4E48;&#x65F6;&#x5019;&#x80FD;&#x7528;&#x5230;mapextra"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x4EC0;&#x4E48;&#x65F6;&#x5019;&#x80FD;&#x7528;&#x5230;mapextra" class="plugin-anchor" href="#&#x4EC0;&#x4E48;&#x65F6;&#x5019;&#x80FD;&#x7528;&#x5230;mapextra"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4EC0;&#x4E48;&#x65F6;&#x5019;&#x80FD;&#x7528;&#x5230;mapextra?</h5>
+<p>&#x5F53;key&#x548C;value&#x4E0D;&#x5305;&#x542B;&#x6307;&#x9488;&#xFF0C;&#x5E76;&#x4E14;&#x662F;&#x5185;&#x8054;(inline)&#x7684;&#xFF0C;&#x5E76;&#x4E14;&lt;=128&#x5B57;&#x8282;&#xFF0C;&#x6211;&#x4EEC;&#x5C31;&#x5C06;bucket&#x7684;&#x7C7B;&#x578B;&#x6807;&#x8BB0;&#x4E3A;&#x4E0D;&#x5305;&#x542B;&#x6307;&#x9488;&#xFF0C;&#x8FD9;&#x6837;&#x5C31;&#x53EF;&#x4EE5;&#x907F;&#x514D;GC&#x626B;&#x63CF;&#x6574;&#x4E2A;map&#x3002;
+&#x53EF;&#x662F;bmap.overflow&#x5B57;&#x6BB5;&#x4E5F;&#x662F;&#x4E00;&#x4E2A;&#x6307;&#x9488;&#xFF0C;GC&#x8FD8;&#x662F;&#x626B;&#x63CF;&#x6574;&#x4E2A;map&#xFF0C;&#x4E3A;&#x4E86;&#x4F7F;&#x6EA2;&#x51FA;&#x6876;&#x4FDD;&#x6301;&#x6D3B;&#x8DC3;&#x72B6;&#x6001;&#xFF0C;&#x6211;&#x4EEC;&#x4F1A;&#x5C06;&#x6240;&#x6709;&#x7684;&#x6EA2;&#x51FA;&#x6876;&#x4FDD;&#x5B58;&#x5230;hmap.extra.overflow&#x548C;hmap.extra.oldoverflow&#x4E2D;&#x3002;</p>
+<h4 id="bucket&#x6570;&#x636E;&#x7ED3;&#x6784;&#x7531;usrlocalgosrcruntimemapgobmap&#x5B9A;&#x4E49;"><a name="bucket&#x6570;&#x636E;&#x7ED3;&#x6784;&#x7531;usrlocalgosrcruntimemapgobmap&#x5B9A;&#x4E49;" class="anchor-navigation-ex-anchor" href="#bucket&#x6570;&#x636E;&#x7ED3;&#x6784;&#x7531;usrlocalgosrcruntimemapgobmap&#x5B9A;&#x4E49;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="bucket&#x6570;&#x636E;&#x7ED3;&#x6784;&#x7531;usrlocalgosrcruntimemapgobmap&#x5B9A;&#x4E49;" class="plugin-anchor" href="#bucket&#x6570;&#x636E;&#x7ED3;&#x6784;&#x7531;usrlocalgosrcruntimemapgobmap&#x5B9A;&#x4E49;"><i class="fa fa-link" aria-hidden="true"></i></a>bucket&#x6570;&#x636E;&#x7ED3;&#x6784;&#x7531;<code>/usr/local/go/src/runtime/map.go:bmap</code>&#x5B9A;&#x4E49;</h4>
+<pre><code class="lang-go"><span class="hljs-keyword">type</span> bmap <span class="hljs-keyword">struct</span> {
+    tophash [bucketCnt]<span class="hljs-keyword">uint8</span>    <span class="hljs-comment">// &#x6BCF;&#x4E2A;&#x5143;&#x7D20;hash&#x503C;&#x7684;&#x9AD8;8&#x4F4D;&#xFF0C;&#x5982;&#x679C;tophash[0] &lt; 5&#xFF0C;&#x8868;&#x793A;&#x8FD9;&#x4E2A;&#x6876;&#x7684;&#x642C;&#x8FC1;&#x72B6;&#x6001;</span>
+    <span class="hljs-comment">// &#x7F16;&#x8BD1;&#x5668;&#x4F1A;&#x52A8;&#x6001;&#x6DFB;&#x52A0;&#x4EE5;&#x4E0B;&#x5B57;&#x6BB5;</span>
+    keys    [<span class="hljs-number">8</span>]keytype      <span class="hljs-comment">// key&#x503C;&#x6570;&#x7EC4;</span>
+    values  [<span class="hljs-number">8</span>]valuetype    <span class="hljs-comment">// value&#x503C;&#x6570;&#x7EC4;</span>
+    overflow *bmap <span class="hljs-comment">// &#x6EA2;&#x51FA;bucket&#x7684;&#x5730;&#x5740;</span>
+}
+</code></pre>
+<ul>
+<li>&#x4F7F;&#x7528;&#x62C9;&#x94FE;&#x6CD5;&#x5B9E;&#x73B0;&#x6876;&#x4E4B;&#x95F4;&#x7684;&#x4E32;&#x8054;&#xFF1A;&#x65B0;&#x6876;&#x4F18;&#x5148;&#x4F7F;&#x7528;&#x9884;&#x5206;&#x914D;&#x7684;&#x6876;</li>
+<li>&#x54C8;&#x5E0C;&#x9AD8;8&#x4F4D;&#x4F18;&#x5316;&#x6876;&#x67E5;&#x627E;key&#xFF1A;&#x5C06;key&#x54C8;&#x5E0C;&#x503C;&#x7684;&#x9AD8;8&#x4F4D;&#x5B58;&#x50A8;&#x5728;&#x6876;&#x7684;tohash&#x6570;&#x7EC4;&#x4E2D;&#xFF0C;&#x8FD9;&#x6837;&#x67E5;&#x627E;&#x65F6;&#x4E0D;&#x7528;&#x6BD4;&#x8F83;&#x5B8C;&#x6574;&#x7684;key&#x5C31;&#x80FD;&#x8FC7;&#x6EE4;&#x6389;&#x4E0D;&#x7B26;&#x5408;&#x8981;&#x6C42;&#x7684;key&#xFF0C;tohash&#x4E2D;&#x7684;&#x503C;&#x76F8;&#x7B49;&#xFF0C;&#x518D;&#x53BB;&#x6BD4;&#x8F83;key&#x503C;</li>
+<li>&#x6876;&#x4E2D;key/value&#x5206;&#x5F00;&#x5B58;&#x653E;&#xFF1A;&#x6876;&#x4E2D;&#x6240;&#x6709;&#x7684;key&#x5B58;&#x4E00;&#x8D77;&#xFF0C;&#x6240;&#x6709;&#x7684;value&#x5B58;&#x4E00;&#x8D77;&#xFF0C;&#x76EE;&#x7684;&#x662F;&#x4E3A;&#x4E86;&#x65B9;&#x4FBF;&#x5185;&#x5B58;&#x5BF9;&#x9F50;</li>
+<li>&#x6839;&#x636E;k/v&#x5927;&#x5C0F;&#x5B58;&#x50A8;&#x4E0D;&#x540C;&#x503C;&#xFF1A;&#x5F53;k&#x6216;v&#x5927;&#x4E8E;128&#x5B57;&#x8282;&#x65F6;&#xFF0C;&#x5176;&#x5B58;&#x50A8;&#x7684;&#x5B57;&#x6BB5;&#x4E3A;&#x6307;&#x9488;&#xFF0C;&#x6307;&#x5411;k&#x6216;v&#x7684;&#x5B9E;&#x9645;&#x5185;&#x5BB9;&#xFF0C;&#x5C0F;&#x4E8E;&#x7B49;&#x4E8E;128&#x5B57;&#x8282;&#xFF0C;&#x5176;&#x5B58;&#x50A8;&#x7684;&#x5B57;&#x6BB5;&#x4E3A;&#x539F;&#x503C;</li>
+<li>&#x6876;&#x7684;&#x642C;&#x8FC1;&#x72B6;&#x6001;&#xFF1A;&#x53EF;&#x4EE5;&#x6839;&#x636E;tohash&#x5B57;&#x6BB5;&#x7684;&#x503C;&#xFF0C;&#x662F;&#x5426;&#x5C0F;&#x4E8E;minTopHash&#xFF0C;&#x6765;&#x8868;&#x793A;&#x6876;&#x662F;&#x5426;&#x5904;&#x4E8E;&#x642C;&#x8FC1;&#x72B6;&#x6001;</li>
+</ul>
+<h4 id="&#x6574;&#x4F53;&#x7ED3;&#x6784;&#x5982;&#x4E0B;&#x56FE;&#x6240;&#x793A;&#xFF1A;"><a name="&#x6574;&#x4F53;&#x7ED3;&#x6784;&#x5982;&#x4E0B;&#x56FE;&#x6240;&#x793A;&#xFF1A;" class="anchor-navigation-ex-anchor" href="#&#x6574;&#x4F53;&#x7ED3;&#x6784;&#x5982;&#x4E0B;&#x56FE;&#x6240;&#x793A;&#xFF1A;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x6574;&#x4F53;&#x7ED3;&#x6784;&#x5982;&#x4E0B;&#x56FE;&#x6240;&#x793A;&#xFF1A;" class="plugin-anchor" href="#&#x6574;&#x4F53;&#x7ED3;&#x6784;&#x5982;&#x4E0B;&#x56FE;&#x6240;&#x793A;&#xFF1A;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6574;&#x4F53;&#x7ED3;&#x6784;&#x5982;&#x4E0B;&#x56FE;&#x6240;&#x793A;&#xFF1A;</h4>
+<p><img src="../images/hmap.jpg" alt="map"></p>
+<h1 id="&#x521D;&#x59CB;&#x5316;"><a name="&#x521D;&#x59CB;&#x5316;" class="anchor-navigation-ex-anchor" href="#&#x521D;&#x59CB;&#x5316;"><i class="fa fa-link" aria-hidden="true"></i></a>2. &#x521D;&#x59CB;&#x5316;</h1>
+<p>map&#x7684;&#x521D;&#x59CB;&#x5316;&#x65B9;&#x5F0F;&#x6709;&#x4E24;&#x79CD;&#xFF0C;&#x4F8B;&#x5982;</p>
+<pre><code class="lang-go">m := <span class="hljs-keyword">map</span>[k]v{}
+m := <span class="hljs-built_in">make</span>(<span class="hljs-keyword">map</span>[k]v)
+m := <span class="hljs-built_in">make</span>(<span class="hljs-keyword">map</span>[k]v, hint) <span class="hljs-comment">// &#x6307;&#x5B9A;&#x521D;&#x59CB;&#x5316;map&#x5927;&#x5C0F;&#x4E3A;hint</span>
+</code></pre>
+<h4 id="&#x65B9;&#x6CD5;&#x4E00;&#xFF1A;&#x5148;&#x58F0;&#x660E;&#x518D;&#x521D;&#x59CB;&#x5316;"><a name="&#x65B9;&#x6CD5;&#x4E00;&#xFF1A;&#x5148;&#x58F0;&#x660E;&#x518D;&#x521D;&#x59CB;&#x5316;" class="anchor-navigation-ex-anchor" href="#&#x65B9;&#x6CD5;&#x4E00;&#xFF1A;&#x5148;&#x58F0;&#x660E;&#x518D;&#x521D;&#x59CB;&#x5316;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x65B9;&#x6CD5;&#x4E00;&#xFF1A;&#x5148;&#x58F0;&#x660E;&#x518D;&#x521D;&#x59CB;&#x5316;" class="plugin-anchor" href="#&#x65B9;&#x6CD5;&#x4E00;&#xFF1A;&#x5148;&#x58F0;&#x660E;&#x518D;&#x521D;&#x59CB;&#x5316;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x65B9;&#x6CD5;&#x4E00;&#xFF1A;&#x5148;&#x58F0;&#x660E;&#x518D;&#x521D;&#x59CB;&#x5316;</h4>
+<pre><code class="lang-go"><span class="hljs-keyword">var</span> m1 <span class="hljs-keyword">map</span>[<span class="hljs-keyword">string</span>]<span class="hljs-keyword">string</span>
+
+m1 = <span class="hljs-built_in">make</span>(<span class="hljs-keyword">map</span>[<span class="hljs-keyword">string</span>]<span class="hljs-keyword">string</span>)
+
+m1[<span class="hljs-string">&quot;name&quot;</span>] = <span class="hljs-string">&quot;lsc&quot;</span>
+m1[<span class="hljs-string">&quot;age&quot;</span>] = <span class="hljs-string">&quot;28&quot;</span>
+</code></pre>
+<h4 id="&#x65B9;&#x6CD5;&#x4E8C;&#xFF1A;&#x76F4;&#x63A5;&#x521D;&#x59CB;&#x5316;"><a name="&#x65B9;&#x6CD5;&#x4E8C;&#xFF1A;&#x76F4;&#x63A5;&#x521D;&#x59CB;&#x5316;" class="anchor-navigation-ex-anchor" href="#&#x65B9;&#x6CD5;&#x4E8C;&#xFF1A;&#x76F4;&#x63A5;&#x521D;&#x59CB;&#x5316;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x65B9;&#x6CD5;&#x4E8C;&#xFF1A;&#x76F4;&#x63A5;&#x521D;&#x59CB;&#x5316;" class="plugin-anchor" href="#&#x65B9;&#x6CD5;&#x4E8C;&#xFF1A;&#x76F4;&#x63A5;&#x521D;&#x59CB;&#x5316;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x65B9;&#x6CD5;&#x4E8C;&#xFF1A;&#x76F4;&#x63A5;&#x521D;&#x59CB;&#x5316;</h4>
+<pre><code class="lang-go">m1 := <span class="hljs-built_in">make</span>(<span class="hljs-keyword">map</span>[<span class="hljs-keyword">string</span>]<span class="hljs-keyword">string</span>)
+
+m1[<span class="hljs-string">&quot;name&quot;</span>] = <span class="hljs-string">&quot;lsc&quot;</span>
+m1[<span class="hljs-string">&quot;age&quot;</span>] = <span class="hljs-string">&quot;28&quot;</span>
+</code></pre>
+<h4 id="&#x65B9;&#x6CD5;&#x4E09;&#xFF1A;&#x76F4;&#x63A5;&#x8D4B;&#x503C;"><a name="&#x65B9;&#x6CD5;&#x4E09;&#xFF1A;&#x76F4;&#x63A5;&#x8D4B;&#x503C;" class="anchor-navigation-ex-anchor" href="#&#x65B9;&#x6CD5;&#x4E09;&#xFF1A;&#x76F4;&#x63A5;&#x8D4B;&#x503C;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x65B9;&#x6CD5;&#x4E09;&#xFF1A;&#x76F4;&#x63A5;&#x8D4B;&#x503C;" class="plugin-anchor" href="#&#x65B9;&#x6CD5;&#x4E09;&#xFF1A;&#x76F4;&#x63A5;&#x8D4B;&#x503C;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x65B9;&#x6CD5;&#x4E09;&#xFF1A;&#x76F4;&#x63A5;&#x8D4B;&#x503C;</h4>
+<pre><code class="lang-go">m1 := <span class="hljs-keyword">map</span>[<span class="hljs-keyword">string</span>]<span class="hljs-keyword">string</span>{
+    <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;lsc&quot;</span>,
+    <span class="hljs-string">&quot;age&quot;</span>: <span class="hljs-string">&quot;28&quot;</span>,
+}
+</code></pre>
+<h4 id="map&#x7684;&#x521B;&#x5EFA;&#x8FC7;&#x7A0B;"><a name="map&#x7684;&#x521B;&#x5EFA;&#x8FC7;&#x7A0B;" class="anchor-navigation-ex-anchor" href="#map&#x7684;&#x521B;&#x5EFA;&#x8FC7;&#x7A0B;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="map&#x7684;&#x521B;&#x5EFA;&#x8FC7;&#x7A0B;" class="plugin-anchor" href="#map&#x7684;&#x521B;&#x5EFA;&#x8FC7;&#x7A0B;"><i class="fa fa-link" aria-hidden="true"></i></a>map&#x7684;&#x521B;&#x5EFA;&#x8FC7;&#x7A0B;</h4>
+<p>&#x6E90;&#x7801;&#x521B;&#x5EFA;map&#x7684;&#x65B9;&#x6CD5;&#x6709;&#x4E09;&#x79CD;&#xFF1A;</p>
+<pre><code class="lang-go"><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">makemap64</span><span class="hljs-params">(t *maptype, hint <span class="hljs-keyword">int64</span>, h *hmap)</span> *<span class="hljs-title">hmap</span>
+<span class="hljs-title">func</span> <span class="hljs-title">makemap_small</span><span class="hljs-params">()</span> *<span class="hljs-title">hmap</span>
+<span class="hljs-title">func</span> <span class="hljs-title">makemap</span><span class="hljs-params">(t *maptype, hint <span class="hljs-keyword">int</span>, h *hmap)</span> *<span class="hljs-title">hmap</span>
+</span></code></pre>
+<p>&#x5F53; hint&lt;=8 &#x65F6;&#xFF0C;&#x8C03;&#x7528;makemap_small&#x51FD;&#x6570;&#xFF0C;&#x5426;&#x5219;&#x6700;&#x7EC8;&#x90FD;&#x4F1A;&#x8C03;&#x7528;makemap&#x51FD;&#x6570;&#xFF0C;&#x521B;&#x5EFA;&#x8FC7;&#x7A0B;&#x5982;&#x4E0B;&#xFF1A;
+<img src="../images/makemap.jpg" alt="makemap"></p>
+<h1 id="hash&#x503C;&#x5B9A;&#x4F4D;"><a name="hash&#x503C;&#x5B9A;&#x4F4D;" class="anchor-navigation-ex-anchor" href="#hash&#x503C;&#x5B9A;&#x4F4D;"><i class="fa fa-link" aria-hidden="true"></i></a>3. hash&#x503C;&#x5B9A;&#x4F4D;</h1>
+<p>&#x4E0D;&#x540C;&#x7C7B;&#x578B;&#x7684;key&#xFF0C;&#x4F1A;&#x4F7F;&#x7528;&#x4E0D;&#x4E00;&#x6837;&#x7684;hash&#x7B97;&#x6CD5;&#xFF0C;&#x7531;<code>src/runtime/alg.go:typehash</code>&#x51FD;&#x6570;&#x5B9A;&#x4E49;</p>
+<pre><code class="lang-go">hash := t.hasher(key, <span class="hljs-keyword">uintptr</span>(h.hash0))
+</code></pre>
+<p>&#x901A;&#x8FC7;hash&#x503C;&#x7684;&#x5B9A;&#x4F4D;&#x6D41;&#x7A0B;&#x5982;&#x4E0B;&#xFF1A;</p>
+<ul>
+<li>&#x901A;&#x8FC7;&#x4F4E;B&#x4F4D;&#x5B9A;&#x4F4D;&#x5230;&#x6240;&#x5728;&#x6876;&#xFF08;bucket&#xFF09;&#x4F4D;&#x7F6E;</li>
+<li>&#x518D;&#x901A;&#x8FC7;&#x9AD8;8&#x4F4D;&#x5B9A;&#x4F4D;&#x5728;bucket&#x7684;&#x54EA;&#x4E2A;&#x4F4D;&#x7F6E;</li>
+</ul>
+<p>&#x770B;&#x4E0B;&#x9762;&#x8FD9;&#x4E2A;&#x4F8B;&#x5B50;&#xFF0C;&#x5728;map&#x4E2D;&#x67E5;&#x627E;key1&#x7684;&#x503C;</p>
+<pre><code class="lang-go"><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span> {
+    m := <span class="hljs-built_in">make</span>(<span class="hljs-keyword">map</span>[<span class="hljs-keyword">string</span>]<span class="hljs-keyword">string</span>, <span class="hljs-number">120</span>)
+
+    <span class="hljs-keyword">for</span> i := <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">120</span>; i++ {
+        k := fmt.Sprintf(<span class="hljs-string">&quot;key%d&quot;</span>, i)
+        v := fmt.Sprintf(<span class="hljs-string">&quot;value%d&quot;</span>, i)
+        m[k] = v
+    }
+
+    f := m[<span class="hljs-string">&quot;key1&quot;</span>]
+    fmt.Println(f)
+}
+</code></pre>
+<p>&#x5177;&#x4F53;&#x6D41;&#x7A0B;&#x5982;&#x4E0B;&#xFF1A;
+<img src="../images/hash.jpg" alt="hash"></p>
+<h1 id="&#x67E5;&#x627E;&#x8FC7;&#x7A0B;---mapaccess"><a name="&#x67E5;&#x627E;&#x8FC7;&#x7A0B;---mapaccess" class="anchor-navigation-ex-anchor" href="#&#x67E5;&#x627E;&#x8FC7;&#x7A0B;---mapaccess"><i class="fa fa-link" aria-hidden="true"></i></a>4. &#x67E5;&#x627E;&#x8FC7;&#x7A0B; - mapaccess</h1>
+<p>&#x67E5;&#x627E;&#x51FD;&#x6570;&#x6709;&#x4E09;&#x79CD;&#xFF0C;&#x5177;&#x4F53;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-go"><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">mapaccess1</span><span class="hljs-params">(t *maptype, h *hmap, key unsafe.Pointer)</span> <span class="hljs-title">unsafe</span>.<span class="hljs-title">Pointer</span>
+<span class="hljs-title">func</span> <span class="hljs-title">mapaccess2</span><span class="hljs-params">(t *maptype, h *hmap, key unsafe.Pointer)</span> <span class="hljs-params">(unsafe.Pointer, <span class="hljs-keyword">bool</span>)</span>
+<span class="hljs-title">func</span> <span class="hljs-title">mapaccessK</span><span class="hljs-params">(t *maptype, h *hmap, key unsafe.Pointer)</span> <span class="hljs-params">(unsafe.Pointer, unsafe.Pointer)</span>
+</span></code></pre>
+<ul>
+<li>&#x4F7F;&#x7528;&#x5F62;&#x5F0F;<code>v := m[k]</code>&#x65F6;&#x4F1A;&#x8C03;&#x7528;&#x51FD;&#x6570;mapaccess1</li>
+<li>&#x4F7F;&#x7528;&#x5F62;&#x5F0F;<code>v,ok := m[k]</code>&#x65F6;&#x4F1A;&#x8C03;&#x7528;&#x51FD;&#x6570;mapaccess2</li>
+<li>&#x904D;&#x5386;map&#x65F6;&#x4F1A;&#x8C03;&#x7528;&#x51FD;&#x6570;mapaccessK</li>
+</ul>
+<p>&#x6839;&#x636E;key&#x7684;&#x7C7B;&#x578B;&#x8C03;&#x7528;&#x4E0D;&#x540C;&#x7684;&#x51FD;&#x6570;&#xFF0C;&#x4E0D;&#x8FC7;&#x57FA;&#x672C;&#x903B;&#x8F91;&#x90FD;&#x5DEE;&#x4E0D;&#x591A;&#xFF0C;mapaccess1&#x7684;&#x8FC7;&#x7A0B;&#x5982;&#x4E0B;&#xFF1A;
+<img src="../images/mapfind.jpg" alt="mapfind">
+&#x6E90;&#x7801;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-go"><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">mapaccess1</span><span class="hljs-params">(t *maptype, h *hmap, key unsafe.Pointer)</span> <span class="hljs-title">unsafe</span>.<span class="hljs-title">Pointer</span></span> {
+    <span class="hljs-comment">// &#x662F;&#x5426;&#x5F00;&#x542F;&#x7ADE;&#x6001;&#x68C0;&#x6D4B; -race</span>
+    <span class="hljs-keyword">if</span> raceenabled &amp;&amp; h != <span class="hljs-literal">nil</span> {
+        callerpc := getcallerpc()
+        pc := funcPC(mapaccess1)
+        racereadpc(unsafe.Pointer(h), callerpc, pc)
+        raceReadObjectPC(t.key, key, callerpc, pc)
+    }
+    <span class="hljs-comment">// &#x662F;&#x5426;&#x5F00;&#x542F;&#x5185;&#x5B58;&#x626B;&#x63CF; -msan</span>
+    <span class="hljs-keyword">if</span> msanenabled &amp;&amp; h != <span class="hljs-literal">nil</span> {
+        msanread(key, t.key.size)
+    }
+    <span class="hljs-comment">// &#x5982;&#x679C;hmap&#x4E3A;&#x7A7A;&#x6216;&#x8005;&#x5143;&#x7D20;&#x4E2A;&#x6570;&#x4E3A;0&#xFF0C;&#x8FD4;&#x56DE;&#x96F6;&#x503C;</span>
+    <span class="hljs-keyword">if</span> h == <span class="hljs-literal">nil</span> || h.count == <span class="hljs-number">0</span> {
+        <span class="hljs-keyword">if</span> t.hashMightPanic() {
+            t.hasher(key, <span class="hljs-number">0</span>) <span class="hljs-comment">// see issue 23734</span>
+        }
+        <span class="hljs-keyword">return</span> unsafe.Pointer(&amp;zeroVal[<span class="hljs-number">0</span>])
+    }
+
+    <span class="hljs-comment">// &#x5F53;h.flags&#x5BF9;&#x5E94;&#x7684;&#x503C;&#x4E3A;hashWriting&#xFF08;&#x8868;&#x660E;&#x6709;&#x5176;&#x4F59;goroutine&#x6B63;&#x5728;&#x5F80;map&#x4E2D;&#x5199;key&#xFF09;&#x65F6;&#xFF0C;&#x5219;&#x4F1A;&#x629B;&#x9519;&#x8BEF;&#x3002;</span>
+    <span class="hljs-comment">// &#x8FD9;&#x4E5F;&#x8868;&#x793A;&#xFF0C;go&#x7684;map&#x662F;&#x975E;&#x5E76;&#x53D1;&#x5B89;&#x5168;&#x7684;</span>
+    <span class="hljs-keyword">if</span> h.flags&amp;hashWriting != <span class="hljs-number">0</span> {
+        throw(<span class="hljs-string">&quot;concurrent map read and map write&quot;</span>)
+    }
+
+    <span class="hljs-comment">// &#x4E0D;&#x540C;&#x7C7B;&#x578B;&#x7684;key&#xFF0C;&#x4F1A;&#x4F7F;&#x7528;&#x4E0D;&#x4E00;&#x6837;&#x7684;hash&#x7B97;&#x6CD5;&#xFF0C;&#x7531;```src/runtime/alg.go:typehash```&#x51FD;&#x6570;&#x5B9A;&#x4E49;</span>
+    hash := t.hasher(key, <span class="hljs-keyword">uintptr</span>(h.hash0))
+
+    <span class="hljs-comment">// &#x6839;&#x636E;hash&#x503C;&#x627E;&#x5230;&#x5BF9;&#x5E94;&#x7684;bucket</span>
+    m := bucketMask(h.B)
+    b := (*bmap)(add(h.buckets, (hash&amp;m)*<span class="hljs-keyword">uintptr</span>(t.bucketsize)))
+
+    <span class="hljs-comment">// &#x5982;&#x679C;oldbuckets&#x4E0D;&#x4E3A;&#x7A7A;&#xFF0C;&#x8BF4;&#x660E;map&#x53D1;&#x751F;&#x4E86;&#x6269;&#x5BB9;</span>
+    <span class="hljs-comment">// &#x5982;&#x679C;&#x53D1;&#x751F;&#x4E86;&#x6269;&#x5BB9;&#xFF0C;&#x53EF;&#x80FD;&#x6709;&#x90E8;&#x5206;&#x6570;&#x636E;&#x8FD8;&#x6CA1;&#x6709;&#x8FC1;&#x79FB;&#x5B8C;&#x6210;&#xFF0C;&#x6240;&#x4EE5;&#x8981;&#x5148;&#x67E5;&#x627E;&#x7684;&#x8001;&#x7684;buckets</span>
+    <span class="hljs-keyword">if</span> c := h.oldbuckets; c != <span class="hljs-literal">nil</span> {
+        <span class="hljs-comment">// &#x662F;&#x5426;&#x6269;&#x5BB9;&#x5230;oldbuckets&#x7684;2&#x500D;</span>
+        <span class="hljs-keyword">if</span> !h.sameSizeGrow() {
+            m &gt;&gt;= <span class="hljs-number">1</span>
+        }
+        <span class="hljs-comment">// &#x5728;&#x8001;&#x7684;buckets&#x627E;&#x5230;&#x5BF9;&#x5E94;&#x7684;bucket</span>
+        oldb := (*bmap)(add(c, (hash&amp;m)*<span class="hljs-keyword">uintptr</span>(t.bucketsize)))
+
+        <span class="hljs-comment">// &#x5224;&#x65AD;&#x8FC1;&#x79FB;&#x662F;&#x5426;&#x5B8C;&#x6210;&#xFF0C;&#x53EA;&#x6709;&#x6CA1;&#x6709;&#x8FC1;&#x79FB;&#x5B8C;&#x6210;&#x65F6;&#xFF0C;&#x624D;&#x4F7F;&#x7528;oldbucket</span>
+        <span class="hljs-keyword">if</span> !evacuated(oldb) {
+            b = oldb
+        }
+    }
+
+    <span class="hljs-comment">// &#x53D6;&#x51FA;&#x5F53;&#x524D;key&#x503C;&#x7684;tophash&#x503C;</span>
+    top := tophash(hash)
+
+  <span class="hljs-comment">// &#x53CC;&#x5C42;&#x5FAA;&#x73AF;&#x904D;&#x5386;&#xFF1A;&#x5916;&#x5C42;&#x5FAA;&#x73AF;&#x662F;&#x4ECE;&#x6876;&#x5230;&#x6EA2;&#x51FA;&#x6876;&#x904D;&#x5386;&#xFF1B;&#x5185;&#x5C42;&#x662F;&#x6876;&#x4E2D;&#x7684;cell&#x904D;&#x5386;</span>
+  <span class="hljs-comment">// &#x8DF3;&#x51FA;&#x5FAA;&#x73AF;&#x7684;&#x6761;&#x4EF6;&#x6709;&#x4E09;&#x79CD;&#xFF1A;&#x7B2C;&#x4E00;&#x79CD;&#x662F;&#x5DF2;&#x7ECF;&#x627E;&#x5230;key&#x503C;&#xFF1B;&#x7B2C;&#x4E8C;&#x79CD;&#x662F;&#x5F53;&#x524D;&#x6876;&#x518D;&#x65E0;&#x6EA2;&#x51FA;&#x6876;&#xFF1B;</span>
+  <span class="hljs-comment">// &#x7B2C;&#x4E09;&#x79CD;&#x662F;&#x5F53;&#x524D;&#x6876;&#x4E2D;&#x6709;cell&#x4F4D;&#x7684;tophash&#x503C;&#x662F;emptyRest&#xFF0C;&#x8FD9;&#x4E2A;&#x503C;&#x5728;&#x524D;&#x9762;&#x89E3;&#x91CA;&#x8FC7;&#xFF0C;&#x5B83;&#x8868;&#x660E;&#x6B64;&#x65F6;&#x7684;&#x6876;&#x540E;&#x9762;&#x7684;cell&#x8FD8;&#x672A;&#x5229;&#x7528;&#xFF0C;&#x56E0;&#x6B64;&#x65E0;&#x9700;&#x518D;&#x7EE7;&#x7EED;&#x904D;&#x5386;&#x3002;</span>
+bucketloop:
+    <span class="hljs-keyword">for</span> ; b != <span class="hljs-literal">nil</span>; b = b.overflow(t) {
+        <span class="hljs-keyword">for</span> i := <span class="hljs-keyword">uintptr</span>(<span class="hljs-number">0</span>); i &lt; bucketCnt; i++ {
+            <span class="hljs-comment">// &#x5148;&#x6839;&#x636E;tophash&#x5B57;&#x6BB5;&#x548C;key&#x54C8;&#x5E0C;&#x503C;&#x7684;&#x9AD8;8&#x4F4D;&#x662F;&#x5426;&#x76F8;&#x7B49;</span>
+            <span class="hljs-keyword">if</span> b.tophash[i] != top {
+                <span class="hljs-keyword">if</span> b.tophash[i] == emptyRest {
+                    <span class="hljs-keyword">break</span> bucketloop
+                }
+                <span class="hljs-keyword">continue</span>
+            }
+            <span class="hljs-comment">// &#x8BA1;&#x7B97;key&#x7684;&#x5730;&#x5740;</span>
+            k := add(unsafe.Pointer(b), dataOffset+i*<span class="hljs-keyword">uintptr</span>(t.keysize))
+            <span class="hljs-comment">// &#x5982;&#x679C;key&#x5B58;&#x50A8;&#x7684;&#x662F;&#x6307;&#x9488;&#xFF0C;&#x8FDB;&#x884C;&#x7C7B;&#x578B;&#x8F6C;&#x6362;</span>
+            <span class="hljs-keyword">if</span> t.indirectkey() {
+                k = *((*unsafe.Pointer)(k))
+            }
+            <span class="hljs-comment">// &#x5982;&#x679C;key=k&#x7684;&#x8BDD;&#xFF0C;&#x8BF4;&#x660E;&#x5DF2;&#x7ECF;&#x67E5;&#x5230;&#xFF0C;&#x67E5;&#x627E;&#x5BF9;&#x5E94;key&#x7684;value&#x503C;</span>
+            <span class="hljs-keyword">if</span> t.key.equal(key, k) {
+                <span class="hljs-comment">// &#x8BA1;&#x7B97;value&#x7684;&#x5730;&#x5740;</span>
+                e := add(unsafe.Pointer(b), dataOffset+bucketCnt*<span class="hljs-keyword">uintptr</span>(t.keysize)+i*<span class="hljs-keyword">uintptr</span>(t.elemsize))
+                <span class="hljs-comment">// &#x5982;&#x679C;value&#x5B58;&#x50A8;&#x7684;&#x662F;&#x6307;&#x9488;&#xFF0C;&#x8FDB;&#x884C;&#x7C7B;&#x578B;&#x8F6C;&#x6362;</span>
+                <span class="hljs-keyword">if</span> t.indirectelem() {
+                    e = *((*unsafe.Pointer)(e))
+                }
+                <span class="hljs-keyword">return</span> e
+            }
+        }
+    }
+    <span class="hljs-comment">// &#x672A;&#x627E;&#x5230;&#x8FD4;&#x56DE;0</span>
+    <span class="hljs-keyword">return</span> unsafe.Pointer(&amp;zeroVal[<span class="hljs-number">0</span>])
+}
+</code></pre>
+<h1 id="&#x5206;&#x914D;&#x8FC7;&#x7A0B;---mapassign"><a name="&#x5206;&#x914D;&#x8FC7;&#x7A0B;---mapassign" class="anchor-navigation-ex-anchor" href="#&#x5206;&#x914D;&#x8FC7;&#x7A0B;---mapassign"><i class="fa fa-link" aria-hidden="true"></i></a>5. &#x5206;&#x914D;&#x8FC7;&#x7A0B; - mapassign</h1>
+<p>&#x6309;&#x7167;&#x4E0D;&#x540C;&#x7C7B;&#x578B;&#xFF0C;&#x5206;&#x914D;&#x4E5F;&#x5206;&#x4E3A;3&#x79CD;</p>
+<pre><code class="lang-go"><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">mapassign_faststr</span><span class="hljs-params">(t *maptype, h *hmap, s <span class="hljs-keyword">string</span>)</span> <span class="hljs-title">unsafe</span>.<span class="hljs-title">Pointer</span>
+<span class="hljs-title">func</span> <span class="hljs-title">mapassign_fast64</span><span class="hljs-params">(t *maptype, h *hmap, key <span class="hljs-keyword">uint64</span>)</span> <span class="hljs-title">unsafe</span>.<span class="hljs-title">Pointer</span>
+<span class="hljs-title">func</span> <span class="hljs-title">mapassign_fast32</span><span class="hljs-params">(t *maptype, h *hmap, key <span class="hljs-keyword">uint32</span>)</span> <span class="hljs-title">unsafe</span>.<span class="hljs-title">Pointer</span>
+</span></code></pre>
+<p>&#x5404;&#x79CD;&#x7C7B;&#x578B;&#x7684;&#x903B;&#x8F91;&#x90FD;&#x5DEE;&#x4E0D;&#x591A;&#xFF0C;mapassign&#x7684;&#x903B;&#x8F91;&#x5982;&#x4E0B;&#xFF1A;
+<img src="../images/mapassign.jpg" alt="mapassign"></p>
+<pre><code class="lang-go"><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">mapassign</span><span class="hljs-params">(t *maptype, h *hmap, key unsafe.Pointer)</span> <span class="hljs-title">unsafe</span>.<span class="hljs-title">Pointer</span></span> {
+    <span class="hljs-comment">// &#x82E5;&#x662F;h&#x662F;&#x7A7A;&#x6307;&#x9488;&#xFF0C;&#x8D4B;&#x503C;&#x4F1A;&#x5F15;&#x53D1;panic</span>
+    <span class="hljs-comment">// &#x4F8B;&#x5982;&#xFF1A;</span>
+    <span class="hljs-comment">// var m map[string]string</span>
+    <span class="hljs-comment">// m[&quot;name&quot;] = &quot;lsc&quot;</span>
+    <span class="hljs-keyword">if</span> h == <span class="hljs-literal">nil</span> {
+        <span class="hljs-built_in">panic</span>(plainError(<span class="hljs-string">&quot;assignment to entry in nil map&quot;</span>))
+    }
+    <span class="hljs-comment">// &#x662F;&#x5426;&#x5F00;&#x542F;&#x7ADE;&#x6001;&#x68C0;&#x6D4B; -race</span>
+    <span class="hljs-keyword">if</span> raceenabled {
+        callerpc := getcallerpc()
+        pc := funcPC(mapassign)
+        racewritepc(unsafe.Pointer(h), callerpc, pc)
+        raceReadObjectPC(t.key, key, callerpc, pc)
+    }
+    <span class="hljs-comment">// &#x662F;&#x5426;&#x5F00;&#x542F;&#x5185;&#x5B58;&#x626B;&#x63CF; -msan</span>
+    <span class="hljs-keyword">if</span> msanenabled {
+        msanread(key, t.key.size)
+    }
+    <span class="hljs-comment">// &#x662F;&#x5426;&#x6709;&#x5E76;&#x53D1;&#x5199;&#x5165;</span>
+    <span class="hljs-keyword">if</span> h.flags&amp;hashWriting != <span class="hljs-number">0</span> {
+        throw(<span class="hljs-string">&quot;concurrent map writes&quot;</span>)
+    }
+    <span class="hljs-comment">// &#x8BA1;&#x7B97;hash&#x503C;</span>
+    hash := t.hasher(key, <span class="hljs-keyword">uintptr</span>(h.hash0))
+    <span class="hljs-comment">// &#x5728;&#x8C03;&#x7528;t.hasher&#x4E4B;&#x540E;&#x8BBE;&#x7F6E;hashWriting&#xFF0C;&#x6211;&#x4EEC;&#x5B9E;&#x9645;&#x4E0A;&#x8FD8;&#x6CA1;&#x6709;&#x5B8C;&#x6210;&#x5199;&#x64CD;&#x4F5C;&#xFF0C;&#x518D;&#x6B21;&#x8C03;&#x7528;t.hasher&#x53EF;&#x80FD;&#x4F1A;&#x53D1;&#x751F;painc</span>
+    <span class="hljs-comment">// &#x5F00;&#x542F;&#x5C4F;&#x969C;&#x5199;</span>
+    h.flags ^= hashWriting
+
+    <span class="hljs-keyword">if</span> h.buckets == <span class="hljs-literal">nil</span> {
+        h.buckets = newobject(t.bucket) <span class="hljs-comment">// newarray(t.bucket, 1)</span>
+    }
+
+again:
+    <span class="hljs-comment">// &#x8BA1;&#x7B97;&#x5E94;&#x8BE5;&#x5B58;&#x5728;&#x7B2C;&#x51E0;&#x4E2A;&#x6876;</span>
+    bucket := hash &amp; bucketMask(h.B)
+    <span class="hljs-comment">// &#x5982;&#x679C;map&#x6570;&#x636E;&#x6B63;&#x5728;&#x8FC1;&#x79FB;&#xFF0C;&#x5219;&#x5148;&#x8981;&#x8FDB;&#x884C;&#x8FC1;&#x79FB;</span>
+    <span class="hljs-keyword">if</span> h.growing() {
+        growWork(t, h, bucket)
+    }
+    <span class="hljs-comment">// &#x786E;&#x5B9A;bucket&#x6876;&#x7684;&#x5185;&#x5B58;&#x4F4D;&#x7F6E;</span>
+    b := (*bmap)(add(h.buckets, bucket*<span class="hljs-keyword">uintptr</span>(t.bucketsize)))
+    <span class="hljs-comment">// &#x8BA1;&#x7B97;&#x54C8;&#x5E0C;&#x503C;&#x7684;&#x9AD8;&#x516B;&#x4F4D;&#xFF0C;&#x5373;&#x786E;&#x5B9A;&#x5728;&#x5F53;&#x524D;&#x6876;&#x7684;&#x4F4D;&#x7F6E;&#xFF0C;&#x5B57;&#x6BB5;tophash&#x5B57;&#x6BB5;&#x7684;&#x503C;</span>
+    top := tophash(hash)
+
+    <span class="hljs-keyword">var</span> inserti *<span class="hljs-keyword">uint8</span>
+    <span class="hljs-keyword">var</span> insertk unsafe.Pointer
+    <span class="hljs-keyword">var</span> elem unsafe.Pointer
+bucketloop:
+    <span class="hljs-comment">// &#x904D;&#x5386;</span>
+    <span class="hljs-keyword">for</span> {
+        <span class="hljs-comment">// &#x904D;&#x5386;&#x6876;&#x4E2D;&#x7684;8&#x4E2A;cell</span>
+        <span class="hljs-keyword">for</span> i := <span class="hljs-keyword">uintptr</span>(<span class="hljs-number">0</span>); i &lt; bucketCnt; i++ {
+            <span class="hljs-comment">// &#x5F53;&#x524D;cell&#x503C;&#x4E0D;&#x7B49;&#x4E8E;top</span>
+            <span class="hljs-keyword">if</span> b.tophash[i] != top {
+                <span class="hljs-comment">// &#x5982;&#x679C;&#x5F53;&#x524D;cell&#x4E3A;&#x7A7A;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x5728;&#x5F53;&#x524D;&#x4F4D;&#x7F6E;&#x63D2;&#x5165;</span>
+                <span class="hljs-keyword">if</span> isEmpty(b.tophash[i]) &amp;&amp; inserti == <span class="hljs-literal">nil</span> {
+                    <span class="hljs-comment">// &#x5728;tophash&#x5B57;&#x6BB5;&#x4E2D;&#x7684;&#x5730;&#x5740;</span>
+                    inserti = &amp;b.tophash[i]
+                    <span class="hljs-comment">// key&#x7684;&#x5730;&#x5740;</span>
+                    insertk = add(unsafe.Pointer(b), dataOffset+i*<span class="hljs-keyword">uintptr</span>(t.keysize))
+                    <span class="hljs-comment">// value&#x7684;&#x5730;&#x5740;</span>
+                    elem = add(unsafe.Pointer(b), dataOffset+bucketCnt*<span class="hljs-keyword">uintptr</span>(t.keysize)+i*<span class="hljs-keyword">uintptr</span>(t.elemsize))
+                }
+                <span class="hljs-comment">// &#x5982;&#x679C;cell&#x503C;&#x4E3A;0&#xFF0C;&#x8DF3;&#x51FA;bucket&#x5FAA;&#x73AF;&#xFF0C;&#x5426;&#x5219;&#x7EE7;&#x7EED;&#x904D;&#x5386;cell</span>
+                <span class="hljs-keyword">if</span> b.tophash[i] == emptyRest {
+                    <span class="hljs-keyword">break</span> bucketloop
+                }
+                <span class="hljs-keyword">continue</span>
+            }
+            <span class="hljs-comment">// &#x8BA1;&#x7B97;k&#x7684;&#x5730;&#x5740;&#xFF0C;&#x5982;&#x679C;&#x5B58;&#x7684;&#x662F;&#x7D22;&#x5F15;&#xFF0C;&#x67E5;&#x627E;&#x5BF9;&#x5E94;&#x7684;&#x503C;</span>
+            k := add(unsafe.Pointer(b), dataOffset+i*<span class="hljs-keyword">uintptr</span>(t.keysize))
+            <span class="hljs-keyword">if</span> t.indirectkey() {
+                k = *((*unsafe.Pointer)(k))
+            }
+            <span class="hljs-comment">// &#x5982;&#x679C;key&#x4E0D;&#x76F8;&#x7B49;&#xFF0C;&#x7EE7;&#x7EED;&#x904D;&#x5386;cell</span>
+            <span class="hljs-keyword">if</span> !t.key.equal(key, k) {
+                <span class="hljs-keyword">continue</span>
+            }
+            <span class="hljs-comment">// &#x5982;&#x679C;key&#x5DF2;&#x7ECF;&#x5B58;&#x5728;&#xFF0C;&#x5C31;&#x66F4;&#x65B0;</span>
+            <span class="hljs-keyword">if</span> t.needkeyupdate() {
+                typedmemmove(t.key, k, key)
+            }
+            <span class="hljs-comment">// &#x8BA1;&#x7B97;value&#x7684;&#x5730;&#x5740;</span>
+            elem = add(unsafe.Pointer(b), dataOffset+bucketCnt*<span class="hljs-keyword">uintptr</span>(t.keysize)+i*<span class="hljs-keyword">uintptr</span>(t.elemsize))
+            <span class="hljs-comment">// &#x7ED3;&#x675F;</span>
+            <span class="hljs-keyword">goto</span> done
+        }
+        <span class="hljs-comment">// &#x5982;&#x679C;&#x5F53;&#x524D;&#x6876;&#x4E2D;&#x7684;8&#x4E2A;cell&#x4E2D;&#x90FD;&#x6CA1;&#x6709;&#x4F4D;&#x7F6E;&#xFF0C;&#x90A3;&#x5C31;&#x904D;&#x5386;&#x6EA2;&#x51FA;&#x6876;</span>
+        ovf := b.overflow(t)
+        <span class="hljs-comment">// &#x5982;&#x679C;&#x6CA1;&#x6709;&#x6EA2;&#x51FA;&#x6876;&#xFF0C;&#x8DF3;&#x51FA;&#x5FAA;&#x73AF;</span>
+        <span class="hljs-keyword">if</span> ovf == <span class="hljs-literal">nil</span> {
+            <span class="hljs-keyword">break</span>
+        }
+        b = ovf
+    }
+
+    <span class="hljs-comment">// &#x5982;&#x679C;&#x5728;&#x6240;&#x6709;&#x6876;&#x4E2D;&#x90FD;&#x6CA1;&#x6709;&#x627E;&#x5230;key&#xFF0C;&#x8FDB;&#x884C;&#x4E0B;&#x9762;&#x7684;&#x64CD;&#x4F5C;</span>
+    <span class="hljs-comment">// &#x8D1F;&#x8F7D;&#x56E0;&#x5B50; = count/2^B</span>
+    <span class="hljs-comment">// &#x5982;&#x679C;&#x8D1F;&#x8F7D;&#x56E0;&#x5B50;&gt;6.5&#x6216;&#x8005;&#x6EA2;&#x51FA;&#x6876;&#x7684;&#x6570;&#x91CF;&#x8FC7;&#x591A;&#xFF0C;&#x5219;&#x8FDB;&#x884C;&#x6269;&#x5BB9;</span>
+    <span class="hljs-keyword">if</span> !h.growing() &amp;&amp; (overLoadFactor(h.count+<span class="hljs-number">1</span>, h.B) || tooManyOverflowBuckets(h.noverflow, h.B)) {
+        hashGrow(t, h)
+        <span class="hljs-comment">// hashGrow()&#x5B9E;&#x9645;&#x5E76;&#x672A;&#x5B8C;&#x6210;&#x6269;&#x5BB9;&#xFF0C;&#x5BF9;&#x54C8;&#x5E0C;&#x8868;&#x6570;&#x636E;&#x7684;&#x8FC1;&#x79FB;&#x64CD;&#x505A;&#x662F;&#x7531;growWork()&#x6765;&#x5B8C;&#x6210;&#x7684;&#x3002;</span>
+        <span class="hljs-comment">// &#x4ECE;&#x65B0;&#x8DF3;&#x5165;again&#x903B;&#x8F91;&#xFF0C;&#x5728;&#x8FDB;&#x884C;&#x5B8C;growWork()&#x64CD;&#x505A;&#x540E;&#xFF0C;&#x518D;&#x6B21;&#x904D;&#x5386;&#x65B0;&#x7684;&#x6876;&#x3002;</span>
+        <span class="hljs-keyword">goto</span> again
+    }
+
+    <span class="hljs-comment">// &#x4E3A;&#x5F53;&#x524D;&#x6876;&#x518D;&#x65B0;&#x5EFA;&#x6EA2;&#x51FA;&#x6876;&#xFF0C;&#x5E76;&#x5C06;tophash&#xFF0C;key&#x63D2;&#x5165;&#x5230;&#x65B0;&#x5EFA;&#x6EA2;&#x51FA;&#x6876;&#x7684;&#x5BF9;&#x5E94;&#x5185;&#x5B58;&#x7684;0&#x53F7;&#x4F4D;&#x7F6E;</span>
+    <span class="hljs-keyword">if</span> inserti == <span class="hljs-literal">nil</span> {
+        newb := h.newoverflow(t, b)
+        inserti = &amp;newb.tophash[<span class="hljs-number">0</span>]
+        insertk = add(unsafe.Pointer(newb), dataOffset)
+        elem = add(insertk, bucketCnt*<span class="hljs-keyword">uintptr</span>(t.keysize))
+    }
+
+    <span class="hljs-comment">// &#x5C06;&#x65B0;&#x7684;key&#x3001;value&#x5B58;&#x5165;&#x63D2;&#x5165;&#x4F4D;&#x7F6E;</span>
+    <span class="hljs-keyword">if</span> t.indirectkey() {
+        kmem := newobject(t.key)
+        *(*unsafe.Pointer)(insertk) = kmem
+        insertk = kmem
+    }
+    <span class="hljs-keyword">if</span> t.indirectelem() {
+        vmem := newobject(t.elem)
+        *(*unsafe.Pointer)(elem) = vmem
+    }
+    typedmemmove(t.key, insertk, key)
+    *inserti = top
+    <span class="hljs-comment">// key&#x7684;&#x6570;&#x91CF;&#x52A0;1</span>
+    h.count++
+
+done:
+    <span class="hljs-keyword">if</span> h.flags&amp;hashWriting == <span class="hljs-number">0</span> {
+        throw(<span class="hljs-string">&quot;concurrent map writes&quot;</span>)
+    }
+    <span class="hljs-comment">// &#x89E3;&#x9664;&#x5199;&#x4FDD;&#x62A4;</span>
+    h.flags &amp;^= hashWriting
+    <span class="hljs-keyword">if</span> t.indirectelem() {
+        elem = *((*unsafe.Pointer)(elem))
+    }
+    <span class="hljs-keyword">return</span> elem
+}
+</code></pre>
+<p>&#x4ECE;&#x4E0A;&#x9762;&#x7684;&#x5206;&#x6790;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#xFF0C;mapassign&#x51FD;&#x6570;&#x5E76;&#x6CA1;&#x6709;&#x628A;value&#x5199;&#x5165;&#x5BF9;&#x5E94;&#x7684;&#x4F4D;&#x7F6E;&#xFF0C;&#x53EA;&#x662F;&#x8FD4;&#x56DE;&#x4E86;value&#x7684;&#x5730;&#x5740;&#xFF0C;&#x8FD9;&#x662F;&#x56E0;&#x4E3A;&#x5C06;&#x503C;&#x62F7;&#x8D1D;&#x5230;&#x5185;&#x5B58;&#x533A;&#x57DF;&#x662F;&#x901A;&#x8FC7;&#x5E95;&#x5C42;&#x6C47;&#x7F16;&#x914D;&#x5408;&#x5B8C;&#x6210;&#x7684;&#xFF0C;&#x4F8B;&#x5982;&#xFF1A;</p>
+<pre><code class="lang-go"><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span> {
+    m := <span class="hljs-built_in">make</span>(<span class="hljs-keyword">map</span>[<span class="hljs-keyword">string</span>]<span class="hljs-keyword">int</span>)
+
+    m[<span class="hljs-string">&quot;a&quot;</span>] = <span class="hljs-number">88</span>
+}
+</code></pre>
+<p>m[&quot;a&quot;] = 88 &#x6C47;&#x7F16;&#x4EE3;&#x7801;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-go"><span class="hljs-number">0x0089</span> <span class="hljs-number">00137</span> (map5.<span class="hljs-keyword">go</span>:<span class="hljs-number">6</span>)        LEAQ    <span class="hljs-keyword">type</span>.<span class="hljs-keyword">map</span>[<span class="hljs-keyword">string</span>]<span class="hljs-keyword">int</span>(SB), AX
+<span class="hljs-number">0x0090</span> <span class="hljs-number">00144</span> (map5.<span class="hljs-keyword">go</span>:<span class="hljs-number">6</span>)        LEAQ    <span class="hljs-string">&quot;&quot;</span>..autotmp_1+<span class="hljs-number">32</span>(SP), BX
+<span class="hljs-number">0x0095</span> <span class="hljs-number">00149</span> (map5.<span class="hljs-keyword">go</span>:<span class="hljs-number">6</span>)        LEAQ    <span class="hljs-keyword">go</span>.<span class="hljs-keyword">string</span>.<span class="hljs-string">&quot;a&quot;</span>(SB), CX
+<span class="hljs-number">0x009c</span> <span class="hljs-number">00156</span> (map5.<span class="hljs-keyword">go</span>:<span class="hljs-number">6</span>)        MOVL    $<span class="hljs-number">1</span>, DI
+<span class="hljs-number">0x00a1</span> <span class="hljs-number">00161</span> (map5.<span class="hljs-keyword">go</span>:<span class="hljs-number">6</span>)        PCDATA  $<span class="hljs-number">1</span>, $<span class="hljs-number">0</span>
+<span class="hljs-number">0x00a1</span> <span class="hljs-number">00161</span> (map5.<span class="hljs-keyword">go</span>:<span class="hljs-number">6</span>)        CALL    runtime.mapassign_faststr(SB) <span class="hljs-comment">// &#x8C03;&#x7528;&#x5206;&#x914D;&#x51FD;&#x6570;</span>
+<span class="hljs-number">0x00a6</span> <span class="hljs-number">00166</span> (map5.<span class="hljs-keyword">go</span>:<span class="hljs-number">6</span>)        MOVQ    $<span class="hljs-number">88</span>, (AX) <span class="hljs-comment">// &#x5C06;88&#x653E;&#x5165;&#x5730;&#x5740;</span>
+</code></pre>
+<h1 id="&#x6269;&#x5BB9;&#x8FC7;&#x7A0B;"><a name="&#x6269;&#x5BB9;&#x8FC7;&#x7A0B;" class="anchor-navigation-ex-anchor" href="#&#x6269;&#x5BB9;&#x8FC7;&#x7A0B;"><i class="fa fa-link" aria-hidden="true"></i></a>6. &#x6269;&#x5BB9;&#x8FC7;&#x7A0B;</h1>
+<h4 id="61-&#x4EC0;&#x4E48;&#x65F6;&#x5019;&#x6269;&#x5BB9;"><a name="61-&#x4EC0;&#x4E48;&#x65F6;&#x5019;&#x6269;&#x5BB9;" class="anchor-navigation-ex-anchor" href="#61-&#x4EC0;&#x4E48;&#x65F6;&#x5019;&#x6269;&#x5BB9;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="61-&#x4EC0;&#x4E48;&#x65F6;&#x5019;&#x6269;&#x5BB9;" class="plugin-anchor" href="#61-&#x4EC0;&#x4E48;&#x65F6;&#x5019;&#x6269;&#x5BB9;"><i class="fa fa-link" aria-hidden="true"></i></a>6.1 &#x4EC0;&#x4E48;&#x65F6;&#x5019;&#x6269;&#x5BB9;</h4>
+<p>&#x5728;&#x4E86;&#x89E3;&#x6269;&#x5BB9;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x80AF;&#x5B9A;&#x4F1A;&#x60F3;&#x5230;&#x8FD9;&#x4E2A;<code>&#x4EC0;&#x4E48;&#x65F6;&#x5019;&#x6269;&#x5BB9;</code>???</p>
+<pre><code class="lang-go"><span class="hljs-comment">// &#x5982;&#x679C;&#x5728;&#x6240;&#x6709;&#x6876;&#x4E2D;&#x90FD;&#x6CA1;&#x6709;&#x627E;&#x5230;key&#xFF0C;&#x8FDB;&#x884C;&#x4E0B;&#x9762;&#x7684;&#x64CD;&#x4F5C;</span>
+<span class="hljs-comment">// &#x8D1F;&#x8F7D;&#x56E0;&#x5B50; = count/2^B</span>
+<span class="hljs-comment">// &#x5982;&#x679C;&#x8D1F;&#x8F7D;&#x56E0;&#x5B50;&gt;6.5&#x6216;&#x8005;&#x6EA2;&#x51FA;&#x6876;&#x7684;&#x6570;&#x91CF;&#x8FC7;&#x591A;&#xFF0C;&#x5219;&#x8FDB;&#x884C;&#x6269;&#x5BB9;</span>
+<span class="hljs-keyword">if</span> !h.growing() &amp;&amp; (overLoadFactor(h.count+<span class="hljs-number">1</span>, h.B) || tooManyOverflowBuckets(h.noverflow, h.B)) {
+    hashGrow(t, h)
+    <span class="hljs-comment">// hashGrow()&#x5B9E;&#x9645;&#x5E76;&#x672A;&#x5B8C;&#x6210;&#x6269;&#x5BB9;&#xFF0C;&#x5BF9;&#x54C8;&#x5E0C;&#x8868;&#x6570;&#x636E;&#x7684;&#x8FC1;&#x79FB;&#x64CD;&#x505A;&#x662F;&#x7531;growWork()&#x6765;&#x5B8C;&#x6210;&#x7684;&#x3002;</span>
+    <span class="hljs-comment">// &#x4ECE;&#x65B0;&#x8DF3;&#x5165;again&#x903B;&#x8F91;&#xFF0C;&#x5728;&#x8FDB;&#x884C;&#x5B8C;growWork()&#x64CD;&#x505A;&#x540E;&#xFF0C;&#x518D;&#x6B21;&#x904D;&#x5386;&#x65B0;&#x7684;&#x6876;&#x3002;</span>
+    <span class="hljs-keyword">goto</span> again
+}
+</code></pre>
+<h5 id="&#x539F;&#x56E0;&#x4E00;&#xFF1A;&#x8D1F;&#x8F7D;&#x56E0;&#x5B50;65"><a name="&#x539F;&#x56E0;&#x4E00;&#xFF1A;&#x8D1F;&#x8F7D;&#x56E0;&#x5B50;65" class="anchor-navigation-ex-anchor" href="#&#x539F;&#x56E0;&#x4E00;&#xFF1A;&#x8D1F;&#x8F7D;&#x56E0;&#x5B50;65"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x539F;&#x56E0;&#x4E00;&#xFF1A;&#x8D1F;&#x8F7D;&#x56E0;&#x5B50;65" class="plugin-anchor" href="#&#x539F;&#x56E0;&#x4E00;&#xFF1A;&#x8D1F;&#x8F7D;&#x56E0;&#x5B50;65"><i class="fa fa-link" aria-hidden="true"></i></a>&#x539F;&#x56E0;&#x4E00;&#xFF1A;&#x8D1F;&#x8F7D;&#x56E0;&#x5B50;&gt;6.5</h5>
+<p><strong>&#x8D1F;&#x8F7D;&#x56E0;&#x5B50; = count/2^B</strong>
+&#x5F53;&#x8D1F;&#x8F7D;&#x56E0;&#x5B50;&gt;6.5&#x65F6;&#xFF0C;&#x8BF4;&#x660E;&#x5927;&#x90E8;&#x5206;&#x6876;&#x53EF;&#x80FD;&#x90FD;&#x5FEB;&#x6EE1;&#x4E86;&#xFF0C;&#x5982;&#x63D2;&#x5165;&#x65B0;&#x7684;&#x5143;&#x7D20;&#xFF0C;&#x5C31;&#x4F1A;&#x6709;&#x5F88;&#x5927;&#x7684;&#x6982;&#x7387;&#x6302;&#x5728;&#x6EA2;&#x51FA;&#x6876;&#x4E0A;&#x3002;</p>
+<pre><code class="lang-go"><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">overLoadFactor</span><span class="hljs-params">(count <span class="hljs-keyword">int</span>, B <span class="hljs-keyword">uint8</span>)</span> <span class="hljs-title">bool</span></span> {
+    <span class="hljs-keyword">return</span> count &gt; bucketCnt &amp;&amp; <span class="hljs-keyword">uintptr</span>(count) &gt; loadFactorNum*(bucketShift(B)/loadFactorDen)
+}
+</code></pre>
+<h5 id="&#x539F;&#x56E0;&#x4E8C;&#xFF1A;&#x6EA2;&#x51FA;&#x6876;&#x7684;&#x6570;&#x91CF;&#x8FC7;&#x591A;"><a name="&#x539F;&#x56E0;&#x4E8C;&#xFF1A;&#x6EA2;&#x51FA;&#x6876;&#x7684;&#x6570;&#x91CF;&#x8FC7;&#x591A;" class="anchor-navigation-ex-anchor" href="#&#x539F;&#x56E0;&#x4E8C;&#xFF1A;&#x6EA2;&#x51FA;&#x6876;&#x7684;&#x6570;&#x91CF;&#x8FC7;&#x591A;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x539F;&#x56E0;&#x4E8C;&#xFF1A;&#x6EA2;&#x51FA;&#x6876;&#x7684;&#x6570;&#x91CF;&#x8FC7;&#x591A;" class="plugin-anchor" href="#&#x539F;&#x56E0;&#x4E8C;&#xFF1A;&#x6EA2;&#x51FA;&#x6876;&#x7684;&#x6570;&#x91CF;&#x8FC7;&#x591A;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x539F;&#x56E0;&#x4E8C;&#xFF1A;&#x6EA2;&#x51FA;&#x6876;&#x7684;&#x6570;&#x91CF;&#x8FC7;&#x591A;</h5>
+<p>&#x5224;&#x65AD;&#x6EA2;&#x51FA;&#x6876;&#x662F;&#x5426;&#x8FC7;&#x591A;&#x7684;&#x65B9;&#x5F0F;&#x6709;&#x4E24;&#x79CD;&#xFF1A;
+1&#x3001;&#x5F53;&#x5E38;&#x89C4;&#x6876;&#x7684;&#x603B;&#x6570;&gt;=2^15&#x65F6;&#xFF0C;&#x5982;&#x679C;&#x6EA2;&#x51FA;&#x6876;&#x7684;&#x6570;&#x91CF;&gt;=2^15&#xFF0C;&#x5219;&#x8BA4;&#x4E3A;&#x6EA2;&#x51FA;&#x6876;&#x592A;&#x591A;&#x4E86;&#x3002;
+2&#x3001;&#x5F53;&#x5E38;&#x89C4;&#x6876;&#x7684;&#x603B;&#x6570;<2^15时，如果溢出桶的总数>=&#x5E38;&#x89C4;&#x6876;&#x603B;&#x6570;&#xFF0C;&#x5219;&#x8BA4;&#x4E3A;&#x6EA2;&#x51FA;&#x6876;&#x592A;&#x591A;&#x4E86;&#x3002;</2^15时，如果溢出桶的总数></p>
+<pre><code class="lang-go"><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">tooManyOverflowBuckets</span><span class="hljs-params">(noverflow <span class="hljs-keyword">uint16</span>, B <span class="hljs-keyword">uint8</span>)</span> <span class="hljs-title">bool</span></span> {
+    <span class="hljs-keyword">if</span> B &gt; <span class="hljs-number">15</span> {
+        B = <span class="hljs-number">15</span>
+    }
+    <span class="hljs-keyword">return</span> noverflow &gt;= <span class="hljs-keyword">uint16</span>(<span class="hljs-number">1</span>)&lt;&lt;(B&amp;<span class="hljs-number">15</span>)
+}
+</code></pre>
+<h4 id="&#x6269;&#x5BB9;&#x89C4;&#x5219;"><a name="&#x6269;&#x5BB9;&#x89C4;&#x5219;" class="anchor-navigation-ex-anchor" href="#&#x6269;&#x5BB9;&#x89C4;&#x5219;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x6269;&#x5BB9;&#x89C4;&#x5219;" class="plugin-anchor" href="#&#x6269;&#x5BB9;&#x89C4;&#x5219;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6269;&#x5BB9;&#x89C4;&#x5219;</h4>
+<p>&#x5728;&#x6269;&#x5BB9;&#x7684;&#x65F6;&#x5019;&#x91C7;&#x7528;&#x7684;&#x662F;<strong>&#x589E;&#x91CF;&#x6269;&#x5BB9;</strong>&#x7684;&#x65B9;&#x5F0F;&#xFF0C;&#x800C;&#x4E0D;&#x662F;<strong>&#x5168;&#x91CF;&#x6269;&#x5BB9;</strong>&#x3002;
+&#x5982;&#x679C;&#x91C7;&#x53D6;&#x5168;&#x91CF;&#x6269;&#x5BB9;&#xFF0C;&#x5F53;&#x524D;hmap&#x5F88;&#x5927;&#xFF0C;&#x4F1A;&#x82B1;&#x8D39;&#x5927;&#x91CF;&#x7684;&#x65F6;&#x95F4;&#x548C;&#x5185;&#x5B58;&#xFF0C;&#x4F1A;&#x5BFC;&#x81F4;&#x7CFB;&#x7EDF;&#x5361;&#x987F;&#xFF0C;&#x6700;&#x76F4;&#x89C2;&#x7684;&#x8868;&#x73B0;&#x5C31;&#x662F;&#x5F88;&#x6162;&#x3002;&#x6240;&#x4EE5;&#x91C7;&#x7528;&#x589E;&#x91CF;&#x6269;&#x5BB9;&#xFF0C;&#x5728;hmap&#x7ED3;&#x6784;&#x4E2D;&#x6709;buckets&#x3001;oldbuckets&#x548C;nevacuate&#x5B57;&#x6BB5;&#x7684;&#x8BBE;&#x8BA1;&#x65B9;&#x5F0F;&#xFF0C;&#x901A;&#x8FC7;&#x6BCF;&#x4E00;&#x6B21;&#x64CD;&#x4F5C;&#x8FDB;&#x884C;&#x6E10;&#x8FDB;&#x5F0F;&#x6269;&#x5BB9;&#x3002;</p>
+<h5 id="&#x6269;&#x5BB9;&#x89C4;&#x5219;&#x5982;&#x4E0B;&#xFF1A;"><a name="&#x6269;&#x5BB9;&#x89C4;&#x5219;&#x5982;&#x4E0B;&#xFF1A;" class="anchor-navigation-ex-anchor" href="#&#x6269;&#x5BB9;&#x89C4;&#x5219;&#x5982;&#x4E0B;&#xFF1A;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x6269;&#x5BB9;&#x89C4;&#x5219;&#x5982;&#x4E0B;&#xFF1A;" class="plugin-anchor" href="#&#x6269;&#x5BB9;&#x89C4;&#x5219;&#x5982;&#x4E0B;&#xFF1A;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6269;&#x5BB9;&#x89C4;&#x5219;&#x5982;&#x4E0B;&#xFF1A;</h5>
+<p><img src="../images/map-extend.jpg" alt="map&#x6269;&#x5BB9;&#x89C4;&#x5219;">
+&#x7FFB;&#x500D;&#x6269;&#x5BB9;&#xFF1A;&#x6269;&#x5BB9;&#x5230;&#x65E7;&#x6876;&#x6570;&#x76EE;&#x7684;2&#x500D;</p>
+<p>&#x7B49;&#x91CF;&#x6269;&#x5BB9;&#xFF1A;&#x521B;&#x5EFA;&#x548C;&#x65E7;&#x6876;&#x6570;&#x76EE;&#x4E00;&#x6837;&#x591A;&#x7684;&#x65B0;&#x6876;&#xFF0C;&#x628A;&#x539F;&#x6765;&#x7684;&#x6570;&#x636E;&#x8FC1;&#x79FB;&#x5230;&#x65B0;&#x6876;&#x4E2D;&#x3002;
+&#x4E3A;&#x4EC0;&#x4E48;&#x8981;&#x6709;&#x7B49;&#x91CF;&#x8FC1;&#x79FB;&#xFF1F;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x60F3;&#x4E00;&#x4E0B;&#xFF0C;&#x6876;&#x7684;&#x8D1F;&#x8F7D;&#x56E0;&#x5B50;&#x6CA1;&#x6709;&#x8D85;&#x8FC7;&#x4E0A;&#x9650;&#x503C;&#xFF0C;&#x5374;&#x53C8;&#x8FD9;&#x4E48;&#x591A;&#x7684;&#x6EA2;&#x51FA;&#x6876;&#xFF1F;&#x8FD9;&#x80AF;&#x5B9A;&#x662F;&#x56E0;&#x4E3A;&#x5F88;&#x591A;&#x7684;&#x952E;&#x503C;&#x5BF9;&#x5DF2;&#x7ECF;&#x88AB;&#x5220;&#x9664;&#x3002;</p>
+<h5 id="&#x6E90;&#x7801;&#x5982;&#x4E0B;&#xFF1A;"><a name="&#x6E90;&#x7801;&#x5982;&#x4E0B;&#xFF1A;" class="anchor-navigation-ex-anchor" href="#&#x6E90;&#x7801;&#x5982;&#x4E0B;&#xFF1A;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x6E90;&#x7801;&#x5982;&#x4E0B;&#xFF1A;" class="plugin-anchor" href="#&#x6E90;&#x7801;&#x5982;&#x4E0B;&#xFF1A;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6E90;&#x7801;&#x5982;&#x4E0B;&#xFF1A;</h5>
+<p>&#x6E90;&#x7801;&#x5206;&#x4E3A;&#x4E24;&#x4E2A;&#x90E8;&#x5206;&#xFF1A;1&#x3001;&#x7533;&#x8BF7;&#x65B0;&#x6876;-hashGrow&#xFF0C;2&#x3001;&#x6570;&#x636E;&#x8FC1;&#x79FB;-growWork</p>
+<pre><code class="lang-go"><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">hashGrow</span><span class="hljs-params">(t *maptype, h *hmap)</span></span> {
+    <span class="hljs-comment">// &#x5982;&#x679C;&#x8D85;&#x8FC7;&#x8D1F;&#x8F7D;&#x56E0;&#x5B50;&#xFF0C;&#x5C31;&#x4F7F;&#x7528;&#x7FFB;&#x500D;&#x6269;&#x5BB9;&#xFF0C;&#x5426;&#x5219;&#x91C7;&#x7528;&#x7B49;&#x91CF;&#x6269;&#x5BB9;</span>
+    bigger := <span class="hljs-keyword">uint8</span>(<span class="hljs-number">1</span>)
+    <span class="hljs-keyword">if</span> !overLoadFactor(h.count+<span class="hljs-number">1</span>, h.B) {
+        bigger = <span class="hljs-number">0</span>
+        h.flags |= sameSizeGrow
+    }
+    oldbuckets := h.buckets
+    <span class="hljs-comment">// &#x7533;&#x8BF7;&#x65B0;&#x7684;buckets</span>
+    newbuckets, nextOverflow := makeBucketArray(t, h.B+bigger, <span class="hljs-literal">nil</span>)
+
+    flags := h.flags &amp;^ (iterator | oldIterator)
+    <span class="hljs-keyword">if</span> h.flags&amp;iterator != <span class="hljs-number">0</span> {
+        flags |= oldIterator
+    }
+    <span class="hljs-comment">// hmap&#x5B57;&#x6BB5;&#x91CD;&#x65B0;&#x8D4B;&#x503C;</span>
+    h.B += bigger
+    h.flags = flags
+    h.oldbuckets = oldbuckets
+    h.buckets = newbuckets
+    h.nevacuate = <span class="hljs-number">0</span>
+    h.noverflow = <span class="hljs-number">0</span>
+
+    <span class="hljs-keyword">if</span> h.extra != <span class="hljs-literal">nil</span> &amp;&amp; h.extra.overflow != <span class="hljs-literal">nil</span> {
+        <span class="hljs-comment">// Promote current overflow buckets to the old generation.</span>
+        <span class="hljs-keyword">if</span> h.extra.oldoverflow != <span class="hljs-literal">nil</span> {
+            throw(<span class="hljs-string">&quot;oldoverflow is not nil&quot;</span>)
+        }
+        h.extra.oldoverflow = h.extra.overflow
+        h.extra.overflow = <span class="hljs-literal">nil</span>
+    }
+    <span class="hljs-keyword">if</span> nextOverflow != <span class="hljs-literal">nil</span> {
+        <span class="hljs-keyword">if</span> h.extra == <span class="hljs-literal">nil</span> {
+            h.extra = <span class="hljs-built_in">new</span>(mapextra)
+        }
+        h.extra.nextOverflow = nextOverflow
+    }
+
+    <span class="hljs-comment">// the actual copying of the hash table data is done incrementally</span>
+    <span class="hljs-comment">// by growWork() and evacuate().</span>
+}
+</code></pre>
+<pre><code class="lang-go"><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">growWork</span><span class="hljs-params">(t *maptype, h *hmap, bucket <span class="hljs-keyword">uintptr</span>)</span></span> {
+    <span class="hljs-comment">// &#x8FC1;&#x79FB;&#x8001;&#x7684;bucket</span>
+    evacuate(t, h, bucket&amp;h.oldbucketmask())
+
+    <span class="hljs-comment">// &#x5982;&#x679C;&#x672A;&#x5B8C;&#x6210;&#x6269;&#x5BB9;&#x52A8;&#x4F5C;&#xFF0C;&#x5C31;&#x7EE7;&#x7EED;&#x8FC1;&#x79FB;&#x4E0B;&#x4E00;&#x4E2A;bucket&#x7684;&#x6570;&#x636E;</span>
+    <span class="hljs-keyword">if</span> h.growing() {
+        evacuate(t, h, h.nevacuate)
+    }
+}
+</code></pre>
+<p>&#x8FC1;&#x79FB;&#x7684;&#x6838;&#x5FC3;&#x903B;&#x8F91;</p>
+<pre><code class="lang-go"><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">evacuate</span><span class="hljs-params">(t *maptype, h *hmap, oldbucket <span class="hljs-keyword">uintptr</span>)</span></span> {
+    <span class="hljs-comment">// &#x8BA1;&#x7B97;&#x8001;&#x7684;bucket&#x5730;&#x5740;</span>
+    b := (*bmap)(add(h.oldbuckets, oldbucket*<span class="hljs-keyword">uintptr</span>(t.bucketsize)))
+    <span class="hljs-comment">// &#x8868;&#x793A;&#x8001;&#x7684;buckets&#x6570;&#x91CF; 1&lt;&lt;oldh.B</span>
+    newbit := h.noldbuckets()
+    <span class="hljs-comment">// &#x5224;&#x65AD;&#x8FD9;&#x4E2A;bucket&#x662F;&#x5426;&#x8FC1;&#x79FB;&#x5B8C;&#x6210;&#xFF0C;&#x5982;&#x679C;&#x8FC1;&#x79FB;&#x5B8C;&#x6210;&#xFF0C;&#x66F4;&#x65B0;&#x8FC1;&#x79FB;&#x8FDB;&#x5EA6;&#xFF0C;&#x5426;&#x5219;&#x7EE7;&#x7EED;&#x8FC1;&#x79FB;</span>
+    <span class="hljs-keyword">if</span> !evacuated(b) {
+        <span class="hljs-comment">// <span class="hljs-doctag">TODO:</span> reuse overflow buckets instead of using new ones, if there</span>
+        <span class="hljs-comment">// is no iterator using the old buckets.  (If !oldIterator.)</span>
+
+        <span class="hljs-comment">/**
+        &#x8FC1;&#x79FB;&#x76EE;&#x6807;&#x6570;&#x636E;&#x7ED3;&#x6784;
+        type evacDst struct {
+            b *bmap          // &#x5F53;&#x524D;&#x76EE;&#x6807;&#x6876;&#x5730;&#x5740;
+            i int            // &#x6876;&#x4E2D;&#x5B58;&#x50A8;&#x952E;&#x503C;&#x5BF9;&#x7684;&#x6570;&#x91CF;
+            k unsafe.Pointer // key&#x7684;&#x5730;&#x5740;
+            e unsafe.Pointer // value&#x7684;&#x5730;&#x5740;
+        }**/</span>
+        <span class="hljs-keyword">var</span> xy [<span class="hljs-number">2</span>]evacDst
+        x := &amp;xy[<span class="hljs-number">0</span>]
+        x.b = (*bmap)(add(h.buckets, oldbucket*<span class="hljs-keyword">uintptr</span>(t.bucketsize)))
+        x.k = add(unsafe.Pointer(x.b), dataOffset)
+        x.e = add(x.k, bucketCnt*<span class="hljs-keyword">uintptr</span>(t.keysize))
+
+        <span class="hljs-comment">// &#x5982;&#x679C;&#x662F;&#x589E;&#x91CF;&#x6269;&#x5BB9;&#xFF0C;&#x8BA1;&#x7B97;y&#x7684;&#x5730;&#x5740;</span>
+        <span class="hljs-keyword">if</span> !h.sameSizeGrow() {
+            y := &amp;xy[<span class="hljs-number">1</span>]
+            y.b = (*bmap)(add(h.buckets, (oldbucket+newbit)*<span class="hljs-keyword">uintptr</span>(t.bucketsize)))
+            y.k = add(unsafe.Pointer(y.b), dataOffset)
+            y.e = add(y.k, bucketCnt*<span class="hljs-keyword">uintptr</span>(t.keysize))
+        }
+
+        <span class="hljs-comment">// &#x904D;&#x5386;&#x5F53;&#x524D;&#x6876;&#x548C;&#x5F53;&#x524D;&#x6876;&#x7684;&#x6EA2;&#x51FA;&#x6876;</span>
+        <span class="hljs-keyword">for</span> ; b != <span class="hljs-literal">nil</span>; b = b.overflow(t) {
+            k := add(unsafe.Pointer(b), dataOffset)
+            e := add(k, bucketCnt*<span class="hljs-keyword">uintptr</span>(t.keysize))
+            <span class="hljs-comment">// &#x904D;&#x5386;&#x6876;&#x4E2D;&#x7684;cell</span>
+            <span class="hljs-keyword">for</span> i := <span class="hljs-number">0</span>; i &lt; bucketCnt; i, k, e = i+<span class="hljs-number">1</span>, add(k, <span class="hljs-keyword">uintptr</span>(t.keysize)), add(e, <span class="hljs-keyword">uintptr</span>(t.elemsize)) {
+                top := b.tophash[i]
+                <span class="hljs-comment">// &#x5224;&#x65AD;&#x5F53;&#x524D;&#x4F4D;&#x7F6E;&#x662F;&#x5426;&#x4E3A;&#x7A7A;&#xFF0C;&#x5982;&#x679C;&#x4E3A;&#x7A7A;&#x5219;&#x6807;&#x8BB0;&#x5F53;&#x4F4D;&#x7F6E;&#x4E3A;evacuatedEmpty&#xFF0C;&#x7EE7;&#x7EED;&#x904D;&#x5386;&#x4E0B;&#x4E00;&#x4E2A;cell</span>
+                <span class="hljs-keyword">if</span> isEmpty(top) {
+                    b.tophash[i] = evacuatedEmpty
+                    <span class="hljs-keyword">continue</span>
+                }
+                <span class="hljs-comment">// &#x5982;&#x679C;top&#x503C;&#x5C0F;&#x4E8E;&#x6700;&#x5C0F;&#x54C8;&#x5E0C;top&#x503C;&#xFF0C;&#x8BF4;&#x660E;&#x8BE5;map&#x6B63;&#x5728;&#x8FC1;&#x79FB;&#xFF0C;&#x5219;&#x629B;&#x51FA;&#x9519;&#x8BEF;</span>
+                <span class="hljs-keyword">if</span> top &lt; minTopHash {
+                    throw(<span class="hljs-string">&quot;bad map state&quot;</span>)
+                }
+                k2 := k
+                <span class="hljs-comment">// &#x5982;&#x679C;key&#x662F;&#x6307;&#x9488;&#xFF0C;&#x5219;&#x89E3;&#x5F15;&#x7528;</span>
+                <span class="hljs-keyword">if</span> t.indirectkey() {
+                    k2 = *((*unsafe.Pointer)(k2))
+                }
+                <span class="hljs-keyword">var</span> useY <span class="hljs-keyword">uint8</span>
+                <span class="hljs-keyword">if</span> !h.sameSizeGrow() {
+                    <span class="hljs-comment">// &#x751F;&#x6210;hash&#x503C;&#xFF0C;&#x5224;&#x65AD;key&#x548C;value&#x8981;&#x88AB;&#x642C;&#x8FC1;&#x5230;bucketX&#x8FD8;&#x662F;bucketY</span>
+                    hash := t.hasher(k2, <span class="hljs-keyword">uintptr</span>(h.hash0))
+                    <span class="hljs-comment">// &#x5F53;k=math.NaN()&#x65F6;&#xFF0C;&#x53EA;&#x7ECF;&#x8FC7; tophash &#x7684;&#x6700;&#x4F4E;&#x4F4D;&#x51B3;&#x5B9A;&#x5206;&#x914D;&#x5230;bucketX&#x8FD8;&#x662F;bucketY&#xFF0C;&#x5982;&#x679C;top&#x7684;&#x6700;&#x4F4E;&#x4F4D;&#x662F;0&#x5206;&#x914D;&#x5230;bucketX&#xFF0C;&#x5426;&#x5219;&#x5206;&#x914D;&#x5230;bucketY&#x3002;</span>
+                    <span class="hljs-keyword">if</span> h.flags&amp;iterator != <span class="hljs-number">0</span> &amp;&amp; !t.reflexivekey() &amp;&amp; !t.key.equal(k2, k2) {
+                        useY = top &amp; <span class="hljs-number">1</span>
+                        top = tophash(hash)
+                    } <span class="hljs-keyword">else</span> {
+                        <span class="hljs-comment">// &#x5F53;key&#x662F;&#x6B63;&#x5E38;&#x503C;&#x65F6;&#x7684;&#x903B;&#x8F91;</span>
+                        <span class="hljs-keyword">if</span> hash&amp;newbit != <span class="hljs-number">0</span> {
+                            useY = <span class="hljs-number">1</span>
+                        }
+                    }
+                }
+
+                <span class="hljs-keyword">if</span> evacuatedX+<span class="hljs-number">1</span> != evacuatedY || evacuatedX^<span class="hljs-number">1</span> != evacuatedY {
+                    throw(<span class="hljs-string">&quot;bad evacuatedN&quot;</span>)
+                }
+
+                b.tophash[i] = evacuatedX + useY <span class="hljs-comment">// evacuatedX + 1 == evacuatedY</span>
+                dst := &amp;xy[useY]                 <span class="hljs-comment">// evacuation destination</span>
+
+                <span class="hljs-comment">// &#x5982;&#x679C;&#x5F53;&#x524D;&#x6876;&#x6EE1;&#x4E86;&#xFF0C;&#x5219;&#x8981;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x6EA2;&#x51FA;&#x6876;&#x4F5C;&#x4E3A;&#x76EE;&#x6807;&#x6876;</span>
+                <span class="hljs-keyword">if</span> dst.i == bucketCnt {
+                    dst.b = h.newoverflow(t, dst.b)
+                    dst.i = <span class="hljs-number">0</span>
+                    dst.k = add(unsafe.Pointer(dst.b), dataOffset)
+                    dst.e = add(dst.k, bucketCnt*<span class="hljs-keyword">uintptr</span>(t.keysize))
+                }
+                <span class="hljs-comment">// &#x5C4F;&#x853D;dst.i&#x4F5C;&#x4E3A;&#x4F18;&#x5316;&#xFF0C;&#x4EE5;&#x907F;&#x514D;&#x8FB9;&#x754C;&#x68C0;&#x67E5;</span>
+                dst.b.tophash[dst.i&amp;(bucketCnt<span class="hljs-number">-1</span>)] = top 
+                <span class="hljs-comment">// &#x590D;&#x5236;key&#x548C;value</span>
+                <span class="hljs-keyword">if</span> t.indirectkey() {
+                    *(*unsafe.Pointer)(dst.k) = k2 <span class="hljs-comment">// copy pointer</span>
+                } <span class="hljs-keyword">else</span> {
+                    typedmemmove(t.key, dst.k, k) <span class="hljs-comment">// copy elem</span>
+                }
+                <span class="hljs-keyword">if</span> t.indirectelem() {
+                    *(*unsafe.Pointer)(dst.e) = *(*unsafe.Pointer)(e)
+                } <span class="hljs-keyword">else</span> {
+                    typedmemmove(t.elem, dst.e, e)
+                }
+                dst.i++
+                <span class="hljs-comment">// These updates might push these pointers past the end of the</span>
+                <span class="hljs-comment">// key or elem arrays.  That&apos;s ok, as we have the overflow pointer</span>
+                <span class="hljs-comment">// at the end of the bucket to protect against pointing past the</span>
+                <span class="hljs-comment">// end of the bucket.</span>
+                dst.k = add(dst.k, <span class="hljs-keyword">uintptr</span>(t.keysize))
+                dst.e = add(dst.e, <span class="hljs-keyword">uintptr</span>(t.elemsize))
+            }
+        }
+        <span class="hljs-comment">// &#x65AD;&#x5F00;&#x6EA2;&#x51FA;&#x6876;&#x7684;&#x94FE;&#x63A5;&#x5E76;&#x6E05;&#x9664;key/elem&#x4EE5;&#x5E2E;&#x52A9;GC&#x3002;</span>
+        <span class="hljs-keyword">if</span> h.flags&amp;oldIterator == <span class="hljs-number">0</span> &amp;&amp; t.bucket.ptrdata != <span class="hljs-number">0</span> {
+            b := add(h.oldbuckets, oldbucket*<span class="hljs-keyword">uintptr</span>(t.bucketsize))
+            <span class="hljs-comment">// &#x53EA;&#x6E05;&#x9664;bucket &#x7684; key,value &#x90E8;&#x5206;&#xFF0C;&#x4FDD;&#x7559; top hash &#x90E8;&#x5206;&#xFF0C;&#x6307;&#x793A;&#x642C;&#x8FC1;&#x72B6;&#x6001;</span>
+            ptr := add(b, dataOffset)
+            n := <span class="hljs-keyword">uintptr</span>(t.bucketsize) - dataOffset
+            memclrHasPointers(ptr, n)
+        }
+    }
+
+    <span class="hljs-comment">// &#x66F4;&#x65B0;&#x642C;&#x8FC1;&#x8FDB;&#x5EA6;</span>
+    <span class="hljs-keyword">if</span> oldbucket == h.nevacuate {
+        advanceEvacuationMark(h, t, newbit)
+    }
+}
+
+<span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">advanceEvacuationMark</span><span class="hljs-params">(h *hmap, t *maptype, newbit <span class="hljs-keyword">uintptr</span>)</span></span> {
+    h.nevacuate++
+    <span class="hljs-comment">// Experiments suggest that 1024 is overkill by at least an order of magnitude.</span>
+    <span class="hljs-comment">// Put it in there as a safeguard anyway, to ensure O(1) behavior.</span>
+    stop := h.nevacuate + <span class="hljs-number">1024</span>
+    <span class="hljs-keyword">if</span> stop &gt; newbit {
+        stop = newbit
+    }
+    <span class="hljs-comment">// &#x8BA1;&#x7B97;&#x642C;&#x8FC1;&#x5B8C;&#x6210;&#x7684;&#x6876;&#x6570;</span>
+    <span class="hljs-keyword">for</span> h.nevacuate != stop &amp;&amp; bucketEvacuated(t, h, h.nevacuate) {
+        h.nevacuate++
+    }
+    <span class="hljs-comment">// &#x5982;&#x679C;h.nevacuate == newbit&#xFF0C;&#x5219;&#x8868;&#x660E;&#x5168;&#x90E8;&#x7684;&#x6876;&#x90FD;&#x5DF2;&#x7ECF;&#x642C;&#x8FC1;&#x5B8C;&#x6BD5;</span>
+    <span class="hljs-keyword">if</span> h.nevacuate == newbit { <span class="hljs-comment">// newbit == # of oldbuckets</span>
+        <span class="hljs-comment">// &#x91CA;&#x653E;&#x8BE5;&#x6876;</span>
+        h.oldbuckets = <span class="hljs-literal">nil</span>
+        <span class="hljs-keyword">if</span> h.extra != <span class="hljs-literal">nil</span> {
+            h.extra.oldoverflow = <span class="hljs-literal">nil</span>
+        }
+        h.flags &amp;^= sameSizeGrow
+    }
+}
+</code></pre>
+<footer class="page-footer"><span class="copyright">Copyright &#xA9; Lsc 2019 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
+2021-02-16 08:35:14
+</span></footer><script>var _hmt = _hmt || [];(function() {var hm = document.createElement('script');hm.src = '//hm.baidu.com/hm.js?181780a9962d5f58cb82c8ce32b1ff71';var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(hm, s);})();</script>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="slice.html" class="navigation navigation-prev " aria-label="Previous page: 切片(slice)">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../command/mod.md" class="navigation navigation-next " aria-label="Next page: 管理工具-gomod">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"字典(map)","level":"1.2.8","depth":2,"next":{"title":"管理工具-gomod","level":"1.2.9","depth":2,"path":"go/command/mod.md","ref":"go/command/mod.md","articles":[]},"previous":{"title":"切片(slice)","level":"1.2.7","depth":2,"path":"go/base/slice.md","ref":"go/base/slice.md","articles":[]},"dir":"ltr"},"config":{"plugins":["fontsettings","highlight","-livereload","-search","search-pro","sharing","anchors","anchor-navigation-ex","ba","-expandable-chapters","expandable-chapters-small","toggle-chapters","splitter","tbfed-pagefooter","code","copy-code-button","-todo","-advanced-emoji","-chapter-fold"],"styles":{"website":"styles/website.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy Lsc 2019","modify_label":"修订时间：","modify_format":"2021-MM-DD HH:mm:ss"},"splitter":{},"search-pro":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":false},"fontsettings":{"family":"sans","size":2,"theme":"night"},"highlight":{},"anchor-navigation-ex":{"mode":"float","pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"isRewritePageTitle":false,"showLevel":true,"showGoTop":true,"printLog":false,"multipleH1":true,"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false}},"expandable-chapters-small":{},"copy-code-button":{},"sharing":{"all":["facebook","google","twitter","weibo","instapaper"],"facebook":true,"google":false,"instapaper":false,"twitter":true,"vk":false,"weibo":true},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{},"toggle-chapters":{},"ba":{"token":"181780a9962d5f58cb82c8ce32b1ff71"}},"theme":"default","author":"LiuShuaicai","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Lsc'Go","language":"zh-hans","links":{"sidebar":{"Lsc'Home":"http://blog.liushuaicai.com"}},"gitbook":"3.2.3","description":"为了自己的野心要不断努力！","theme-default":{"showLevel":true}},"file":{"path":"go/base/map.md","mtime":"2022-02-16T00:35:14.424Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-02-16T00:35:40.693Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-toggle-chapters/toggle.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+
+    </body>
+</html>
+

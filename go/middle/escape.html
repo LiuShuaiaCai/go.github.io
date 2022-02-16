@@ -77,6 +77,8 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
+    <link rel="next" href="uintptr.html" />
+    
     
     <link rel="prev" href="./" />
     
@@ -213,7 +215,7 @@
                 <a href="../base/array.html">
             
                     
-                    数组
+                    数组(array)
             
                 </a>
             
@@ -226,7 +228,7 @@
                 <a href="../base/slice.html">
             
                     
-                    Slice
+                    切片(slice)
             
                 </a>
             
@@ -234,7 +236,20 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.8" data-path="../command/mod.md">
+        <li class="chapter " data-level="1.2.8" data-path="../base/map.html">
+            
+                <a href="../base/map.html">
+            
+                    
+                    字典(map)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="../command/mod.md">
             
                 <span>
             
@@ -272,6 +287,19 @@
             
                     
                     变量逃逸分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="uintptr.html">
+            
+                <a href="uintptr.html">
+            
+                    
+                    uintptr与unsafe.Pointer的关系
             
                 </a>
             
@@ -476,10 +504,14 @@
 
             
                 
-                <a href="./" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 加强学习">
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: 加强学习">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
+                
+                <a href="uintptr.html" class="navigation navigation-next " aria-label="Next page: uintptr与unsafe.Pointer的关系">
+                    <i class="fa fa-angle-right"></i>
+                </a>
                 
             
         
@@ -488,7 +520,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"变量逃逸分析","level":"1.3.1","depth":2,"previous":{"title":"加强学习","level":"1.3","depth":1,"path":"go/middle/README.md","ref":"go/middle/README.md","articles":[{"title":"变量逃逸分析","level":"1.3.1","depth":2,"path":"go/middle/escape.md","ref":"go/middle/escape.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["fontsettings","highlight","-livereload","-search","search-pro","sharing","anchors","anchor-navigation-ex","ba","-expandable-chapters","expandable-chapters-small","toggle-chapters","splitter","tbfed-pagefooter","code","copy-code-button","-todo","-advanced-emoji","-chapter-fold"],"styles":{"website":"styles/website.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy Lsc 2019","modify_label":"修订时间：","modify_format":"2021-MM-DD HH:mm:ss"},"splitter":{},"search-pro":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":false},"fontsettings":{"family":"sans","size":2,"theme":"night"},"highlight":{},"anchor-navigation-ex":{"mode":"float","pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"isRewritePageTitle":false,"showLevel":true,"showGoTop":true,"printLog":false,"multipleH1":true,"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false}},"expandable-chapters-small":{},"copy-code-button":{},"sharing":{"all":["facebook","google","twitter","weibo","instapaper"],"facebook":true,"google":false,"instapaper":false,"twitter":true,"vk":false,"weibo":true},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{},"toggle-chapters":{},"ba":{"token":"181780a9962d5f58cb82c8ce32b1ff71"}},"theme":"default","author":"LiuShuaicai","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Lsc'Go","language":"zh-hans","links":{"sidebar":{"Lsc'Home":"http://blog.liushuaicai.com"}},"gitbook":"3.2.3","description":"为了自己的野心要不断努力！","theme-default":{"showLevel":true}},"file":{"path":"go/middle/escape.md","mtime":"2022-01-28T10:37:54.778Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-01-30T07:10:04.778Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"变量逃逸分析","level":"1.3.1","depth":2,"next":{"title":"uintptr与unsafe.Pointer的关系","level":"1.3.2","depth":2,"path":"go/middle/uintptr.md","ref":"go/middle/uintptr.md","articles":[]},"previous":{"title":"加强学习","level":"1.3","depth":1,"path":"go/middle/README.md","ref":"go/middle/README.md","articles":[{"title":"变量逃逸分析","level":"1.3.1","depth":2,"path":"go/middle/escape.md","ref":"go/middle/escape.md","articles":[]},{"title":"uintptr与unsafe.Pointer的关系","level":"1.3.2","depth":2,"path":"go/middle/uintptr.md","ref":"go/middle/uintptr.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["fontsettings","highlight","-livereload","-search","search-pro","sharing","anchors","anchor-navigation-ex","ba","-expandable-chapters","expandable-chapters-small","toggle-chapters","splitter","tbfed-pagefooter","code","copy-code-button","-todo","-advanced-emoji","-chapter-fold"],"styles":{"website":"styles/website.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy Lsc 2019","modify_label":"修订时间：","modify_format":"2021-MM-DD HH:mm:ss"},"splitter":{},"search-pro":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":false},"fontsettings":{"family":"sans","size":2,"theme":"night"},"highlight":{},"anchor-navigation-ex":{"mode":"float","pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"isRewritePageTitle":false,"showLevel":true,"showGoTop":true,"printLog":false,"multipleH1":true,"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false}},"expandable-chapters-small":{},"copy-code-button":{},"sharing":{"all":["facebook","google","twitter","weibo","instapaper"],"facebook":true,"google":false,"instapaper":false,"twitter":true,"vk":false,"weibo":true},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{},"toggle-chapters":{},"ba":{"token":"181780a9962d5f58cb82c8ce32b1ff71"}},"theme":"default","author":"LiuShuaicai","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Lsc'Go","language":"zh-hans","links":{"sidebar":{"Lsc'Home":"http://blog.liushuaicai.com"}},"gitbook":"3.2.3","description":"为了自己的野心要不断努力！","theme-default":{"showLevel":true}},"file":{"path":"go/middle/escape.md","mtime":"2022-01-28T10:37:54.778Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-02-16T00:35:40.693Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
