@@ -77,6 +77,8 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
+    <link rel="next" href="memory/" />
+    
     
     <link rel="prev" href="env.html" />
     
@@ -317,6 +319,19 @@
             
         </li>
     
+        <li class="chapter " data-level="1.13" data-path="memory/">
+            
+                <a href="memory/">
+            
+                    
+                    内存分配
+            
+                </a>
+            
+
+            
+        </li>
+    
 
     
 
@@ -417,7 +432,7 @@ go tool pprof -alloc_space <a href="http://ip:port/debug/pprof/profile?second=60
 <h4 id="&#x65B9;&#x5F0F;&#x4E00;&#xFF1A;&#x901A;&#x8FC7;url&#x65B9;&#x5F0F;"><a name="&#x65B9;&#x5F0F;&#x4E00;&#xFF1A;&#x901A;&#x8FC7;url&#x65B9;&#x5F0F;" class="anchor-navigation-ex-anchor" href="#&#x65B9;&#x5F0F;&#x4E00;&#xFF1A;&#x901A;&#x8FC7;url&#x65B9;&#x5F0F;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x65B9;&#x5F0F;&#x4E00;&#xFF1A;&#x901A;&#x8FC7;url&#x65B9;&#x5F0F;" class="plugin-anchor" href="#&#x65B9;&#x5F0F;&#x4E00;&#xFF1A;&#x901A;&#x8FC7;url&#x65B9;&#x5F0F;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x65B9;&#x5F0F;&#x4E00;&#xFF1A;&#x901A;&#x8FC7;URL&#x65B9;&#x5F0F;</h4>
 <p>&#x6267;&#x884C;&#x547D;&#x4EE4;&#xFF1A;go tool pprof  <a href="http://localhost:8080/debug/pprof/profile?seconds=20s" target="_blank">http://localhost:8080/debug/pprof/profile?seconds=20s</a>
 <img src="images/pprof2.png" alt="pprof">
-&#x901A;&#x8FC7;<img src="https://cdn.nlark.com/yuque/__latex/ae8eb96df05e788ac39d88948eaf295c.svg#card=math&amp;code=svg&amp;height=14&amp;id=s3JvT" alt="">&#x751F;&#x6210;svg&#x6587;&#x4EF6;&#x540E;&#xFF0C;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x5728;&#x6D4F;&#x89C8;&#x5668;&#x6253;&#x5F00;&#x5982;&#x4E0B;&#x56FE;&#xFF1A;
+&#x901A;&#x8FC7;<code>svg</code>&#x547D;&#x4EE4;&#x751F;&#x6210;svg&#x6587;&#x4EF6;&#x540E;&#xFF0C;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x5728;&#x6D4F;&#x89C8;&#x5668;&#x6253;&#x5F00;&#x5982;&#x4E0B;&#x56FE;&#xFF1A;
 <img src="images/pprof3.png" alt="pprof"></p>
 <h4 id="&#x65B9;&#x5F0F;&#x4E8C;&#xFF1A;&#x901A;&#x8FC7;&#x538B;&#x6D4B;&#x5C5E;&#x6027;&#x7684;&#x65B9;&#x5F0F;"><a name="&#x65B9;&#x5F0F;&#x4E8C;&#xFF1A;&#x901A;&#x8FC7;&#x538B;&#x6D4B;&#x5C5E;&#x6027;&#x7684;&#x65B9;&#x5F0F;" class="anchor-navigation-ex-anchor" href="#&#x65B9;&#x5F0F;&#x4E8C;&#xFF1A;&#x901A;&#x8FC7;&#x538B;&#x6D4B;&#x5C5E;&#x6027;&#x7684;&#x65B9;&#x5F0F;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x65B9;&#x5F0F;&#x4E8C;&#xFF1A;&#x901A;&#x8FC7;&#x538B;&#x6D4B;&#x5C5E;&#x6027;&#x7684;&#x65B9;&#x5F0F;" class="plugin-anchor" href="#&#x65B9;&#x5F0F;&#x4E8C;&#xFF1A;&#x901A;&#x8FC7;&#x538B;&#x6D4B;&#x5C5E;&#x6027;&#x7684;&#x65B9;&#x5F0F;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x65B9;&#x5F0F;&#x4E8C;&#xFF1A;&#x901A;&#x8FC7;&#x538B;&#x6D4B;&#x5C5E;&#x6027;&#x7684;&#x65B9;&#x5F0F;</h4>
 <p>&#x7ED3;&#x6784;&#x4F53;&#x6587;&#x4EF6;&#xFF1A;</p>
@@ -516,7 +531,7 @@ go test --bench=. -cpuprofile cpu.prof -memprofile mem.prof
 <pre><code class="lang-bash">~/GolandProjects/bin/pprof -http 127.0.0.1:9090 http://127.0.0.1:8080/debug/pprof/profile
 </code></pre>
 <footer class="page-footer"><span class="copyright">Copyright &#xA9; Lsc 2019 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
-2021-02-16 15:05:02
+2021-03-05 08:54:34
 </span></footer><script>var _hmt = _hmt || [];(function() {var hm = document.createElement('script');hm.src = '//hm.baidu.com/hm.js?181780a9962d5f58cb82c8ce32b1ff71';var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(hm, s);})();</script>
                                 
                                 </section>
@@ -544,10 +559,14 @@ go test --bench=. -cpuprofile cpu.prof -memprofile mem.prof
 
             
                 
-                <a href="env.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: ENV配置">
+                <a href="env.html" class="navigation navigation-prev " aria-label="Previous page: ENV配置">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
+                
+                <a href="memory/" class="navigation navigation-next " aria-label="Next page: 内存分配">
+                    <i class="fa fa-angle-right"></i>
+                </a>
                 
             
         
@@ -556,7 +575,7 @@ go test --bench=. -cpuprofile cpu.prof -memprofile mem.prof
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"分析工具-pprof","level":"1.12","depth":1,"previous":{"title":"ENV配置","level":"1.11","depth":1,"path":"go/env.md","ref":"go/env.md","articles":[]},"dir":"ltr"},"config":{"plugins":["fontsettings","highlight","-livereload","-search","search-pro","sharing","anchors","anchor-navigation-ex","ba","-expandable-chapters","expandable-chapters-small","toggle-chapters","splitter","tbfed-pagefooter","code","copy-code-button","-todo","-advanced-emoji","-chapter-fold"],"styles":{"website":"styles/website.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy Lsc 2019","modify_label":"修订时间：","modify_format":"2021-MM-DD HH:mm:ss"},"splitter":{},"search-pro":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":false},"fontsettings":{"family":"sans","size":2,"theme":"night"},"highlight":{},"anchor-navigation-ex":{"mode":"float","pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"isRewritePageTitle":false,"showLevel":true,"showGoTop":true,"printLog":false,"multipleH1":true,"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false}},"expandable-chapters-small":{},"copy-code-button":{},"sharing":{"all":["facebook","google","twitter","weibo","instapaper"],"facebook":true,"google":false,"instapaper":false,"twitter":true,"vk":false,"weibo":true},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{},"toggle-chapters":{},"ba":{"token":"181780a9962d5f58cb82c8ce32b1ff71"}},"theme":"default","author":"LiuShuaicai","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Lsc'Go","language":"zh-hans","links":{"sidebar":{"Lsc'Home":"http://blog.liushuaicai.com"}},"gitbook":"3.2.3","description":"为了自己的野心要不断努力！","theme-default":{"showLevel":true}},"file":{"path":"go/pprof.md","mtime":"2022-02-16T07:05:02.738Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-02-18T01:22:41.166Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"分析工具-pprof","level":"1.12","depth":1,"next":{"title":"内存分配","level":"1.13","depth":1,"path":"go/memory/README.md","ref":"go/memory/README.md","articles":[]},"previous":{"title":"ENV配置","level":"1.11","depth":1,"path":"go/env.md","ref":"go/env.md","articles":[]},"dir":"ltr"},"config":{"plugins":["fontsettings","highlight","-livereload","-search","search-pro","sharing","anchors","anchor-navigation-ex","ba","-expandable-chapters","expandable-chapters-small","toggle-chapters","splitter","tbfed-pagefooter","code","copy-code-button","-todo","-advanced-emoji","-chapter-fold"],"styles":{"website":"styles/website.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy Lsc 2019","modify_label":"修订时间：","modify_format":"2021-MM-DD HH:mm:ss"},"splitter":{},"search-pro":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":false},"fontsettings":{"family":"sans","size":2,"theme":"night"},"highlight":{},"anchor-navigation-ex":{"mode":"float","pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"isRewritePageTitle":false,"showLevel":true,"showGoTop":true,"printLog":false,"multipleH1":true,"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false}},"expandable-chapters-small":{},"copy-code-button":{},"sharing":{"all":["facebook","google","twitter","weibo","instapaper"],"facebook":true,"google":false,"instapaper":false,"twitter":true,"vk":false,"weibo":true},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{},"toggle-chapters":{},"ba":{"token":"181780a9962d5f58cb82c8ce32b1ff71"}},"theme":"default","author":"LiuShuaicai","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Lsc'Go","language":"zh-hans","links":{"sidebar":{"Lsc'Home":"http://blog.liushuaicai.com"}},"gitbook":"3.2.3","description":"为了自己的野心要不断努力！","theme-default":{"showLevel":true}},"file":{"path":"go/pprof.md","mtime":"2022-03-05T00:54:34.457Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-03-05T00:54:53.831Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
