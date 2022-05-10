@@ -1,0 +1,1434 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>腾讯发布Go安全指南 · Lsc'Go</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="LiuShuaicai">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-toggle-chapters/toggle.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../styles/website.css">
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="gin/base.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="http://blog.liushuaicai.com" target="_blank" class="custom-link">Lsc'Home</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    资源列表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="variable/">
+            
+                <a href="variable/">
+            
+                    
+                    变量
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="variable/type.html">
+            
+                <a href="variable/type.html">
+            
+                    
+                    数据类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="variable/format.html">
+            
+                <a href="variable/format.html">
+            
+                    
+                    格式化输出
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="variable/conversion.html">
+            
+                <a href="variable/conversion.html">
+            
+                    
+                    数据类型转换
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="constant.html">
+            
+                <a href="constant.html">
+            
+                    
+                    常量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="array.html">
+            
+                <a href="array.html">
+            
+                    
+                    数组(array)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="slice.html">
+            
+                <a href="slice.html">
+            
+                    
+                    切片(slice)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="map.html">
+            
+                <a href="map.html">
+            
+                    
+                    字典(map)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="channel.html">
+            
+                <a href="channel.html">
+            
+                    
+                    管道(channel)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="gpm/">
+            
+                <a href="gpm/">
+            
+                    
+                    GPM模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="escape.html">
+            
+                <a href="escape.html">
+            
+                    
+                    变量逃逸分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="uintptr.html">
+            
+                <a href="uintptr.html">
+            
+                    
+                    uintptr与unsafe.Pointer的关系
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="env.html">
+            
+                <a href="env.html">
+            
+                    
+                    ENV配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="pprof.html">
+            
+                <a href="pprof.html">
+            
+                    
+                    分析工具-pprof
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="protobuf/">
+            
+                <a href="protobuf/">
+            
+                    
+                    Protobuf
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="gin/">
+            
+                <a href="gin/">
+            
+                    
+                    Gin
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.14.1" data-path="gin/base.html">
+            
+                <a href="gin/base.html">
+            
+                    
+                    gin基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.15" data-path="safety_guide.html">
+            
+                <a href="safety_guide.html">
+            
+                    
+                    腾讯发布Go安全指南
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >腾讯发布Go安全指南</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#&#x901A;&#x7528;&#x7C7B;"><b>1. </b>&#x901A;&#x7528;&#x7C7B;</a></li><ul><li><span class="title-icon "></span><a href="#&#x4EE3;&#x7801;&#x5B9E;&#x73B0;&#x7C7B;"><b>1.1. </b>&#x4EE3;&#x7801;&#x5B9E;&#x73B0;&#x7C7B;</a></li><ul><li><span class="title-icon "></span><a href="#&#x5185;&#x5B58;&#x7BA1;&#x7406;"><b>1.1.1. </b>&#x5185;&#x5B58;&#x7BA1;&#x7406;</a></li><li><span class="title-icon "></span><a href="#&#x6587;&#x4EF6;&#x64CD;&#x4F5C;"><b>1.1.2. </b>&#x6587;&#x4EF6;&#x64CD;&#x4F5C;</a></li><li><span class="title-icon "></span><a href="#&#x7CFB;&#x7EDF;&#x63A5;&#x53E3;"><b>1.1.3. </b>&#x7CFB;&#x7EDF;&#x63A5;&#x53E3;</a></li><li><span class="title-icon "></span><a href="#&#x901A;&#x4FE1;&#x5B89;&#x5168;"><b>1.1.4. </b>&#x901A;&#x4FE1;&#x5B89;&#x5168;</a></li><li><span class="title-icon "></span><a href="#&#x654F;&#x611F;&#x6570;&#x636E;&#x4FDD;&#x62A4;"><b>1.1.5. </b>&#x654F;&#x611F;&#x6570;&#x636E;&#x4FDD;&#x62A4;</a></li><li><span class="title-icon "></span><a href="#&#x52A0;&#x5BC6;&#x89E3;&#x5BC6;"><b>1.1.6. </b>&#x52A0;&#x5BC6;&#x89E3;&#x5BC6;</a></li><li><span class="title-icon "></span><a href="#&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;"><b>1.1.7. </b>&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;</a></li></ul></ul><li><span class="title-icon "></span><a href="#&#x540E;&#x53F0;&#x7C7B;"><b>2. </b>&#x540E;&#x53F0;&#x7C7B;</a></li><ul><li><span class="title-icon "></span><a href="#&#x4EE3;&#x7801;&#x5B9E;&#x73B0;&#x7C7B;_1"><b>2.1. </b>&#x4EE3;&#x7801;&#x5B9E;&#x73B0;&#x7C7B;</a></li><ul><li><span class="title-icon "></span><a href="#&#x8F93;&#x5165;&#x6821;&#x9A8C;"><b>2.1.1. </b>&#x8F93;&#x5165;&#x6821;&#x9A8C;</a></li><li><span class="title-icon "></span><a href="#sql&#x64CD;&#x4F5C;"><b>2.1.2. </b>SQL&#x64CD;&#x4F5C;</a></li><li><span class="title-icon "></span><a href="#&#x7F51;&#x7EDC;&#x8BF7;&#x6C42;"><b>2.1.3. </b>&#x7F51;&#x7EDC;&#x8BF7;&#x6C42;</a></li><li><span class="title-icon "></span><a href="#&#x670D;&#x52A1;&#x5668;&#x7AEF;&#x6E32;&#x67D3;"><b>2.1.4. </b>&#x670D;&#x52A1;&#x5668;&#x7AEF;&#x6E32;&#x67D3;</a></li><li><span class="title-icon "></span><a href="#web&#x8DE8;&#x57DF;"><b>2.1.5. </b>Web&#x8DE8;&#x57DF;</a></li><li><span class="title-icon "></span><a href="#&#x54CD;&#x5E94;&#x8F93;&#x51FA;"><b>2.1.6. </b>&#x54CD;&#x5E94;&#x8F93;&#x51FA;</a></li><li><span class="title-icon "></span><a href="#&#x4F1A;&#x8BDD;&#x7BA1;&#x7406;"><b>2.1.7. </b>&#x4F1A;&#x8BDD;&#x7BA1;&#x7406;</a></li><li><span class="title-icon "></span><a href="#&#x8BBF;&#x95EE;&#x63A7;&#x5236;"><b>2.1.8. </b>&#x8BBF;&#x95EE;&#x63A7;&#x5236;</a></li><li><span class="title-icon "></span><a href="#&#x5E76;&#x53D1;&#x4FDD;&#x62A4;"><b>2.1.9. </b>&#x5E76;&#x53D1;&#x4FDD;&#x62A4;</a></li></ul></ul></ul></div><a href="#&#x901A;&#x7528;&#x7C7B;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x901A;&#x7528;&#x7C7B;"><a name="&#x901A;&#x7528;&#x7C7B;" class="anchor-navigation-ex-anchor" href="#&#x901A;&#x7528;&#x7C7B;"><i class="fa fa-link" aria-hidden="true"></i></a>1. &#x901A;&#x7528;&#x7C7B;</h1>
+<h2 id="&#x4EE3;&#x7801;&#x5B9E;&#x73B0;&#x7C7B;"><a name="&#x4EE3;&#x7801;&#x5B9E;&#x73B0;&#x7C7B;" class="anchor-navigation-ex-anchor" href="#&#x4EE3;&#x7801;&#x5B9E;&#x73B0;&#x7C7B;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1. &#x4EE3;&#x7801;&#x5B9E;&#x73B0;&#x7C7B;</h2>
+<h3 id="&#x5185;&#x5B58;&#x7BA1;&#x7406;"><a name="&#x5185;&#x5B58;&#x7BA1;&#x7406;" class="anchor-navigation-ex-anchor" href="#&#x5185;&#x5B58;&#x7BA1;&#x7406;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.1. &#x5185;&#x5B58;&#x7BA1;&#x7406;</h3>
+<h4 id="&#x3010;&#x5FC5;&#x987B;&#x3011;&#x5207;&#x7247;&#x957F;&#x5EA6;&#x6821;&#x9A8C;"><a name="&#x3010;&#x5FC5;&#x987B;&#x3011;&#x5207;&#x7247;&#x957F;&#x5EA6;&#x6821;&#x9A8C;" class="anchor-navigation-ex-anchor" href="#&#x3010;&#x5FC5;&#x987B;&#x3011;&#x5207;&#x7247;&#x957F;&#x5EA6;&#x6821;&#x9A8C;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x3010;&#x5FC5;&#x987B;&#x3011;&#x5207;&#x7247;&#x957F;&#x5EA6;&#x6821;&#x9A8C;" class="plugin-anchor" href="#&#x3010;&#x5FC5;&#x987B;&#x3011;&#x5207;&#x7247;&#x957F;&#x5EA6;&#x6821;&#x9A8C;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x3010;&#x5FC5;&#x987B;&#x3011;&#x5207;&#x7247;&#x957F;&#x5EA6;&#x6821;&#x9A8C;</h4>
+<ul>
+<li>&#x5728;&#x5BF9;slice&#x8FDB;&#x884C;&#x64CD;&#x4F5C;&#x65F6;&#xFF0C;&#x5FC5;&#x987B;&#x5224;&#x65AD;&#x957F;&#x5EA6;&#x662F;&#x5426;&#x5408;&#x6CD5;&#xFF0C;&#x9632;&#x6B62;&#x7A0B;&#x5E8F;panic</li>
+</ul>
+<pre><code class="lang-go"><span class="hljs-comment">// bad: &#x672A;&#x5224;&#x65AD;data&#x7684;&#x957F;&#x5EA6;&#xFF0C;&#x53EF;&#x5BFC;&#x81F4; index out of range</span>
+<span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">decode</span><span class="hljs-params">(data []<span class="hljs-keyword">byte</span>)</span> <span class="hljs-title">bool</span></span> {
+    <span class="hljs-keyword">if</span> data[<span class="hljs-number">0</span>] == <span class="hljs-string">&apos;F&apos;</span> &amp;&amp; data[<span class="hljs-number">1</span>] == <span class="hljs-string">&apos;U&apos;</span> &amp;&amp; data[<span class="hljs-number">2</span>] == <span class="hljs-string">&apos;Z&apos;</span> &amp;&amp; data[<span class="hljs-number">3</span>] == <span class="hljs-string">&apos;Z&apos;</span> &amp;&amp; data[<span class="hljs-number">4</span>] == <span class="hljs-string">&apos;E&apos;</span> &amp;&amp; data[<span class="hljs-number">5</span>] == <span class="hljs-string">&apos;R&apos;</span> {
+        fmt.Println(<span class="hljs-string">&quot;Bad&quot;</span>)
+        <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>
+    }
+    <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>
+}
+<span class="hljs-comment">// bad: slice bounds out of range</span>
+<span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">foo</span><span class="hljs-params">()</span></span> {
+    <span class="hljs-keyword">var</span> slice = []<span class="hljs-keyword">int</span>{<span class="hljs-number">0</span>, <span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>}
+    fmt.Println(slice[:<span class="hljs-number">10</span>])
+}
+<span class="hljs-comment">// good: &#x4F7F;&#x7528;data&#x524D;&#x5E94;&#x5224;&#x65AD;&#x957F;&#x5EA6;&#x662F;&#x5426;&#x5408;&#x6CD5;</span>
+<span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">decode</span><span class="hljs-params">(data []<span class="hljs-keyword">byte</span>)</span> <span class="hljs-title">bool</span></span> {
+    <span class="hljs-keyword">if</span> <span class="hljs-built_in">len</span>(data) == <span class="hljs-number">6</span> {
+        <span class="hljs-keyword">if</span> data[<span class="hljs-number">0</span>] == <span class="hljs-string">&apos;F&apos;</span> &amp;&amp; data[<span class="hljs-number">1</span>] == <span class="hljs-string">&apos;U&apos;</span> &amp;&amp; data[<span class="hljs-number">2</span>] == <span class="hljs-string">&apos;Z&apos;</span> &amp;&amp; data[<span class="hljs-number">3</span>] == <span class="hljs-string">&apos;Z&apos;</span> &amp;&amp; data[<span class="hljs-number">4</span>] == <span class="hljs-string">&apos;E&apos;</span> &amp;&amp; data[<span class="hljs-number">5</span>] == <span class="hljs-string">&apos;R&apos;</span> {
+            fmt.Println(<span class="hljs-string">&quot;Good&quot;</span>)
+            <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>
+        }
+    }
+    <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>
+}
+</code></pre>
+<h4 id="112&#x3010;&#x5FC5;&#x987B;&#x3011;nil&#x6307;&#x9488;&#x5224;&#x65AD;"><a name="112&#x3010;&#x5FC5;&#x987B;&#x3011;nil&#x6307;&#x9488;&#x5224;&#x65AD;" class="anchor-navigation-ex-anchor" href="#112&#x3010;&#x5FC5;&#x987B;&#x3011;nil&#x6307;&#x9488;&#x5224;&#x65AD;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="112&#x3010;&#x5FC5;&#x987B;&#x3011;nil&#x6307;&#x9488;&#x5224;&#x65AD;" class="plugin-anchor" href="#112&#x3010;&#x5FC5;&#x987B;&#x3011;nil&#x6307;&#x9488;&#x5224;&#x65AD;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.2&#x3010;&#x5FC5;&#x987B;&#x3011;nil&#x6307;&#x9488;&#x5224;&#x65AD;</h4>
+<ul>
+<li>&#x8FDB;&#x884C;&#x6307;&#x9488;&#x64CD;&#x4F5C;&#x65F6;&#xFF0C;&#x5FC5;&#x987B;&#x5224;&#x65AD;&#x8BE5;&#x6307;&#x9488;&#x662F;&#x5426;&#x4E3A;nil&#xFF0C;&#x9632;&#x6B62;&#x7A0B;&#x5E8F;panic&#xFF0C;&#x5C24;&#x5176;&#x5728;&#x8FDB;&#x884C;&#x7ED3;&#x6784;&#x4F53;Unmarshal&#x65F6;</li>
+</ul>
+<pre><code class="lang-go"><span class="hljs-keyword">type</span> Packet <span class="hljs-keyword">struct</span> {
+    PackeyType    <span class="hljs-keyword">uint8</span>
+    PackeyVersion <span class="hljs-keyword">uint8</span>
+    Data          *Data
+}
+<span class="hljs-keyword">type</span> Data <span class="hljs-keyword">struct</span> {
+    Stat <span class="hljs-keyword">uint8</span>
+    Len  <span class="hljs-keyword">uint8</span>
+    Buf  [<span class="hljs-number">8</span>]<span class="hljs-keyword">byte</span>
+}
+<span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-params">(p *Packet)</span> <span class="hljs-title">UnmarshalBinary</span><span class="hljs-params">(b []<span class="hljs-keyword">byte</span>)</span> <span class="hljs-title">error</span></span> {
+    <span class="hljs-keyword">if</span> <span class="hljs-built_in">len</span>(b) &lt; <span class="hljs-number">2</span> {
+        <span class="hljs-keyword">return</span> io.EOF
+    }
+    p.PackeyType = b[<span class="hljs-number">0</span>]
+    p.PackeyVersion = b[<span class="hljs-number">1</span>]
+    <span class="hljs-comment">// &#x82E5;&#x957F;&#x5EA6;&#x7B49;&#x4E8E;2&#xFF0C;&#x90A3;&#x4E48;&#x4E0D;&#x4F1A;new Data</span>
+    <span class="hljs-keyword">if</span> <span class="hljs-built_in">len</span>(b) &gt; <span class="hljs-number">2</span> {
+        p.Data = <span class="hljs-built_in">new</span>(Data)
+    }
+    <span class="hljs-keyword">return</span> <span class="hljs-literal">nil</span>
+}
+<span class="hljs-comment">// bad: &#x672A;&#x5224;&#x65AD;&#x6307;&#x9488;&#x662F;&#x5426;&#x4E3A;nil</span>
+<span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span> {
+    packet := <span class="hljs-built_in">new</span>(Packet)
+    data := <span class="hljs-built_in">make</span>([]<span class="hljs-keyword">byte</span>, <span class="hljs-number">2</span>)
+    <span class="hljs-keyword">if</span> err := packet.UnmarshalBinary(data); err != <span class="hljs-literal">nil</span> {
+        fmt.Println(<span class="hljs-string">&quot;Failed to unmarshal packet&quot;</span>)
+        <span class="hljs-keyword">return</span>
+    }
+    fmt.Printf(<span class="hljs-string">&quot;Stat: %v\n&quot;</span>, packet.Data.Stat)
+}
+<span class="hljs-comment">// good: &#x5224;&#x65AD;Data&#x6307;&#x9488;&#x662F;&#x5426;&#x4E3A;nil</span>
+<span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span> {
+    packet := <span class="hljs-built_in">new</span>(Packet)
+    data := <span class="hljs-built_in">make</span>([]<span class="hljs-keyword">byte</span>, <span class="hljs-number">2</span>)
+    <span class="hljs-keyword">if</span> err := packet.UnmarshalBinary(data); err != <span class="hljs-literal">nil</span> {
+        fmt.Println(<span class="hljs-string">&quot;Failed to unmarshal packet&quot;</span>)
+        <span class="hljs-keyword">return</span>
+    }
+    <span class="hljs-keyword">if</span> packet.Data == <span class="hljs-literal">nil</span> {
+        <span class="hljs-keyword">return</span>
+    }
+    fmt.Printf(<span class="hljs-string">&quot;Stat: %v\n&quot;</span>, packet.Data.Stat)
+}
+</code></pre>
+<h4 id="&#x3010;&#x5FC5;&#x987B;&#x3011;&#x6574;&#x6570;&#x5B89;&#x5168;"><a name="&#x3010;&#x5FC5;&#x987B;&#x3011;&#x6574;&#x6570;&#x5B89;&#x5168;" class="anchor-navigation-ex-anchor" href="#&#x3010;&#x5FC5;&#x987B;&#x3011;&#x6574;&#x6570;&#x5B89;&#x5168;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x3010;&#x5FC5;&#x987B;&#x3011;&#x6574;&#x6570;&#x5B89;&#x5168;" class="plugin-anchor" href="#&#x3010;&#x5FC5;&#x987B;&#x3011;&#x6574;&#x6570;&#x5B89;&#x5168;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x3010;&#x5FC5;&#x987B;&#x3011;&#x6574;&#x6570;&#x5B89;&#x5168;</h4>
+<ul>
+<li><p>&#x5728;&#x8FDB;&#x884C;&#x6570;&#x5B57;&#x8FD0;&#x7B97;&#x64CD;&#x4F5C;&#x65F6;&#xFF0C;&#x9700;&#x8981;&#x505A;&#x597D;&#x957F;&#x5EA6;&#x9650;&#x5236;&#xFF0C;&#x9632;&#x6B62;&#x5916;&#x90E8;&#x8F93;&#x5165;&#x8FD0;&#x7B97;&#x5BFC;&#x81F4;&#x5F02;&#x5E38;&#xFF1A;</p>
+<ul>
+<li>&#x786E;&#x4FDD;&#x65E0;&#x7B26;&#x53F7;&#x6574;&#x6570;&#x8FD0;&#x7B97;&#x65F6;&#x4E0D;&#x4F1A;&#x53CD;&#x8F6C;</li>
+<li>&#x786E;&#x4FDD;&#x6709;&#x7B26;&#x53F7;&#x6574;&#x6570;&#x8FD0;&#x7B97;&#x65F6;&#x4E0D;&#x4F1A;&#x51FA;&#x73B0;&#x6EA2;&#x51FA;</li>
+<li>&#x786E;&#x4FDD;&#x6574;&#x578B;&#x8F6C;&#x6362;&#x65F6;&#x4E0D;&#x4F1A;&#x51FA;&#x73B0;&#x622A;&#x65AD;&#x9519;&#x8BEF;</li>
+<li>&#x786E;&#x4FDD;&#x6574;&#x578B;&#x8F6C;&#x6362;&#x65F6;&#x4E0D;&#x4F1A;&#x51FA;&#x73B0;&#x7B26;&#x53F7;&#x9519;&#x8BEF;</li>
+</ul>
+</li>
+<li><p>&#x4EE5;&#x4E0B;&#x573A;&#x666F;&#x5FC5;&#x987B;&#x4E25;&#x683C;&#x8FDB;&#x884C;&#x957F;&#x5EA6;&#x9650;&#x5236;&#xFF1A;</p>
+<ul>
+<li>&#x4F5C;&#x4E3A;&#x6570;&#x7EC4;&#x7D22;&#x5F15;</li>
+<li>&#x4F5C;&#x4E3A;&#x5BF9;&#x8C61;&#x7684;&#x957F;&#x5EA6;&#x6216;&#x8005;&#x5927;&#x5C0F;</li>
+<li>&#x4F5C;&#x4E3A;&#x6570;&#x7EC4;&#x7684;&#x8FB9;&#x754C;&#xFF08;&#x5982;&#x4F5C;&#x4E3A;&#x5FAA;&#x73AF;&#x8BA1;&#x6570;&#x5668;&#xFF09;</li>
+</ul>
+</li>
+</ul>
+<pre><code class="lang-go"><span class="hljs-comment">// bad: &#x672A;&#x9650;&#x5236;&#x957F;&#x5EA6;&#xFF0C;&#x5BFC;&#x81F4;&#x6574;&#x6570;&#x6EA2;&#x51FA;</span>
+<span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">overflow</span><span class="hljs-params">(numControlByUser <span class="hljs-keyword">int32</span>)</span></span> {
+    <span class="hljs-keyword">var</span> numInt <span class="hljs-keyword">int32</span> = <span class="hljs-number">0</span>
+    numInt = numControlByUser + <span class="hljs-number">1</span>
+    <span class="hljs-comment">// &#x5BF9;&#x957F;&#x5EA6;&#x9650;&#x5236;&#x4E0D;&#x5F53;&#xFF0C;&#x5BFC;&#x81F4;&#x6574;&#x6570;&#x6EA2;&#x51FA;</span>
+    fmt.Printf(<span class="hljs-string">&quot;%d\n&quot;</span>, numInt)
+    <span class="hljs-comment">// &#x4F7F;&#x7528;numInt&#xFF0C;&#x53EF;&#x80FD;&#x5BFC;&#x81F4;&#x5176;&#x4ED6;&#x9519;&#x8BEF;</span>
+}
+<span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span> {
+    overflow(<span class="hljs-number">2147483647</span>)
+}
+<span class="hljs-comment">// good</span>
+<span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">overflow</span><span class="hljs-params">(numControlByUser <span class="hljs-keyword">int32</span>)</span></span> {
+    <span class="hljs-keyword">var</span> numInt <span class="hljs-keyword">int32</span> = <span class="hljs-number">0</span>
+    numInt = numControlByUser + <span class="hljs-number">1</span>
+    <span class="hljs-keyword">if</span> numInt &lt; <span class="hljs-number">0</span> {
+        fmt.Println(<span class="hljs-string">&quot;integer overflow&quot;</span>)
+        <span class="hljs-keyword">return</span>
+    }
+    fmt.Println(<span class="hljs-string">&quot;integer ok&quot;</span>)
+}
+<span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span> {
+    overflow(<span class="hljs-number">2147483647</span>)
+}
+</code></pre>
+<h4 id="&#x3010;&#x5FC5;&#x987B;&#x3011;make&#x5206;&#x914D;&#x957F;&#x5EA6;&#x9A8C;&#x8BC1;"><a name="&#x3010;&#x5FC5;&#x987B;&#x3011;make&#x5206;&#x914D;&#x957F;&#x5EA6;&#x9A8C;&#x8BC1;" class="anchor-navigation-ex-anchor" href="#&#x3010;&#x5FC5;&#x987B;&#x3011;make&#x5206;&#x914D;&#x957F;&#x5EA6;&#x9A8C;&#x8BC1;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x3010;&#x5FC5;&#x987B;&#x3011;make&#x5206;&#x914D;&#x957F;&#x5EA6;&#x9A8C;&#x8BC1;" class="plugin-anchor" href="#&#x3010;&#x5FC5;&#x987B;&#x3011;make&#x5206;&#x914D;&#x957F;&#x5EA6;&#x9A8C;&#x8BC1;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x3010;&#x5FC5;&#x987B;&#x3011;make&#x5206;&#x914D;&#x957F;&#x5EA6;&#x9A8C;&#x8BC1;</h4>
+<ul>
+<li>&#x5728;&#x8FDB;&#x884C;make&#x5206;&#x914D;&#x5185;&#x5B58;&#x65F6;&#xFF0C;&#x9700;&#x8981;&#x5BF9;&#x5916;&#x90E8;&#x53EF;&#x63A7;&#x7684;&#x957F;&#x5EA6;&#x8FDB;&#x884C;&#x6821;&#x9A8C;&#xFF0C;&#x9632;&#x6B62;&#x7A0B;&#x5E8F;panic&#x3002;</li>
+</ul>
+<pre><code class="lang-go"><span class="hljs-comment">// bad</span>
+<span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">parse</span><span class="hljs-params">(lenControlByUser <span class="hljs-keyword">int</span>, data []<span class="hljs-keyword">byte</span>)</span></span> {
+    size := lenControlByUser
+    <span class="hljs-comment">// &#x5BF9;&#x5916;&#x90E8;&#x4F20;&#x5165;&#x7684;size&#xFF0C;&#x8FDB;&#x884C;&#x957F;&#x5EA6;&#x5224;&#x65AD;&#x4EE5;&#x514D;&#x5BFC;&#x81F4;panic</span>
+    buffer := <span class="hljs-built_in">make</span>([]<span class="hljs-keyword">byte</span>, size)
+    <span class="hljs-built_in">copy</span>(buffer, data)
+}
+<span class="hljs-comment">// good</span>
+<span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">parse</span><span class="hljs-params">(lenControlByUser <span class="hljs-keyword">int</span>, data []<span class="hljs-keyword">byte</span>)</span> <span class="hljs-params">([]<span class="hljs-keyword">byte</span>, error)</span></span> {
+    size := lenControlByUser
+    <span class="hljs-comment">// &#x9650;&#x5236;&#x5916;&#x90E8;&#x53EF;&#x63A7;&#x7684;&#x957F;&#x5EA6;&#x5927;&#x5C0F;&#x8303;&#x56F4;</span>
+    <span class="hljs-keyword">if</span> size &gt; <span class="hljs-number">64</span>*<span class="hljs-number">1024</span>*<span class="hljs-number">1024</span> {
+        <span class="hljs-keyword">return</span> <span class="hljs-literal">nil</span>, errors.New(<span class="hljs-string">&quot;value too large&quot;</span>)
+    }
+    buffer := <span class="hljs-built_in">make</span>([]<span class="hljs-keyword">byte</span>, size)
+    <span class="hljs-built_in">copy</span>(buffer, data)
+    <span class="hljs-keyword">return</span> buffer, <span class="hljs-literal">nil</span>
+}
+</code></pre>
+<h4 id="&#x3010;&#x5FC5;&#x987B;&#x3011;&#x7981;&#x6B62;setfinalizer&#x548C;&#x6307;&#x9488;&#x5FAA;&#x73AF;&#x5F15;&#x7528;&#x540C;&#x65F6;&#x4F7F;&#x7528;"><a name="&#x3010;&#x5FC5;&#x987B;&#x3011;&#x7981;&#x6B62;setfinalizer&#x548C;&#x6307;&#x9488;&#x5FAA;&#x73AF;&#x5F15;&#x7528;&#x540C;&#x65F6;&#x4F7F;&#x7528;" class="anchor-navigation-ex-anchor" href="#&#x3010;&#x5FC5;&#x987B;&#x3011;&#x7981;&#x6B62;setfinalizer&#x548C;&#x6307;&#x9488;&#x5FAA;&#x73AF;&#x5F15;&#x7528;&#x540C;&#x65F6;&#x4F7F;&#x7528;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x3010;&#x5FC5;&#x987B;&#x3011;&#x7981;&#x6B62;setfinalizer&#x548C;&#x6307;&#x9488;&#x5FAA;&#x73AF;&#x5F15;&#x7528;&#x540C;&#x65F6;&#x4F7F;&#x7528;" class="plugin-anchor" href="#&#x3010;&#x5FC5;&#x987B;&#x3011;&#x7981;&#x6B62;setfinalizer&#x548C;&#x6307;&#x9488;&#x5FAA;&#x73AF;&#x5F15;&#x7528;&#x540C;&#x65F6;&#x4F7F;&#x7528;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x3010;&#x5FC5;&#x987B;&#x3011;&#x7981;&#x6B62;SetFinalizer&#x548C;&#x6307;&#x9488;&#x5FAA;&#x73AF;&#x5F15;&#x7528;&#x540C;&#x65F6;&#x4F7F;&#x7528;</h4>
+<ul>
+<li>&#x5F53;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x4ECE;&#x88AB;GC&#x9009;&#x4E2D;&#x5230;&#x79FB;&#x9664;&#x5185;&#x5B58;&#x4E4B;&#x524D;&#xFF0C;runtime.SetFinalizer()&#x90FD;&#x4E0D;&#x4F1A;&#x6267;&#x884C;&#xFF0C;&#x5373;&#x4F7F;&#x7A0B;&#x5E8F;&#x6B63;&#x5E38;&#x7ED3;&#x675F;&#x6216;&#x8005;&#x53D1;&#x751F;&#x9519;&#x8BEF;&#x3002;&#x7531;&#x6307;&#x9488;&#x6784;&#x6210;&#x7684;&#x201C;&#x5FAA;&#x73AF;&#x5F15;&#x7528;&#x201D;&#x867D;&#x7136;&#x80FD;&#x88AB;GC&#x6B63;&#x786E;&#x5904;&#x7406;&#xFF0C;&#x4F46;&#x7531;&#x4E8E;&#x65E0;&#x6CD5;&#x786E;&#x5B9A;Finalizer&#x4F9D;&#x8D56;&#x987A;&#x5E8F;&#xFF0C;&#x4ECE;&#x800C;&#x65E0;&#x6CD5;&#x8C03;&#x7528;runtime.SetFinalizer()&#xFF0C;&#x5BFC;&#x81F4;&#x76EE;&#x6807;&#x5BF9;&#x8C61;&#x65E0;&#x6CD5;&#x53D8;&#x6210;&#x53EF;&#x8FBE;&#x72B6;&#x6001;&#xFF0C;&#x4ECE;&#x800C;&#x9020;&#x6210;&#x5185;&#x5B58;&#x65E0;&#x6CD5;&#x88AB;&#x56DE;&#x6536;&#x3002;</li>
+</ul>
+<pre><code class="lang-go"><span class="hljs-comment">// bad</span>
+<span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">foo</span><span class="hljs-params">()</span></span> {
+    <span class="hljs-keyword">var</span> a, b Data
+    a.o = &amp;b
+    b.o = &amp;a
+    <span class="hljs-comment">// &#x6307;&#x9488;&#x5FAA;&#x73AF;&#x5F15;&#x7528;&#xFF0C;SetFinalizer()&#x65E0;&#x6CD5;&#x6B63;&#x5E38;&#x8C03;&#x7528;</span>
+    runtime.SetFinalizer(&amp;a, <span class="hljs-function"><span class="hljs-keyword">func</span><span class="hljs-params">(d *Data)</span></span> {
+        fmt.Printf(<span class="hljs-string">&quot;a %p final.\n&quot;</span>, d)
+    })
+    runtime.SetFinalizer(&amp;b, <span class="hljs-function"><span class="hljs-keyword">func</span><span class="hljs-params">(d *Data)</span></span> {
+        fmt.Printf(<span class="hljs-string">&quot;b %p final.\n&quot;</span>, d)
+    })
+}
+<span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span> {
+    <span class="hljs-keyword">for</span> {
+        foo()
+        time.Sleep(time.Millisecond)
+    }
+}
+</code></pre>
+<h4 id="&#x3010;&#x5FC5;&#x987B;&#x3011;&#x7981;&#x6B62;&#x91CD;&#x590D;&#x91CA;&#x653E;channel"><a name="&#x3010;&#x5FC5;&#x987B;&#x3011;&#x7981;&#x6B62;&#x91CD;&#x590D;&#x91CA;&#x653E;channel" class="anchor-navigation-ex-anchor" href="#&#x3010;&#x5FC5;&#x987B;&#x3011;&#x7981;&#x6B62;&#x91CD;&#x590D;&#x91CA;&#x653E;channel"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x3010;&#x5FC5;&#x987B;&#x3011;&#x7981;&#x6B62;&#x91CD;&#x590D;&#x91CA;&#x653E;channel" class="plugin-anchor" href="#&#x3010;&#x5FC5;&#x987B;&#x3011;&#x7981;&#x6B62;&#x91CD;&#x590D;&#x91CA;&#x653E;channel"><i class="fa fa-link" aria-hidden="true"></i></a>&#x3010;&#x5FC5;&#x987B;&#x3011;&#x7981;&#x6B62;&#x91CD;&#x590D;&#x91CA;&#x653E;channel</h4>
+<ul>
+<li>&#x91CD;&#x590D;&#x91CA;&#x653E;&#x4E00;&#x822C;&#x5B58;&#x5728;&#x4E8E;&#x5F02;&#x5E38;&#x6D41;&#x7A0B;&#x5224;&#x65AD;&#x4E2D;&#xFF0C;&#x5982;&#x679C;&#x6076;&#x610F;&#x653B;&#x51FB;&#x8005;&#x6784;&#x9020;&#x51FA;&#x5F02;&#x5E38;&#x6761;&#x4EF6;&#x4F7F;&#x7A0B;&#x5E8F;&#x91CD;&#x590D;&#x91CA;&#x653E;channel&#xFF0C;&#x5219;&#x4F1A;&#x89E6;&#x53D1;&#x8FD0;&#x884C;&#x65F6;panic&#xFF0C;&#x4ECE;&#x800C;&#x9020;&#x6210;DoS&#x653B;&#x51FB;&#x3002;</li>
+</ul>
+<pre><code class="lang-go"><span class="hljs-comment">// bad</span>
+<span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">foo</span><span class="hljs-params">(c <span class="hljs-keyword">chan</span> <span class="hljs-keyword">int</span>)</span></span> {
+    <span class="hljs-keyword">defer</span> <span class="hljs-built_in">close</span>(c)
+    err := processBusiness()
+    <span class="hljs-keyword">if</span> err != <span class="hljs-literal">nil</span> {
+        c &lt;- <span class="hljs-number">0</span>
+        <span class="hljs-built_in">close</span>(c) <span class="hljs-comment">// &#x91CD;&#x590D;&#x91CA;&#x653E;channel</span>
+        <span class="hljs-keyword">return</span>
+    }
+    c &lt;- <span class="hljs-number">1</span>
+}
+<span class="hljs-comment">// good</span>
+<span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">foo</span><span class="hljs-params">(c <span class="hljs-keyword">chan</span> <span class="hljs-keyword">int</span>)</span></span> {
+    <span class="hljs-keyword">defer</span> <span class="hljs-built_in">close</span>(c) <span class="hljs-comment">// &#x4F7F;&#x7528;defer&#x5EF6;&#x8FDF;&#x5173;&#x95ED;channel</span>
+    err := processBusiness()
+    <span class="hljs-keyword">if</span> err != <span class="hljs-literal">nil</span> {
+        c &lt;- <span class="hljs-number">0</span>
+        <span class="hljs-keyword">return</span>
+    }
+    c &lt;- <span class="hljs-number">1</span>
+}
+</code></pre>
+<h4 id="&#x3010;&#x5FC5;&#x987B;&#x3011;&#x786E;&#x4FDD;&#x6BCF;&#x4E2A;&#x534F;&#x7A0B;&#x90FD;&#x80FD;&#x9000;&#x51FA;"><a name="&#x3010;&#x5FC5;&#x987B;&#x3011;&#x786E;&#x4FDD;&#x6BCF;&#x4E2A;&#x534F;&#x7A0B;&#x90FD;&#x80FD;&#x9000;&#x51FA;" class="anchor-navigation-ex-anchor" href="#&#x3010;&#x5FC5;&#x987B;&#x3011;&#x786E;&#x4FDD;&#x6BCF;&#x4E2A;&#x534F;&#x7A0B;&#x90FD;&#x80FD;&#x9000;&#x51FA;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x3010;&#x5FC5;&#x987B;&#x3011;&#x786E;&#x4FDD;&#x6BCF;&#x4E2A;&#x534F;&#x7A0B;&#x90FD;&#x80FD;&#x9000;&#x51FA;" class="plugin-anchor" href="#&#x3010;&#x5FC5;&#x987B;&#x3011;&#x786E;&#x4FDD;&#x6BCF;&#x4E2A;&#x534F;&#x7A0B;&#x90FD;&#x80FD;&#x9000;&#x51FA;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x3010;&#x5FC5;&#x987B;&#x3011;&#x786E;&#x4FDD;&#x6BCF;&#x4E2A;&#x534F;&#x7A0B;&#x90FD;&#x80FD;&#x9000;&#x51FA;</h4>
+<ul>
+<li>&#x542F;&#x52A8;&#x4E00;&#x4E2A;&#x534F;&#x7A0B;&#x5C31;&#x4F1A;&#x505A;&#x4E00;&#x4E2A;&#x5165;&#x6808;&#x64CD;&#x4F5C;&#xFF0C;&#x5728;&#x7CFB;&#x7EDF;&#x4E0D;&#x9000;&#x51FA;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x534F;&#x7A0B;&#x4E5F;&#x6CA1;&#x6709;&#x8BBE;&#x7F6E;&#x9000;&#x51FA;&#x6761;&#x4EF6;&#xFF0C;&#x5219;&#x76F8;&#x5F53;&#x4E8E;&#x534F;&#x7A0B;&#x5931;&#x53BB;&#x4E86;&#x63A7;&#x5236;&#xFF0C;&#x5B83;&#x5360;&#x7528;&#x7684;&#x8D44;&#x6E90;&#x65E0;&#x6CD5;&#x56DE;&#x6536;&#xFF0C;&#x53EF;&#x80FD;&#x4F1A;&#x5BFC;&#x81F4;&#x5185;&#x5B58;&#x6CC4;&#x9732;&#x3002;</li>
+</ul>
+<pre><code class="lang-go"><span class="hljs-comment">// bad: &#x534F;&#x7A0B;&#x6CA1;&#x6709;&#x8BBE;&#x7F6E;&#x9000;&#x51FA;&#x6761;&#x4EF6;</span>
+<span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">doWaiter</span><span class="hljs-params">(name <span class="hljs-keyword">string</span>, second <span class="hljs-keyword">int</span>)</span></span> {
+    <span class="hljs-keyword">for</span> {
+        time.Sleep(time.Duration(second) * time.Second)
+        fmt.Println(name, <span class="hljs-string">&quot; is ready!&quot;</span>)
+    }
+}
+</code></pre>
+<h4 id="&#x3010;&#x63A8;&#x8350;&#x3011;&#x4E0D;&#x4F7F;&#x7528;unsafe&#x5305;"><a name="&#x3010;&#x63A8;&#x8350;&#x3011;&#x4E0D;&#x4F7F;&#x7528;unsafe&#x5305;" class="anchor-navigation-ex-anchor" href="#&#x3010;&#x63A8;&#x8350;&#x3011;&#x4E0D;&#x4F7F;&#x7528;unsafe&#x5305;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x3010;&#x63A8;&#x8350;&#x3011;&#x4E0D;&#x4F7F;&#x7528;unsafe&#x5305;" class="plugin-anchor" href="#&#x3010;&#x63A8;&#x8350;&#x3011;&#x4E0D;&#x4F7F;&#x7528;unsafe&#x5305;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x3010;&#x63A8;&#x8350;&#x3011;&#x4E0D;&#x4F7F;&#x7528;unsafe&#x5305;</h4>
+<ul>
+<li>&#x7531;&#x4E8E;unsafe&#x5305;&#x7ED5;&#x8FC7;&#x4E86; Golang &#x7684;&#x5185;&#x5B58;&#x5B89;&#x5168;&#x539F;&#x5219;&#xFF0C;&#x4E00;&#x822C;&#x6765;&#x8BF4;&#x4F7F;&#x7528;&#x8BE5;&#x5E93;&#x662F;&#x4E0D;&#x5B89;&#x5168;&#x7684;&#xFF0C;&#x53EF;&#x5BFC;&#x81F4;&#x5185;&#x5B58;&#x7834;&#x574F;&#xFF0C;&#x5C3D;&#x91CF;&#x907F;&#x514D;&#x4F7F;&#x7528;&#x8BE5;&#x5305;&#x3002;&#x82E5;&#x5FC5;&#x987B;&#x8981;&#x4F7F;&#x7528;unsafe&#x64CD;&#x4F5C;&#x6307;&#x9488;&#xFF0C;&#x5FC5;&#x987B;&#x505A;&#x597D;&#x5B89;&#x5168;&#x6821;&#x9A8C;&#x3002;</li>
+</ul>
+<pre><code class="lang-go"><span class="hljs-comment">// bad: &#x901A;&#x8FC7;unsafe&#x64CD;&#x4F5C;&#x539F;&#x59CB;&#x6307;&#x9488;</span>
+<span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">unsafePointer</span><span class="hljs-params">()</span></span> {
+    b := <span class="hljs-built_in">make</span>([]<span class="hljs-keyword">byte</span>, <span class="hljs-number">1</span>)
+    foo := (*<span class="hljs-keyword">int</span>)(unsafe.Pointer(<span class="hljs-keyword">uintptr</span>(unsafe.Pointer(&amp;b[<span class="hljs-number">0</span>])) + <span class="hljs-keyword">uintptr</span>(<span class="hljs-number">0xfffffff</span>e)))
+    fmt.Print(*foo + <span class="hljs-number">1</span>)
+}
+<span class="hljs-comment">// [signal SIGSEGV: segmentation violation code=0x1 addr=0xc100068f55 pc=0x49142b]</span>
+</code></pre>
+<h4 id="&#x3010;&#x63A8;&#x8350;&#x3011;&#x4E0D;&#x4F7F;&#x7528;slice&#x4F5C;&#x4E3A;&#x51FD;&#x6570;&#x5165;&#x53C2;"><a name="&#x3010;&#x63A8;&#x8350;&#x3011;&#x4E0D;&#x4F7F;&#x7528;slice&#x4F5C;&#x4E3A;&#x51FD;&#x6570;&#x5165;&#x53C2;" class="anchor-navigation-ex-anchor" href="#&#x3010;&#x63A8;&#x8350;&#x3011;&#x4E0D;&#x4F7F;&#x7528;slice&#x4F5C;&#x4E3A;&#x51FD;&#x6570;&#x5165;&#x53C2;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x3010;&#x63A8;&#x8350;&#x3011;&#x4E0D;&#x4F7F;&#x7528;slice&#x4F5C;&#x4E3A;&#x51FD;&#x6570;&#x5165;&#x53C2;" class="plugin-anchor" href="#&#x3010;&#x63A8;&#x8350;&#x3011;&#x4E0D;&#x4F7F;&#x7528;slice&#x4F5C;&#x4E3A;&#x51FD;&#x6570;&#x5165;&#x53C2;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x3010;&#x63A8;&#x8350;&#x3011;&#x4E0D;&#x4F7F;&#x7528;slice&#x4F5C;&#x4E3A;&#x51FD;&#x6570;&#x5165;&#x53C2;</h4>
+<ul>
+<li>slice&#x5728;&#x4F5C;&#x4E3A;&#x51FD;&#x6570;&#x5165;&#x53C2;&#x65F6;&#xFF0C;&#x51FD;&#x6570;&#x5185;&#x5BF9;slice&#x7684;&#x4FEE;&#x6539;&#x53EF;&#x80FD;&#x4F1A;&#x5F71;&#x54CD;&#x539F;&#x59CB;&#x6570;&#x636E;</li>
+</ul>
+<pre><code class="lang-go">  <span class="hljs-comment">// bad</span>
+  <span class="hljs-comment">// slice&#x4F5C;&#x4E3A;&#x51FD;&#x6570;&#x5165;&#x53C2;&#x65F6;&#x5305;&#x542B;&#x539F;&#x59CB;&#x6570;&#x7EC4;&#x6307;&#x9488;</span>
+  <span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">modify</span><span class="hljs-params">(array []<span class="hljs-keyword">int</span>)</span></span> {
+      array[<span class="hljs-number">0</span>] = <span class="hljs-number">10</span> <span class="hljs-comment">// &#x5BF9;&#x5165;&#x53C2;slice&#x7684;&#x5143;&#x7D20;&#x4FEE;&#x6539;&#x4F1A;&#x5F71;&#x54CD;&#x539F;&#x59CB;&#x6570;&#x636E;</span>
+  }
+
+  <span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span> {
+      array := []<span class="hljs-keyword">int</span>{<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>}
+
+      modify(array)
+      fmt.Println(array) <span class="hljs-comment">// output&#xFF1A;[10 2 3 4 5]</span>
+  }
+  <span class="hljs-comment">// good</span>
+  <span class="hljs-comment">// &#x6570;&#x7EC4;&#x4F5C;&#x4E3A;&#x51FD;&#x6570;&#x5165;&#x53C2;&#xFF0C;&#x800C;&#x4E0D;&#x662F;slice</span>
+  <span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">modify</span><span class="hljs-params">(array [5]<span class="hljs-keyword">int</span>)</span></span> {
+    array[<span class="hljs-number">0</span>] = <span class="hljs-number">10</span>
+  }
+  <span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span> {
+      <span class="hljs-comment">// &#x4F20;&#x5165;&#x6570;&#x7EC4;&#xFF0C;&#x6CE8;&#x610F;&#x6570;&#x7EC4;&#x4E0E;slice&#x7684;&#x533A;&#x522B;</span>
+      array := [<span class="hljs-number">5</span>]<span class="hljs-keyword">int</span>{<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>}
+
+      modify(array)
+      fmt.Println(array)
+  }
+</code></pre>
+<h3 id="&#x6587;&#x4EF6;&#x64CD;&#x4F5C;"><a name="&#x6587;&#x4EF6;&#x64CD;&#x4F5C;" class="anchor-navigation-ex-anchor" href="#&#x6587;&#x4EF6;&#x64CD;&#x4F5C;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.2. &#x6587;&#x4EF6;&#x64CD;&#x4F5C;</h3>
+<h4 id="&#x3010;&#x5FC5;&#x987B;&#x3011;-&#x8DEF;&#x5F84;&#x7A7F;&#x8D8A;&#x68C0;&#x67E5;"><a name="&#x3010;&#x5FC5;&#x987B;&#x3011;-&#x8DEF;&#x5F84;&#x7A7F;&#x8D8A;&#x68C0;&#x67E5;" class="anchor-navigation-ex-anchor" href="#&#x3010;&#x5FC5;&#x987B;&#x3011;-&#x8DEF;&#x5F84;&#x7A7F;&#x8D8A;&#x68C0;&#x67E5;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x3010;&#x5FC5;&#x987B;&#x3011;-&#x8DEF;&#x5F84;&#x7A7F;&#x8D8A;&#x68C0;&#x67E5;" class="plugin-anchor" href="#&#x3010;&#x5FC5;&#x987B;&#x3011;-&#x8DEF;&#x5F84;&#x7A7F;&#x8D8A;&#x68C0;&#x67E5;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x3010;&#x5FC5;&#x987B;&#x3011; &#x8DEF;&#x5F84;&#x7A7F;&#x8D8A;&#x68C0;&#x67E5;</h4>
+<ul>
+<li>&#x5728;&#x8FDB;&#x884C;&#x6587;&#x4EF6;&#x64CD;&#x4F5C;&#x65F6;&#xFF0C;&#x5982;&#x679C;&#x5BF9;&#x5916;&#x90E8;&#x4F20;&#x5165;&#x7684;&#x6587;&#x4EF6;&#x540D;&#x672A;&#x505A;&#x9650;&#x5236;&#xFF0C;&#x53EF;&#x80FD;&#x5BFC;&#x81F4;&#x4EFB;&#x610F;&#x6587;&#x4EF6;&#x8BFB;&#x53D6;&#x6216;&#x8005;&#x4EFB;&#x610F;&#x6587;&#x4EF6;&#x5199;&#x5165;&#xFF0C;&#x4E25;&#x91CD;&#x53EF;&#x80FD;&#x5BFC;&#x81F4;&#x4EE3;&#x7801;&#x6267;&#x884C;&#x3002;</li>
+</ul>
+<pre><code class="lang-go"><span class="hljs-comment">// bad: &#x4EFB;&#x610F;&#x6587;&#x4EF6;&#x8BFB;&#x53D6;</span>
+<span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">handler</span><span class="hljs-params">(w http.ResponseWriter, r *http.Request)</span></span> {
+    path := r.URL.Query()[<span class="hljs-string">&quot;path&quot;</span>][<span class="hljs-number">0</span>]
+    <span class="hljs-comment">// &#x672A;&#x8FC7;&#x6EE4;&#x6587;&#x4EF6;&#x8DEF;&#x5F84;&#xFF0C;&#x53EF;&#x80FD;&#x5BFC;&#x81F4;&#x4EFB;&#x610F;&#x6587;&#x4EF6;&#x8BFB;&#x53D6;</span>
+    data, _ := ioutil.ReadFile(path)
+    w.Write(data)
+    <span class="hljs-comment">// &#x5BF9;&#x5916;&#x90E8;&#x4F20;&#x5165;&#x7684;&#x6587;&#x4EF6;&#x540D;&#x53D8;&#x91CF;&#xFF0C;&#x8FD8;&#x9700;&#x8981;&#x9A8C;&#x8BC1;&#x662F;&#x5426;&#x5B58;&#x5728;../&#x7B49;&#x8DEF;&#x5F84;&#x7A7F;&#x8D8A;&#x7684;&#x6587;&#x4EF6;&#x540D;</span>
+    data, _ = ioutil.ReadFile(filepath.Join(<span class="hljs-string">&quot;/home/user/&quot;</span>, path))
+    w.Write(data)
+}
+<span class="hljs-comment">// bad: &#x4EFB;&#x610F;&#x6587;&#x4EF6;&#x5199;&#x5165;</span>
+<span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">unzip</span><span class="hljs-params">(f <span class="hljs-keyword">string</span>)</span></span> {
+    r, _ := zip.OpenReader(f)
+    <span class="hljs-keyword">for</span> _, f := <span class="hljs-keyword">range</span> r.File {
+        p, _ := filepath.Abs(f.Name)
+        <span class="hljs-comment">// &#x672A;&#x9A8C;&#x8BC1;&#x538B;&#x7F29;&#x6587;&#x4EF6;&#x540D;&#xFF0C;&#x53EF;&#x80FD;&#x5BFC;&#x81F4;../&#x7B49;&#x8DEF;&#x5F84;&#x7A7F;&#x8D8A;&#xFF0C;&#x4EFB;&#x610F;&#x6587;&#x4EF6;&#x8DEF;&#x5F84;&#x5199;&#x5165;</span>
+        ioutil.WriteFile(p, []<span class="hljs-keyword">byte</span>(<span class="hljs-string">&quot;present&quot;</span>), <span class="hljs-number">0640</span>)
+    }
+}
+<span class="hljs-comment">// good: &#x68C0;&#x67E5;&#x538B;&#x7F29;&#x7684;&#x6587;&#x4EF6;&#x540D;&#x662F;&#x5426;&#x5305;&#x542B;..&#x8DEF;&#x5F84;&#x7A7F;&#x8D8A;&#x7279;&#x5F81;&#x5B57;&#x7B26;&#xFF0C;&#x9632;&#x6B62;&#x4EFB;&#x610F;&#x5199;&#x5165;</span>
+<span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">unzipGood</span><span class="hljs-params">(f <span class="hljs-keyword">string</span>)</span> <span class="hljs-title">bool</span></span> {
+    r, err := zip.OpenReader(f)
+    <span class="hljs-keyword">if</span> err != <span class="hljs-literal">nil</span> {
+        fmt.Println(<span class="hljs-string">&quot;read zip file fail&quot;</span>)
+        <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>
+    }
+    <span class="hljs-keyword">for</span> _, f := <span class="hljs-keyword">range</span> r.File {
+        <span class="hljs-keyword">if</span> !strings.Contains(f.Name, <span class="hljs-string">&quot;..&quot;</span>) {
+            p, _ := filepath.Abs(f.Name)
+            ioutil.WriteFile(p, []<span class="hljs-keyword">byte</span>(<span class="hljs-string">&quot;present&quot;</span>), <span class="hljs-number">0640</span>)
+        } <span class="hljs-keyword">else</span> {
+            <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>
+        }
+    }
+    <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>
+}
+</code></pre>
+<h4 id="&#x3010;&#x5FC5;&#x987B;&#x3011;-&#x6587;&#x4EF6;&#x8BBF;&#x95EE;&#x6743;&#x9650;"><a name="&#x3010;&#x5FC5;&#x987B;&#x3011;-&#x6587;&#x4EF6;&#x8BBF;&#x95EE;&#x6743;&#x9650;" class="anchor-navigation-ex-anchor" href="#&#x3010;&#x5FC5;&#x987B;&#x3011;-&#x6587;&#x4EF6;&#x8BBF;&#x95EE;&#x6743;&#x9650;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x3010;&#x5FC5;&#x987B;&#x3011;-&#x6587;&#x4EF6;&#x8BBF;&#x95EE;&#x6743;&#x9650;" class="plugin-anchor" href="#&#x3010;&#x5FC5;&#x987B;&#x3011;-&#x6587;&#x4EF6;&#x8BBF;&#x95EE;&#x6743;&#x9650;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x3010;&#x5FC5;&#x987B;&#x3011; &#x6587;&#x4EF6;&#x8BBF;&#x95EE;&#x6743;&#x9650;</h4>
+<ul>
+<li>&#x6839;&#x636E;&#x521B;&#x5EFA;&#x6587;&#x4EF6;&#x7684;&#x654F;&#x611F;&#x6027;&#x8BBE;&#x7F6E;&#x4E0D;&#x540C;&#x7EA7;&#x522B;&#x7684;&#x8BBF;&#x95EE;&#x6743;&#x9650;&#xFF0C;&#x4EE5;&#x9632;&#x6B62;&#x654F;&#x611F;&#x6570;&#x636E;&#x88AB;&#x4EFB;&#x610F;&#x6743;&#x9650;&#x7528;&#x6237;&#x8BFB;&#x53D6;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x8BBE;&#x7F6E;&#x6587;&#x4EF6;&#x6743;&#x9650;&#x4E3A;&#xFF1A;<code>-rw-r-----</code></li>
+</ul>
+<pre><code class="lang-go">ioutil.WriteFile(p, []<span class="hljs-keyword">byte</span>(<span class="hljs-string">&quot;present&quot;</span>), <span class="hljs-number">0640</span>)
+</code></pre>
+<h3 id="&#x7CFB;&#x7EDF;&#x63A5;&#x53E3;"><a name="&#x7CFB;&#x7EDF;&#x63A5;&#x53E3;" class="anchor-navigation-ex-anchor" href="#&#x7CFB;&#x7EDF;&#x63A5;&#x53E3;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.3. &#x7CFB;&#x7EDF;&#x63A5;&#x53E3;</h3>
+<p><strong>1.3.1&#x3010;&#x5FC5;&#x987B;&#x3011;&#x547D;&#x4EE4;&#x6267;&#x884C;&#x68C0;&#x67E5;</strong></p>
+<ul>
+<li>&#x4F7F;&#x7528;<code>exec.Command</code>&#x3001;<code>exec.CommandContext</code>&#x3001;<code>syscall.StartProcess</code>&#x3001;<code>os.StartProcess</code>&#x7B49;&#x51FD;&#x6570;&#x65F6;&#xFF0C;&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#xFF08;path&#xFF09;&#x76F4;&#x63A5;&#x53D6;&#x5916;&#x90E8;&#x8F93;&#x5165;&#x503C;&#x65F6;&#xFF0C;&#x5E94;&#x4F7F;&#x7528;&#x767D;&#x540D;&#x5355;&#x9650;&#x5B9A;&#x53EF;&#x6267;&#x884C;&#x7684;&#x547D;&#x4EE4;&#x8303;&#x56F4;&#xFF0C;&#x4E0D;&#x5141;&#x8BB8;&#x4F20;&#x5165;<code>bash</code>&#x3001;<code>cmd</code>&#x3001;<code>sh</code>&#x7B49;&#x547D;&#x4EE4;&#xFF1B;</li>
+<li>&#x4F7F;&#x7528;<code>exec.Command</code>&#x3001;<code>exec.CommandContext</code>&#x7B49;&#x51FD;&#x6570;&#x65F6;&#xFF0C;&#x901A;&#x8FC7;<code>bash</code>&#x3001;<code>cmd</code>&#x3001;<code>sh</code>&#x7B49;&#x521B;&#x5EFA;shell&#xFF0C;-c&#x540E;&#x7684;&#x53C2;&#x6570;&#xFF08;arg&#xFF09;&#x62FC;&#x63A5;&#x5916;&#x90E8;&#x8F93;&#x5165;&#xFF0C;&#x5E94;&#x8FC7;&#x6EE4;\n  $  &amp;  ;  |  &apos;  &quot;  ( )  `&#x7B49;&#x6F5C;&#x5728;&#x6076;&#x610F;&#x5B57;&#x7B26;&#xFF1B;<pre><code class="lang-go"><span class="hljs-comment">// bad</span>
+<span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">foo</span><span class="hljs-params">()</span></span> {
+  userInputedVal := <span class="hljs-string">&quot;&amp;&amp; echo &apos;hello&apos;&quot;</span> <span class="hljs-comment">// &#x5047;&#x8BBE;&#x5916;&#x90E8;&#x4F20;&#x5165;&#x8BE5;&#x53D8;&#x91CF;&#x503C;</span>
+  cmdName := <span class="hljs-string">&quot;ping &quot;</span> + userInputedVal
+  <span class="hljs-comment">// &#x672A;&#x5224;&#x65AD;&#x5916;&#x90E8;&#x8F93;&#x5165;&#x662F;&#x5426;&#x5B58;&#x5728;&#x547D;&#x4EE4;&#x6CE8;&#x5165;&#x5B57;&#x7B26;&#xFF0C;&#x7ED3;&#x5408;sh&#x53EF;&#x9020;&#x6210;&#x547D;&#x4EE4;&#x6CE8;&#x5165;</span>
+  cmd := exec.Command(<span class="hljs-string">&quot;sh&quot;</span>, <span class="hljs-string">&quot;-c&quot;</span>, cmdName)
+  output, _ := cmd.CombinedOutput()
+  fmt.Println(<span class="hljs-keyword">string</span>(output))
+  cmdName := <span class="hljs-string">&quot;ls&quot;</span>
+  <span class="hljs-comment">// &#x672A;&#x5224;&#x65AD;&#x5916;&#x90E8;&#x8F93;&#x5165;&#x662F;&#x5426;&#x662F;&#x9884;&#x671F;&#x547D;&#x4EE4;</span>
+  cmd := exec.Command(cmdName)
+  output, _ := cmd.CombinedOutput()
+  fmt.Println(<span class="hljs-keyword">string</span>(output))
+}
+<span class="hljs-comment">// good</span>
+<span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">checkIllegal</span><span class="hljs-params">(cmdName <span class="hljs-keyword">string</span>)</span> <span class="hljs-title">bool</span></span> {
+  <span class="hljs-keyword">if</span> strings.Contains(cmdName, <span class="hljs-string">&quot;&amp;&quot;</span>) || strings.Contains(cmdName, <span class="hljs-string">&quot;|&quot;</span>) || strings.Contains(cmdName, <span class="hljs-string">&quot;;&quot;</span>) ||
+      strings.Contains(cmdName, <span class="hljs-string">&quot;$&quot;</span>) || strings.Contains(cmdName, <span class="hljs-string">&quot;&apos;&quot;</span>) || strings.Contains(cmdName, <span class="hljs-string">&quot;`&quot;</span>) ||
+      strings.Contains(cmdName, <span class="hljs-string">&quot;(&quot;</span>) || strings.Contains(cmdName, <span class="hljs-string">&quot;)&quot;</span>) || strings.Contains(cmdName, <span class="hljs-string">&quot;\&quot;&quot;</span>) {
+      <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>
+  }
+  <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>
+}
+<span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span> {
+  userInputedVal := <span class="hljs-string">&quot;&amp;&amp; echo &apos;hello&apos;&quot;</span>
+  cmdName := <span class="hljs-string">&quot;ping &quot;</span> + userInputedVal
+  <span class="hljs-keyword">if</span> checkIllegal(cmdName) { <span class="hljs-comment">// &#x68C0;&#x67E5;&#x4F20;&#x7ED9;sh&#x7684;&#x547D;&#x4EE4;&#x662F;&#x5426;&#x6709;&#x7279;&#x6B8A;&#x5B57;&#x7B26;</span>
+      <span class="hljs-keyword">return</span> <span class="hljs-comment">// &#x5B58;&#x5728;&#x7279;&#x6B8A;&#x5B57;&#x7B26;&#x76F4;&#x63A5;return</span>
+  }
+  cmd := exec.Command(<span class="hljs-string">&quot;sh&quot;</span>, <span class="hljs-string">&quot;-c&quot;</span>, cmdName)
+  output, _ := cmd.CombinedOutput()
+  fmt.Println(<span class="hljs-keyword">string</span>(output))
+}
+</code></pre>
+</li>
+</ul>
+<h3 id="&#x901A;&#x4FE1;&#x5B89;&#x5168;"><a name="&#x901A;&#x4FE1;&#x5B89;&#x5168;" class="anchor-navigation-ex-anchor" href="#&#x901A;&#x4FE1;&#x5B89;&#x5168;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.4. &#x901A;&#x4FE1;&#x5B89;&#x5168;</h3>
+<h4 id="&#x3010;&#x5FC5;&#x987B;&#x3011;&#x7F51;&#x7EDC;&#x901A;&#x4FE1;&#x91C7;&#x7528;tls&#x65B9;&#x5F0F;"><a name="&#x3010;&#x5FC5;&#x987B;&#x3011;&#x7F51;&#x7EDC;&#x901A;&#x4FE1;&#x91C7;&#x7528;tls&#x65B9;&#x5F0F;" class="anchor-navigation-ex-anchor" href="#&#x3010;&#x5FC5;&#x987B;&#x3011;&#x7F51;&#x7EDC;&#x901A;&#x4FE1;&#x91C7;&#x7528;tls&#x65B9;&#x5F0F;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x3010;&#x5FC5;&#x987B;&#x3011;&#x7F51;&#x7EDC;&#x901A;&#x4FE1;&#x91C7;&#x7528;tls&#x65B9;&#x5F0F;" class="plugin-anchor" href="#&#x3010;&#x5FC5;&#x987B;&#x3011;&#x7F51;&#x7EDC;&#x901A;&#x4FE1;&#x91C7;&#x7528;tls&#x65B9;&#x5F0F;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x3010;&#x5FC5;&#x987B;&#x3011;&#x7F51;&#x7EDC;&#x901A;&#x4FE1;&#x91C7;&#x7528;TLS&#x65B9;&#x5F0F;</h4>
+<ul>
+<li>&#x660E;&#x6587;&#x4F20;&#x8F93;&#x7684;&#x901A;&#x4FE1;&#x534F;&#x8BAE;&#x76EE;&#x524D;&#x5DF2;&#x88AB;&#x9A8C;&#x8BC1;&#x5B58;&#x5728;&#x8F83;&#x5927;&#x5B89;&#x5168;&#x98CE;&#x9669;&#xFF0C;&#x88AB;&#x4E2D;&#x95F4;&#x4EBA;&#x52AB;&#x6301;&#x540E;&#x53EF;&#x80FD;&#x5BFC;&#x81F4;&#x8BB8;&#x591A;&#x5B89;&#x5168;&#x98CE;&#x9669;&#xFF0C;&#x56E0;&#x6B64;&#x5FC5;&#x987B;&#x91C7;&#x7528;&#x81F3;&#x5C11;TLS&#x7684;&#x5B89;&#x5168;&#x901A;&#x4FE1;&#x65B9;&#x5F0F;&#x4FDD;&#x8BC1;&#x901A;&#x4FE1;&#x5B89;&#x5168;&#xFF0C;&#x4F8B;&#x5982;gRPC/Websocket&#x90FD;&#x4F7F;&#x7528;TLS1.3&#x3002;</li>
+</ul>
+<pre><code class="lang-go"><span class="hljs-comment">// good</span>
+<span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span> {
+    http.HandleFunc(<span class="hljs-string">&quot;/&quot;</span>, <span class="hljs-function"><span class="hljs-keyword">func</span><span class="hljs-params">(w http.ResponseWriter, req *http.Request)</span></span> {
+        w.Header().Add(<span class="hljs-string">&quot;Strict-Transport-Security&quot;</span>, <span class="hljs-string">&quot;max-age=63072000; includeSubDomains&quot;</span>)
+        w.Write([]<span class="hljs-keyword">byte</span>(<span class="hljs-string">&quot;This is an example server.\n&quot;</span>))
+    })
+    <span class="hljs-comment">// &#x670D;&#x52A1;&#x5668;&#x914D;&#x7F6E;&#x8BC1;&#x4E66;&#x4E0E;&#x79C1;&#x94A5;</span>
+    log.Fatal(http.ListenAndServeTLS(<span class="hljs-string">&quot;:443&quot;</span>, <span class="hljs-string">&quot;yourCert.pem&quot;</span>, <span class="hljs-string">&quot;yourKey.pem&quot;</span>, <span class="hljs-literal">nil</span>))
+}
+</code></pre>
+<h4 id="&#x3010;&#x63A8;&#x8350;&#x3011;tls&#x542F;&#x7528;&#x8BC1;&#x4E66;&#x9A8C;&#x8BC1;"><a name="&#x3010;&#x63A8;&#x8350;&#x3011;tls&#x542F;&#x7528;&#x8BC1;&#x4E66;&#x9A8C;&#x8BC1;" class="anchor-navigation-ex-anchor" href="#&#x3010;&#x63A8;&#x8350;&#x3011;tls&#x542F;&#x7528;&#x8BC1;&#x4E66;&#x9A8C;&#x8BC1;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x3010;&#x63A8;&#x8350;&#x3011;tls&#x542F;&#x7528;&#x8BC1;&#x4E66;&#x9A8C;&#x8BC1;" class="plugin-anchor" href="#&#x3010;&#x63A8;&#x8350;&#x3011;tls&#x542F;&#x7528;&#x8BC1;&#x4E66;&#x9A8C;&#x8BC1;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x3010;&#x63A8;&#x8350;&#x3011;TLS&#x542F;&#x7528;&#x8BC1;&#x4E66;&#x9A8C;&#x8BC1;</h4>
+<ul>
+<li>TLS&#x8BC1;&#x4E66;&#x5E94;&#x5F53;&#x662F;&#x6709;&#x6548;&#x7684;&#x3001;&#x672A;&#x8FC7;&#x671F;&#x7684;&#xFF0C;&#x4E14;&#x914D;&#x7F6E;&#x6B63;&#x786E;&#x7684;&#x57DF;&#x540D;&#xFF0C;&#x751F;&#x4EA7;&#x73AF;&#x5883;&#x7684;&#x670D;&#x52A1;&#x7AEF;&#x5E94;&#x542F;&#x7528;&#x8BC1;&#x4E66;&#x9A8C;&#x8BC1;&#x3002;</li>
+</ul>
+<pre><code class="lang-go"><span class="hljs-comment">// bad</span>
+<span class="hljs-keyword">import</span> (
+    <span class="hljs-string">&quot;crypto/tls&quot;</span>
+    <span class="hljs-string">&quot;net/http&quot;</span>
+)
+<span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">doAuthReq</span><span class="hljs-params">(authReq *http.Request)</span> *<span class="hljs-title">http</span>.<span class="hljs-title">Response</span></span> {
+    tr := &amp;http.Transport{
+        TLSClientConfig: &amp;tls.Config{InsecureSkipVerify: <span class="hljs-literal">true</span>},
+    }
+    client := &amp;http.Client{Transport: tr}
+    res, _ := client.Do(authReq)
+    <span class="hljs-keyword">return</span> res
+}
+<span class="hljs-comment">// good</span>
+<span class="hljs-keyword">import</span> (
+    <span class="hljs-string">&quot;crypto/tls&quot;</span>
+    <span class="hljs-string">&quot;net/http&quot;</span>
+)
+<span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">doAuthReq</span><span class="hljs-params">(authReq *http.Request)</span> *<span class="hljs-title">http</span>.<span class="hljs-title">Response</span></span> {
+    tr := &amp;http.Transport{
+        TLSClientConfig: &amp;tls.Config{InsecureSkipVerify: <span class="hljs-literal">false</span>},
+    }
+    client := &amp;http.Client{Transport: tr}
+    res, _ := client.Do(authReq)
+    <span class="hljs-keyword">return</span> res
+}
+</code></pre>
+<h3 id="&#x654F;&#x611F;&#x6570;&#x636E;&#x4FDD;&#x62A4;"><a name="&#x654F;&#x611F;&#x6570;&#x636E;&#x4FDD;&#x62A4;" class="anchor-navigation-ex-anchor" href="#&#x654F;&#x611F;&#x6570;&#x636E;&#x4FDD;&#x62A4;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.5. &#x654F;&#x611F;&#x6570;&#x636E;&#x4FDD;&#x62A4;</h3>
+<h4 id="&#x3010;&#x5FC5;&#x987B;&#x3011;&#x654F;&#x611F;&#x4FE1;&#x606F;&#x8BBF;&#x95EE;"><a name="&#x3010;&#x5FC5;&#x987B;&#x3011;&#x654F;&#x611F;&#x4FE1;&#x606F;&#x8BBF;&#x95EE;" class="anchor-navigation-ex-anchor" href="#&#x3010;&#x5FC5;&#x987B;&#x3011;&#x654F;&#x611F;&#x4FE1;&#x606F;&#x8BBF;&#x95EE;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x3010;&#x5FC5;&#x987B;&#x3011;&#x654F;&#x611F;&#x4FE1;&#x606F;&#x8BBF;&#x95EE;" class="plugin-anchor" href="#&#x3010;&#x5FC5;&#x987B;&#x3011;&#x654F;&#x611F;&#x4FE1;&#x606F;&#x8BBF;&#x95EE;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x3010;&#x5FC5;&#x987B;&#x3011;&#x654F;&#x611F;&#x4FE1;&#x606F;&#x8BBF;&#x95EE;</h4>
+<ul>
+<li>&#x7981;&#x6B62;&#x5C06;&#x654F;&#x611F;&#x4FE1;&#x606F;&#x786C;&#x7F16;&#x7801;&#x5728;&#x7A0B;&#x5E8F;&#x4E2D;&#xFF0C;&#x65E2;&#x53EF;&#x80FD;&#x4F1A;&#x5C06;&#x654F;&#x611F;&#x4FE1;&#x606F;&#x66B4;&#x9732;&#x7ED9;&#x653B;&#x51FB;&#x8005;&#xFF0C;&#x4E5F;&#x4F1A;&#x589E;&#x52A0;&#x4EE3;&#x7801;&#x7BA1;&#x7406;&#x548C;&#x7EF4;&#x62A4;&#x7684;&#x96BE;&#x5EA6;</li>
+<li>&#x4F7F;&#x7528;&#x914D;&#x7F6E;&#x4E2D;&#x5FC3;&#x7CFB;&#x7EDF;&#x7EDF;&#x4E00;&#x6258;&#x7BA1;&#x5BC6;&#x94A5;&#x7B49;&#x654F;&#x611F;&#x4FE1;&#x606F;</li>
+</ul>
+<h4 id="&#x3010;&#x5FC5;&#x987B;&#x3011;&#x654F;&#x611F;&#x6570;&#x636E;&#x8F93;&#x51FA;"><a name="&#x3010;&#x5FC5;&#x987B;&#x3011;&#x654F;&#x611F;&#x6570;&#x636E;&#x8F93;&#x51FA;" class="anchor-navigation-ex-anchor" href="#&#x3010;&#x5FC5;&#x987B;&#x3011;&#x654F;&#x611F;&#x6570;&#x636E;&#x8F93;&#x51FA;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x3010;&#x5FC5;&#x987B;&#x3011;&#x654F;&#x611F;&#x6570;&#x636E;&#x8F93;&#x51FA;" class="plugin-anchor" href="#&#x3010;&#x5FC5;&#x987B;&#x3011;&#x654F;&#x611F;&#x6570;&#x636E;&#x8F93;&#x51FA;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x3010;&#x5FC5;&#x987B;&#x3011;&#x654F;&#x611F;&#x6570;&#x636E;&#x8F93;&#x51FA;</h4>
+<ul>
+<li>&#x53EA;&#x8F93;&#x51FA;&#x5FC5;&#x8981;&#x7684;&#x6700;&#x5C0F;&#x6570;&#x636E;&#x96C6;&#xFF0C;&#x907F;&#x514D;&#x591A;&#x4F59;&#x5B57;&#x6BB5;&#x66B4;&#x9732;&#x5F15;&#x8D77;&#x654F;&#x611F;&#x4FE1;&#x606F;&#x6CC4;&#x9732;</li>
+<li>&#x4E0D;&#x80FD;&#x5728;&#x65E5;&#x5FD7;&#x4FDD;&#x5B58;&#x5BC6;&#x7801;&#xFF08;&#x5305;&#x62EC;&#x660E;&#x6587;&#x5BC6;&#x7801;&#x548C;&#x5BC6;&#x6587;&#x5BC6;&#x7801;&#xFF09;&#x3001;&#x5BC6;&#x94A5;&#x548C;&#x5176;&#x5B83;&#x654F;&#x611F;&#x4FE1;&#x606F;</li>
+<li>&#x5BF9;&#x4E8E;&#x5FC5;&#x987B;&#x8F93;&#x51FA;&#x7684;&#x654F;&#x611F;&#x4FE1;&#x606F;&#xFF0C;&#x5FC5;&#x987B;&#x8FDB;&#x884C;&#x5408;&#x7406;&#x8131;&#x654F;&#x5C55;&#x793A;</li>
+</ul>
+<pre><code class="lang-go"><span class="hljs-comment">// bad</span>
+<span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">serve</span><span class="hljs-params">()</span></span> {
+    http.HandleFunc(<span class="hljs-string">&quot;/register&quot;</span>, <span class="hljs-function"><span class="hljs-keyword">func</span><span class="hljs-params">(w http.ResponseWriter, r *http.Request)</span></span> {
+        r.ParseForm()
+        user := r.Form.Get(<span class="hljs-string">&quot;user&quot;</span>)
+        pw := r.Form.Get(<span class="hljs-string">&quot;password&quot;</span>)
+        log.Printf(<span class="hljs-string">&quot;Registering new user %s with password %s.\n&quot;</span>, user, pw)
+    })
+    http.ListenAndServe(<span class="hljs-string">&quot;:80&quot;</span>, <span class="hljs-literal">nil</span>)
+}
+<span class="hljs-comment">// good</span>
+<span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">serve1</span><span class="hljs-params">()</span></span> {
+    http.HandleFunc(<span class="hljs-string">&quot;/register&quot;</span>, <span class="hljs-function"><span class="hljs-keyword">func</span><span class="hljs-params">(w http.ResponseWriter, r *http.Request)</span></span> {
+        r.ParseForm()
+        user := r.Form.Get(<span class="hljs-string">&quot;user&quot;</span>)
+        pw := r.Form.Get(<span class="hljs-string">&quot;password&quot;</span>)
+        log.Printf(<span class="hljs-string">&quot;Registering new user %s.\n&quot;</span>, user)
+        <span class="hljs-comment">// ...</span>
+        use(pw)
+    })
+    http.ListenAndServe(<span class="hljs-string">&quot;:80&quot;</span>, <span class="hljs-literal">nil</span>)
+}
+</code></pre>
+<ul>
+<li>&#x907F;&#x514D;&#x901A;&#x8FC7;GET&#x65B9;&#x6CD5;&#x3001;&#x4EE3;&#x7801;&#x6CE8;&#x91CA;&#x3001;&#x81EA;&#x52A8;&#x586B;&#x5145;&#x3001;&#x7F13;&#x5B58;&#x7B49;&#x65B9;&#x5F0F;&#x6CC4;&#x9732;&#x654F;&#x611F;&#x4FE1;&#x606F;</li>
+</ul>
+<h4 id="&#x3010;&#x5FC5;&#x987B;&#x3011;&#x654F;&#x611F;&#x6570;&#x636E;&#x5B58;&#x50A8;"><a name="&#x3010;&#x5FC5;&#x987B;&#x3011;&#x654F;&#x611F;&#x6570;&#x636E;&#x5B58;&#x50A8;" class="anchor-navigation-ex-anchor" href="#&#x3010;&#x5FC5;&#x987B;&#x3011;&#x654F;&#x611F;&#x6570;&#x636E;&#x5B58;&#x50A8;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x3010;&#x5FC5;&#x987B;&#x3011;&#x654F;&#x611F;&#x6570;&#x636E;&#x5B58;&#x50A8;" class="plugin-anchor" href="#&#x3010;&#x5FC5;&#x987B;&#x3011;&#x654F;&#x611F;&#x6570;&#x636E;&#x5B58;&#x50A8;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x3010;&#x5FC5;&#x987B;&#x3011;&#x654F;&#x611F;&#x6570;&#x636E;&#x5B58;&#x50A8;</h4>
+<ul>
+<li>&#x654F;&#x611F;&#x6570;&#x636E;&#x5E94;&#x4F7F;&#x7528;SHA2&#x3001;RSA&#x7B49;&#x7B97;&#x6CD5;&#x8FDB;&#x884C;&#x52A0;&#x5BC6;&#x5B58;&#x50A8;</li>
+<li>&#x654F;&#x611F;&#x6570;&#x636E;&#x5E94;&#x4F7F;&#x7528;&#x72EC;&#x7ACB;&#x7684;&#x5B58;&#x50A8;&#x5C42;&#xFF0C;&#x5E76;&#x5728;&#x8BBF;&#x95EE;&#x5C42;&#x5F00;&#x542F;&#x8BBF;&#x95EE;&#x63A7;&#x5236;</li>
+<li>&#x5305;&#x542B;&#x654F;&#x611F;&#x4FE1;&#x606F;&#x7684;&#x4E34;&#x65F6;&#x6587;&#x4EF6;&#x6216;&#x7F13;&#x5B58;&#x4E00;&#x65E6;&#x4E0D;&#x518D;&#x9700;&#x8981;&#x5E94;&#x7ACB;&#x523B;&#x5220;&#x9664;</li>
+</ul>
+<h4 id="&#x3010;&#x5FC5;&#x987B;&#x3011;&#x5F02;&#x5E38;&#x5904;&#x7406;&#x548C;&#x65E5;&#x5FD7;&#x8BB0;&#x5F55;"><a name="&#x3010;&#x5FC5;&#x987B;&#x3011;&#x5F02;&#x5E38;&#x5904;&#x7406;&#x548C;&#x65E5;&#x5FD7;&#x8BB0;&#x5F55;" class="anchor-navigation-ex-anchor" href="#&#x3010;&#x5FC5;&#x987B;&#x3011;&#x5F02;&#x5E38;&#x5904;&#x7406;&#x548C;&#x65E5;&#x5FD7;&#x8BB0;&#x5F55;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x3010;&#x5FC5;&#x987B;&#x3011;&#x5F02;&#x5E38;&#x5904;&#x7406;&#x548C;&#x65E5;&#x5FD7;&#x8BB0;&#x5F55;" class="plugin-anchor" href="#&#x3010;&#x5FC5;&#x987B;&#x3011;&#x5F02;&#x5E38;&#x5904;&#x7406;&#x548C;&#x65E5;&#x5FD7;&#x8BB0;&#x5F55;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x3010;&#x5FC5;&#x987B;&#x3011;&#x5F02;&#x5E38;&#x5904;&#x7406;&#x548C;&#x65E5;&#x5FD7;&#x8BB0;&#x5F55;</h4>
+<ul>
+<li>&#x5E94;&#x5408;&#x7406;&#x4F7F;&#x7528;panic&#x3001;recover&#x3001;defer&#x5904;&#x7406;&#x7CFB;&#x7EDF;&#x5F02;&#x5E38;&#xFF0C;&#x907F;&#x514D;&#x51FA;&#x9519;&#x4FE1;&#x606F;&#x8F93;&#x51FA;&#x5230;&#x524D;&#x7AEF;</li>
+</ul>
+<pre><code class="lang-go"><span class="hljs-keyword">defer</span> <span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-params">()</span></span> {
+    <span class="hljs-keyword">if</span> r := <span class="hljs-built_in">recover</span>(); r != <span class="hljs-literal">nil</span> {
+        fmt.Println(<span class="hljs-string">&quot;Recovered in start()&quot;</span>)
+    }
+}()
+</code></pre>
+<ul>
+<li>&#x5BF9;&#x5916;&#x73AF;&#x5883;&#x7981;&#x6B62;&#x5F00;&#x542F;debug&#x6A21;&#x5F0F;&#xFF0C;&#x6216;&#x5C06;&#x7A0B;&#x5E8F;&#x8FD0;&#x884C;&#x65E5;&#x5FD7;&#x8F93;&#x51FA;&#x5230;&#x524D;&#x7AEF;</li>
+</ul>
+<pre><code class="lang-bash">// bad
+dlv --listen=:2345 --headless=<span class="hljs-literal">true</span> --api-version=2 debug test.go
+// good
+dlv debug test.go
+</code></pre>
+<h3 id="&#x52A0;&#x5BC6;&#x89E3;&#x5BC6;"><a name="&#x52A0;&#x5BC6;&#x89E3;&#x5BC6;" class="anchor-navigation-ex-anchor" href="#&#x52A0;&#x5BC6;&#x89E3;&#x5BC6;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.6. &#x52A0;&#x5BC6;&#x89E3;&#x5BC6;</h3>
+<h4 id="&#x3010;&#x5FC5;&#x987B;&#x3011;&#x4E0D;&#x5F97;&#x786C;&#x7F16;&#x7801;&#x5BC6;&#x7801;&#x5BC6;&#x94A5;"><a name="&#x3010;&#x5FC5;&#x987B;&#x3011;&#x4E0D;&#x5F97;&#x786C;&#x7F16;&#x7801;&#x5BC6;&#x7801;&#x5BC6;&#x94A5;" class="anchor-navigation-ex-anchor" href="#&#x3010;&#x5FC5;&#x987B;&#x3011;&#x4E0D;&#x5F97;&#x786C;&#x7F16;&#x7801;&#x5BC6;&#x7801;&#x5BC6;&#x94A5;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x3010;&#x5FC5;&#x987B;&#x3011;&#x4E0D;&#x5F97;&#x786C;&#x7F16;&#x7801;&#x5BC6;&#x7801;&#x5BC6;&#x94A5;" class="plugin-anchor" href="#&#x3010;&#x5FC5;&#x987B;&#x3011;&#x4E0D;&#x5F97;&#x786C;&#x7F16;&#x7801;&#x5BC6;&#x7801;&#x5BC6;&#x94A5;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x3010;&#x5FC5;&#x987B;&#x3011;&#x4E0D;&#x5F97;&#x786C;&#x7F16;&#x7801;&#x5BC6;&#x7801;/&#x5BC6;&#x94A5;</h4>
+<ul>
+<li>&#x5728;&#x8FDB;&#x884C;&#x7528;&#x6237;&#x767B;&#x9646;&#xFF0C;&#x52A0;&#x89E3;&#x5BC6;&#x7B97;&#x6CD5;&#x7B49;&#x64CD;&#x4F5C;&#x65F6;&#xFF0C;&#x4E0D;&#x5F97;&#x5728;&#x4EE3;&#x7801;&#x91CC;&#x786C;&#x7F16;&#x7801;&#x5BC6;&#x94A5;&#x6216;&#x5BC6;&#x7801;&#xFF0C;&#x53EF;&#x901A;&#x8FC7;&#x53D8;&#x6362;&#x7B97;&#x6CD5;&#x6216;&#x8005;&#x914D;&#x7F6E;&#x7B49;&#x65B9;&#x5F0F;&#x8BBE;&#x7F6E;&#x5BC6;&#x7801;&#x6216;&#x8005;&#x5BC6;&#x94A5;&#x3002;</li>
+</ul>
+<pre><code class="lang-go"><span class="hljs-comment">// bad</span>
+<span class="hljs-keyword">const</span> (
+    user     = <span class="hljs-string">&quot;dbuser&quot;</span>
+    password = <span class="hljs-string">&quot;s3cretp4ssword&quot;</span>
+)
+<span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">connect</span><span class="hljs-params">()</span> *<span class="hljs-title">sql</span>.<span class="hljs-title">DB</span></span> {
+    connStr := fmt.Sprintf(<span class="hljs-string">&quot;postgres://%s:%s@localhost/pqgotest&quot;</span>, user, password)
+    db, err := sql.Open(<span class="hljs-string">&quot;postgres&quot;</span>, connStr)
+    <span class="hljs-keyword">if</span> err != <span class="hljs-literal">nil</span> {
+        <span class="hljs-keyword">return</span> <span class="hljs-literal">nil</span>
+    }
+    <span class="hljs-keyword">return</span> db
+}
+<span class="hljs-comment">// bad</span>
+<span class="hljs-keyword">var</span> (
+    commonkey = []<span class="hljs-keyword">byte</span>(<span class="hljs-string">&quot;0123456789abcdef&quot;</span>)
+)
+<span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">AesEncrypt</span><span class="hljs-params">(plaintext <span class="hljs-keyword">string</span>)</span> <span class="hljs-params">(<span class="hljs-keyword">string</span>, error)</span></span> {
+    block, err := aes.NewCipher(commonkey)
+    <span class="hljs-keyword">if</span> err != <span class="hljs-literal">nil</span> {
+        <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;&quot;</span>, err
+    }
+}
+</code></pre>
+<h4 id="&#x3010;&#x5FC5;&#x987B;&#x3011;&#x5BC6;&#x94A5;&#x5B58;&#x50A8;&#x5B89;&#x5168;"><a name="&#x3010;&#x5FC5;&#x987B;&#x3011;&#x5BC6;&#x94A5;&#x5B58;&#x50A8;&#x5B89;&#x5168;" class="anchor-navigation-ex-anchor" href="#&#x3010;&#x5FC5;&#x987B;&#x3011;&#x5BC6;&#x94A5;&#x5B58;&#x50A8;&#x5B89;&#x5168;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x3010;&#x5FC5;&#x987B;&#x3011;&#x5BC6;&#x94A5;&#x5B58;&#x50A8;&#x5B89;&#x5168;" class="plugin-anchor" href="#&#x3010;&#x5FC5;&#x987B;&#x3011;&#x5BC6;&#x94A5;&#x5B58;&#x50A8;&#x5B89;&#x5168;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x3010;&#x5FC5;&#x987B;&#x3011;&#x5BC6;&#x94A5;&#x5B58;&#x50A8;&#x5B89;&#x5168;</h4>
+<ul>
+<li>&#x5728;&#x4F7F;&#x7528;&#x5BF9;&#x79F0;&#x5BC6;&#x7801;&#x7B97;&#x6CD5;&#x65F6;&#xFF0C;&#x9700;&#x8981;&#x4FDD;&#x62A4;&#x597D;&#x52A0;&#x5BC6;&#x5BC6;&#x94A5;&#x3002;&#x5F53;&#x7B97;&#x6CD5;&#x6D89;&#x53CA;&#x654F;&#x611F;&#x3001;&#x4E1A;&#x52A1;&#x6570;&#x636E;&#x65F6;&#xFF0C;&#x53EF;&#x901A;&#x8FC7;&#x975E;&#x5BF9;&#x79F0;&#x7B97;&#x6CD5;&#x534F;&#x5546;&#x52A0;&#x5BC6;&#x5BC6;&#x94A5;&#x3002;&#x5176;&#x4ED6;&#x8F83;&#x4E3A;&#x4E0D;&#x654F;&#x611F;&#x7684;&#x6570;&#x636E;&#x52A0;&#x5BC6;&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x53D8;&#x6362;&#x7B97;&#x6CD5;&#x7B49;&#x65B9;&#x5F0F;&#x4FDD;&#x62A4;&#x5BC6;&#x94A5;&#x3002;</li>
+</ul>
+<h4 id="&#x3010;&#x63A8;&#x8350;&#x3011;&#x4E0D;&#x4F7F;&#x7528;&#x5F31;&#x5BC6;&#x7801;&#x7B97;&#x6CD5;"><a name="&#x3010;&#x63A8;&#x8350;&#x3011;&#x4E0D;&#x4F7F;&#x7528;&#x5F31;&#x5BC6;&#x7801;&#x7B97;&#x6CD5;" class="anchor-navigation-ex-anchor" href="#&#x3010;&#x63A8;&#x8350;&#x3011;&#x4E0D;&#x4F7F;&#x7528;&#x5F31;&#x5BC6;&#x7801;&#x7B97;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x3010;&#x63A8;&#x8350;&#x3011;&#x4E0D;&#x4F7F;&#x7528;&#x5F31;&#x5BC6;&#x7801;&#x7B97;&#x6CD5;" class="plugin-anchor" href="#&#x3010;&#x63A8;&#x8350;&#x3011;&#x4E0D;&#x4F7F;&#x7528;&#x5F31;&#x5BC6;&#x7801;&#x7B97;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x3010;&#x63A8;&#x8350;&#x3011;&#x4E0D;&#x4F7F;&#x7528;&#x5F31;&#x5BC6;&#x7801;&#x7B97;&#x6CD5;</h4>
+<ul>
+<li>&#x5728;&#x4F7F;&#x7528;&#x52A0;&#x5BC6;&#x7B97;&#x6CD5;&#x65F6;&#xFF0C;&#x4E0D;&#x5EFA;&#x8BAE;&#x4F7F;&#x7528;&#x52A0;&#x5BC6;&#x5F3A;&#x5EA6;&#x8F83;&#x5F31;&#x7684;&#x7B97;&#x6CD5;&#x3002;</li>
+</ul>
+<pre><code>// bad
+crypto/des&#xFF0C;crypto/md5&#xFF0C;crypto/sha1&#xFF0C;crypto/rc4&#x7B49;&#x3002;
+// good
+crypto/rsa&#xFF0C;crypto/aes&#x7B49;&#x3002;
+</code></pre><h3 id="&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;"><a name="&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;" class="anchor-navigation-ex-anchor" href="#&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.7. &#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;</h3>
+<h4 id="&#x3010;&#x63A8;&#x8350;&#x3011;&#x4F7F;&#x7528;regexp&#x8FDB;&#x884C;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x5339;&#x914D;"><a name="&#x3010;&#x63A8;&#x8350;&#x3011;&#x4F7F;&#x7528;regexp&#x8FDB;&#x884C;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x5339;&#x914D;" class="anchor-navigation-ex-anchor" href="#&#x3010;&#x63A8;&#x8350;&#x3011;&#x4F7F;&#x7528;regexp&#x8FDB;&#x884C;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x5339;&#x914D;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x3010;&#x63A8;&#x8350;&#x3011;&#x4F7F;&#x7528;regexp&#x8FDB;&#x884C;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x5339;&#x914D;" class="plugin-anchor" href="#&#x3010;&#x63A8;&#x8350;&#x3011;&#x4F7F;&#x7528;regexp&#x8FDB;&#x884C;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x5339;&#x914D;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x3010;&#x63A8;&#x8350;&#x3011;&#x4F7F;&#x7528;regexp&#x8FDB;&#x884C;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x5339;&#x914D;</h4>
+<ul>
+<li>&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x7F16;&#x5199;&#x4E0D;&#x6070;&#x5F53;&#x53EF;&#x88AB;&#x7528;&#x4E8E;DoS&#x653B;&#x51FB;&#xFF0C;&#x9020;&#x6210;&#x670D;&#x52A1;&#x4E0D;&#x53EF;&#x7528;&#xFF0C;&#x63A8;&#x8350;&#x4F7F;&#x7528;regexp&#x5305;&#x8FDB;&#x884C;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x5339;&#x914D;&#x3002;regexp&#x4FDD;&#x8BC1;&#x4E86;&#x7EBF;&#x6027;&#x65F6;&#x95F4;&#x6027;&#x80FD;&#x548C;&#x4F18;&#x96C5;&#x7684;&#x5931;&#x8D25;&#xFF1A;&#x5BF9;&#x89E3;&#x6790;&#x5668;&#x3001;&#x7F16;&#x8BD1;&#x5668;&#x548C;&#x6267;&#x884C;&#x5F15;&#x64CE;&#x90FD;&#x8FDB;&#x884C;&#x4E86;&#x5185;&#x5B58;&#x9650;&#x5236;&#x3002;&#x4F46;regexp&#x4E0D;&#x652F;&#x6301;&#x4EE5;&#x4E0B;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#x7279;&#x6027;&#xFF0C;&#x5982;&#x4E1A;&#x52A1;&#x4F9D;&#x8D56;&#x8FD9;&#x4E9B;&#x7279;&#x6027;&#xFF0C;&#x5219;regexp&#x4E0D;&#x9002;&#x5408;&#x4F7F;&#x7528;&#x3002;<ul>
+<li>&#x56DE;&#x6EAF;&#x5F15;&#x7528;<a href="https://www.regular-expressions.info/backref.html" target="_blank">Backreferences</a></li>
+<li>&#x67E5;&#x770B;<a href="https://www.regular-expressions.info/lookaround.html" target="_blank">Lookaround</a></li>
+</ul>
+</li>
+</ul>
+<pre><code class="lang-go"><span class="hljs-comment">// good</span>
+matched, err := regexp.MatchString(<span class="hljs-string">`a.b`</span>, <span class="hljs-string">&quot;aaxbb&quot;</span>)
+fmt.Println(matched) <span class="hljs-comment">// true</span>
+fmt.Println(err)     <span class="hljs-comment">// nil</span>
+</code></pre>
+<h1 id="&#x540E;&#x53F0;&#x7C7B;"><a name="&#x540E;&#x53F0;&#x7C7B;" class="anchor-navigation-ex-anchor" href="#&#x540E;&#x53F0;&#x7C7B;"><i class="fa fa-link" aria-hidden="true"></i></a>2. &#x540E;&#x53F0;&#x7C7B;</h1>
+<h2 id="&#x4EE3;&#x7801;&#x5B9E;&#x73B0;&#x7C7B;_1"><a name="&#x4EE3;&#x7801;&#x5B9E;&#x73B0;&#x7C7B;_1" class="anchor-navigation-ex-anchor" href="#&#x4EE3;&#x7801;&#x5B9E;&#x73B0;&#x7C7B;_1"><i class="fa fa-link" aria-hidden="true"></i></a>2.1. &#x4EE3;&#x7801;&#x5B9E;&#x73B0;&#x7C7B;</h2>
+<h3 id="&#x8F93;&#x5165;&#x6821;&#x9A8C;"><a name="&#x8F93;&#x5165;&#x6821;&#x9A8C;" class="anchor-navigation-ex-anchor" href="#&#x8F93;&#x5165;&#x6821;&#x9A8C;"><i class="fa fa-link" aria-hidden="true"></i></a>2.1.1. &#x8F93;&#x5165;&#x6821;&#x9A8C;</h3>
+<h4 id="&#x3010;&#x5FC5;&#x987B;&#x3011;&#x6309;&#x7C7B;&#x578B;&#x8FDB;&#x884C;&#x6570;&#x636E;&#x6821;&#x9A8C;"><a name="&#x3010;&#x5FC5;&#x987B;&#x3011;&#x6309;&#x7C7B;&#x578B;&#x8FDB;&#x884C;&#x6570;&#x636E;&#x6821;&#x9A8C;" class="anchor-navigation-ex-anchor" href="#&#x3010;&#x5FC5;&#x987B;&#x3011;&#x6309;&#x7C7B;&#x578B;&#x8FDB;&#x884C;&#x6570;&#x636E;&#x6821;&#x9A8C;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x3010;&#x5FC5;&#x987B;&#x3011;&#x6309;&#x7C7B;&#x578B;&#x8FDB;&#x884C;&#x6570;&#x636E;&#x6821;&#x9A8C;" class="plugin-anchor" href="#&#x3010;&#x5FC5;&#x987B;&#x3011;&#x6309;&#x7C7B;&#x578B;&#x8FDB;&#x884C;&#x6570;&#x636E;&#x6821;&#x9A8C;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x3010;&#x5FC5;&#x987B;&#x3011;&#x6309;&#x7C7B;&#x578B;&#x8FDB;&#x884C;&#x6570;&#x636E;&#x6821;&#x9A8C;</h4>
+<ul>
+<li>&#x6240;&#x6709;&#x5916;&#x90E8;&#x8F93;&#x5165;&#x7684;&#x53C2;&#x6570;&#xFF0C;&#x5E94;&#x4F7F;&#x7528;<code>validator</code>&#x8FDB;&#x884C;&#x767D;&#x540D;&#x5355;&#x6821;&#x9A8C;&#xFF0C;&#x6821;&#x9A8C;&#x5185;&#x5BB9;&#x5305;&#x62EC;&#x4F46;&#x4E0D;&#x9650;&#x4E8E;&#x6570;&#x636E;&#x957F;&#x5EA6;&#x3001;&#x6570;&#x636E;&#x8303;&#x56F4;&#x3001;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x4E0E;&#x683C;&#x5F0F;&#xFF0C;&#x6821;&#x9A8C;&#x4E0D;&#x901A;&#x8FC7;&#x7684;&#x5E94;&#x5F53;&#x62D2;&#x7EDD;</li>
+</ul>
+<pre><code class="lang-go"><span class="hljs-comment">// good</span>
+<span class="hljs-keyword">import</span> (
+    <span class="hljs-string">&quot;fmt&quot;</span>
+    <span class="hljs-string">&quot;github.com/go-playground/validator/v10&quot;</span>
+)
+<span class="hljs-keyword">var</span> validate *validator.Validate
+<span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">validateVariable</span><span class="hljs-params">()</span></span> {
+    myEmail := <span class="hljs-string">&quot;abc@tencent.com&quot;</span>
+    errs := validate.Var(myEmail, <span class="hljs-string">&quot;required,email&quot;</span>)
+    <span class="hljs-keyword">if</span> errs != <span class="hljs-literal">nil</span> {
+        fmt.Println(errs)
+        <span class="hljs-keyword">return</span>
+        <span class="hljs-comment">//&#x505C;&#x6B62;&#x6267;&#x884C;</span>
+    }
+    <span class="hljs-comment">// &#x9A8C;&#x8BC1;&#x901A;&#x8FC7;&#xFF0C;&#x7EE7;&#x7EED;&#x6267;&#x884C;</span>
+    ...
+}
+<span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span> {
+    validate = validator.New()
+    validateVariable()
+}
+</code></pre>
+<ul>
+<li>&#x65E0;&#x6CD5;&#x901A;&#x8FC7;&#x767D;&#x540D;&#x5355;&#x6821;&#x9A8C;&#x7684;&#x5E94;&#x4F7F;&#x7528;<code>html.EscapeString</code>&#x3001;<code>text/template</code>&#x6216;<code>bluemonday</code>&#x5BF9;<code>&lt;, &gt;, &amp;, &apos;,&quot;</code>&#x7B49;&#x5B57;&#x7B26;&#x8FDB;&#x884C;&#x8FC7;&#x6EE4;&#x6216;&#x7F16;&#x7801;</li>
+</ul>
+<pre><code class="lang-go"><span class="hljs-keyword">import</span> (
+    <span class="hljs-string">&quot;text/template&quot;</span>
+)
+<span class="hljs-comment">// TestHTMLEscapeString HTML&#x7279;&#x6B8A;&#x5B57;&#x7B26;&#x8F6C;&#x4E49;</span>
+<span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">main</span><span class="hljs-params">(inputValue <span class="hljs-keyword">string</span>)</span> <span class="hljs-title">string</span></span> {
+    escapedResult := template.HTMLEscapeString(inputValue)
+    <span class="hljs-keyword">return</span> escapedResult
+}
+</code></pre>
+<h3 id="sql&#x64CD;&#x4F5C;"><a name="sql&#x64CD;&#x4F5C;" class="anchor-navigation-ex-anchor" href="#sql&#x64CD;&#x4F5C;"><i class="fa fa-link" aria-hidden="true"></i></a>2.1.2. SQL&#x64CD;&#x4F5C;</h3>
+<h4 id="&#x3010;&#x5FC5;&#x987B;&#x3011;sql&#x8BED;&#x53E5;&#x9ED8;&#x8BA4;&#x4F7F;&#x7528;&#x9884;&#x7F16;&#x8BD1;&#x5E76;&#x7ED1;&#x5B9A;&#x53D8;&#x91CF;"><a name="&#x3010;&#x5FC5;&#x987B;&#x3011;sql&#x8BED;&#x53E5;&#x9ED8;&#x8BA4;&#x4F7F;&#x7528;&#x9884;&#x7F16;&#x8BD1;&#x5E76;&#x7ED1;&#x5B9A;&#x53D8;&#x91CF;" class="anchor-navigation-ex-anchor" href="#&#x3010;&#x5FC5;&#x987B;&#x3011;sql&#x8BED;&#x53E5;&#x9ED8;&#x8BA4;&#x4F7F;&#x7528;&#x9884;&#x7F16;&#x8BD1;&#x5E76;&#x7ED1;&#x5B9A;&#x53D8;&#x91CF;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x3010;&#x5FC5;&#x987B;&#x3011;sql&#x8BED;&#x53E5;&#x9ED8;&#x8BA4;&#x4F7F;&#x7528;&#x9884;&#x7F16;&#x8BD1;&#x5E76;&#x7ED1;&#x5B9A;&#x53D8;&#x91CF;" class="plugin-anchor" href="#&#x3010;&#x5FC5;&#x987B;&#x3011;sql&#x8BED;&#x53E5;&#x9ED8;&#x8BA4;&#x4F7F;&#x7528;&#x9884;&#x7F16;&#x8BD1;&#x5E76;&#x7ED1;&#x5B9A;&#x53D8;&#x91CF;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x3010;&#x5FC5;&#x987B;&#x3011;SQL&#x8BED;&#x53E5;&#x9ED8;&#x8BA4;&#x4F7F;&#x7528;&#x9884;&#x7F16;&#x8BD1;&#x5E76;&#x7ED1;&#x5B9A;&#x53D8;&#x91CF;</h4>
+<ul>
+<li>&#x4F7F;&#x7528;<code>database/sql</code>&#x7684;prepare&#x3001;Query&#x6216;&#x4F7F;&#x7528;GORM&#x7B49;ORM&#x6267;&#x884C;SQL&#x64CD;&#x4F5C;</li>
+</ul>
+<pre><code class="lang-go"><span class="hljs-keyword">import</span> (
+    <span class="hljs-string">&quot;github.com/jinzhu/gorm&quot;</span>
+    _ <span class="hljs-string">&quot;github.com/jinzhu/gorm/dialects/sqlite&quot;</span>
+)
+<span class="hljs-keyword">type</span> Product <span class="hljs-keyword">struct</span> {
+    gorm.Model
+    Code  <span class="hljs-keyword">string</span>
+    Price <span class="hljs-keyword">uint</span>
+}
+...
+<span class="hljs-keyword">var</span> product Product
+...
+db.First(&amp;product, <span class="hljs-number">1</span>)
+</code></pre>
+<ul>
+<li>&#x4F7F;&#x7528;&#x53C2;&#x6570;&#x5316;&#x67E5;&#x8BE2;&#xFF0C;&#x7981;&#x6B62;&#x62FC;&#x63A5;SQL&#x8BED;&#x53E5;&#xFF0C;&#x53E6;&#x5916;&#x5BF9;&#x4E8E;&#x4F20;&#x5165;&#x53C2;&#x6570;&#x7528;&#x4E8E;order by&#x6216;&#x8868;&#x540D;&#x7684;&#x9700;&#x8981;&#x901A;&#x8FC7;&#x6821;&#x9A8C;</li>
+</ul>
+<pre><code class="lang-go"><span class="hljs-comment">// bad</span>
+<span class="hljs-keyword">import</span> (
+    <span class="hljs-string">&quot;database/sql&quot;</span>
+    <span class="hljs-string">&quot;fmt&quot;</span>
+    <span class="hljs-string">&quot;net/http&quot;</span>
+)
+<span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">handler</span><span class="hljs-params">(db *sql.DB, req *http.Request)</span></span> {
+    q := fmt.Sprintf(<span class="hljs-string">&quot;SELECT ITEM,PRICE FROM PRODUCT WHERE ITEM_CATEGORY=&apos;%s&apos; ORDER BY PRICE&quot;</span>,
+        req.URL.Query()[<span class="hljs-string">&quot;category&quot;</span>])
+    db.Query(q)
+}
+<span class="hljs-comment">// good</span>
+<span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">handlerGood</span><span class="hljs-params">(db *sql.DB, req *http.Request)</span></span> {
+    <span class="hljs-comment">// &#x4F7F;&#x7528;?&#x5360;&#x4F4D;&#x7B26;</span>
+    q := <span class="hljs-string">&quot;SELECT ITEM,PRICE FROM PRODUCT WHERE ITEM_CATEGORY=&apos;?&apos; ORDER BY PRICE&quot;</span>
+    db.Query(q, req.URL.Query()[<span class="hljs-string">&quot;category&quot;</span>])
+}
+</code></pre>
+<h3 id="&#x7F51;&#x7EDC;&#x8BF7;&#x6C42;"><a name="&#x7F51;&#x7EDC;&#x8BF7;&#x6C42;" class="anchor-navigation-ex-anchor" href="#&#x7F51;&#x7EDC;&#x8BF7;&#x6C42;"><i class="fa fa-link" aria-hidden="true"></i></a>2.1.3. &#x7F51;&#x7EDC;&#x8BF7;&#x6C42;</h3>
+<h4 id="&#x3010;&#x5FC5;&#x987B;&#x3011;&#x8D44;&#x6E90;&#x8BF7;&#x6C42;&#x8FC7;&#x6EE4;&#x9A8C;&#x8BC1;"><a name="&#x3010;&#x5FC5;&#x987B;&#x3011;&#x8D44;&#x6E90;&#x8BF7;&#x6C42;&#x8FC7;&#x6EE4;&#x9A8C;&#x8BC1;" class="anchor-navigation-ex-anchor" href="#&#x3010;&#x5FC5;&#x987B;&#x3011;&#x8D44;&#x6E90;&#x8BF7;&#x6C42;&#x8FC7;&#x6EE4;&#x9A8C;&#x8BC1;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x3010;&#x5FC5;&#x987B;&#x3011;&#x8D44;&#x6E90;&#x8BF7;&#x6C42;&#x8FC7;&#x6EE4;&#x9A8C;&#x8BC1;" class="plugin-anchor" href="#&#x3010;&#x5FC5;&#x987B;&#x3011;&#x8D44;&#x6E90;&#x8BF7;&#x6C42;&#x8FC7;&#x6EE4;&#x9A8C;&#x8BC1;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x3010;&#x5FC5;&#x987B;&#x3011;&#x8D44;&#x6E90;&#x8BF7;&#x6C42;&#x8FC7;&#x6EE4;&#x9A8C;&#x8BC1;</h4>
+<ul>
+<li><p>&#x4F7F;&#x7528;<code>&quot;net/http&quot;</code>&#x4E0B;&#x7684;&#x65B9;&#x6CD5;<code>http.Get(url)</code>&#x3001;<code>http.Post(url, contentType, body)</code>&#x3001;<code>http.Head(url)</code>&#x3001;<code>http.PostForm(url, data)</code>&#x3001;<code>http.Do(req)</code>&#x65F6;&#xFF0C;&#x5982;&#x53D8;&#x91CF;&#x503C;&#x5916;&#x90E8;&#x53EF;&#x63A7;&#xFF08;&#x6307;&#x4ECE;&#x53C2;&#x6570;&#x4E2D;&#x52A8;&#x6001;&#x83B7;&#x53D6;&#xFF09;&#xFF0C;&#x5E94;&#x5BF9;&#x8BF7;&#x6C42;&#x76EE;&#x6807;&#x8FDB;&#x884C;&#x4E25;&#x683C;&#x7684;&#x5B89;&#x5168;&#x6821;&#x9A8C;&#x3002;</p>
+</li>
+<li><p>&#x5982;&#x8BF7;&#x6C42;&#x8D44;&#x6E90;&#x57DF;&#x540D;&#x5F52;&#x5C5E;&#x56FA;&#x5B9A;&#x7684;&#x8303;&#x56F4;&#xFF0C;&#x5982;&#x53EA;&#x5141;&#x8BB8;<code>a.qq.com</code>&#x548C;<code>b.qq.com</code>&#xFF0C;&#x5E94;&#x505A;&#x767D;&#x540D;&#x5355;&#x9650;&#x5236;&#x3002;&#x5982;&#x4E0D;&#x9002;&#x7528;&#x767D;&#x540D;&#x5355;&#xFF0C;&#x5219;&#x63A8;&#x8350;&#x7684;&#x6821;&#x9A8C;&#x903B;&#x8F91;&#x6B65;&#x9AA4;&#x662F;&#xFF1A;</p>
+<ul>
+<li><p>&#x7B2C; 1 &#x6B65;&#x3001;&#x53EA;&#x5141;&#x8BB8;HTTP&#x6216;HTTPS&#x534F;&#x8BAE;</p>
+</li>
+<li><p>&#x7B2C; 2 &#x6B65;&#x3001;&#x89E3;&#x6790;&#x76EE;&#x6807;URL&#xFF0C;&#x83B7;&#x53D6;&#x5176;HOST</p>
+</li>
+<li><p>&#x7B2C; 3 &#x6B65;&#x3001;&#x89E3;&#x6790;HOST&#xFF0C;&#x83B7;&#x53D6;HOST&#x6307;&#x5411;&#x7684;IP&#x5730;&#x5740;&#x8F6C;&#x6362;&#x6210;Long&#x578B;</p>
+</li>
+<li><p>&#x7B2C; 4 &#x6B65;&#x3001;&#x68C0;&#x67E5;IP&#x5730;&#x5740;&#x662F;&#x5426;&#x4E3A;&#x5185;&#x7F51;IP&#xFF0C;&#x7F51;&#x6BB5;&#x6709;&#xFF1A;</p>
+<pre><code>// &#x4EE5;RFC&#x5B9A;&#x4E49;&#x7684;&#x4E13;&#x6709;&#x7F51;&#x7EDC;&#x4E3A;&#x4F8B;&#xFF0C;&#x5982;&#x6709;&#x81EA;&#x5B9A;&#x4E49;&#x79C1;&#x6709;&#x7F51;&#x6BB5;&#x4EA6;&#x5E94;&#x52A0;&#x5165;&#x7981;&#x6B62;&#x8BBF;&#x95EE;&#x5217;&#x8868;&#x3002;
+10.0.0.0/8
+172.16.0.0/12
+192.168.0.0/16
+127.0.0.0/8
+</code></pre></li>
+<li><p>&#x7B2C; 5 &#x6B65;&#x3001;&#x8BF7;&#x6C42;URL</p>
+</li>
+<li><p>&#x7B2C; 6 &#x6B65;&#x3001;&#x5982;&#x6709;&#x8DF3;&#x8F6C;&#xFF0C;&#x8DF3;&#x8F6C;&#x540E;&#x6267;&#x884C;1&#xFF0C;&#x5426;&#x5219;&#x7ED1;&#x5B9A;&#x7ECF;&#x6821;&#x9A8C;&#x7684;ip&#x548C;&#x57DF;&#x540D;&#xFF0C;&#x5BF9;URL&#x53D1;&#x8D77;&#x8BF7;&#x6C42;</p>
+</li>
+</ul>
+</li>
+<li><p>&#x5B98;&#x65B9;&#x5E93;<code>encoding/xml</code>&#x4E0D;&#x652F;&#x6301;&#x5916;&#x90E8;&#x5B9E;&#x4F53;&#x5F15;&#x7528;&#xFF0C;&#x4F7F;&#x7528;&#x8BE5;&#x5E93;&#x53EF;&#x907F;&#x514D;xxe&#x6F0F;&#x6D1E;</p>
+</li>
+</ul>
+<pre><code class="lang-go"><span class="hljs-keyword">import</span> (
+    <span class="hljs-string">&quot;encoding/xml&quot;</span>
+    <span class="hljs-string">&quot;fmt&quot;</span>
+    <span class="hljs-string">&quot;os&quot;</span>
+)
+<span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span> {
+    <span class="hljs-keyword">type</span> Person <span class="hljs-keyword">struct</span> {
+        XMLName  xml.Name <span class="hljs-string">`xml:&quot;person&quot;`</span>
+        Id       <span class="hljs-keyword">int</span>      <span class="hljs-string">`xml:&quot;id,attr&quot;`</span>
+        UserName <span class="hljs-keyword">string</span>   <span class="hljs-string">`xml:&quot;name&gt;first&quot;`</span>
+        Comment  <span class="hljs-keyword">string</span>   <span class="hljs-string">`xml:&quot;,comment&quot;`</span>
+    }
+    v := &amp;Person{Id: <span class="hljs-number">13</span>, UserName: <span class="hljs-string">&quot;John&quot;</span>}
+    v.Comment = <span class="hljs-string">&quot; Need more details. &quot;</span>
+    enc := xml.NewEncoder(os.Stdout)
+    enc.Indent(<span class="hljs-string">&quot;  &quot;</span>, <span class="hljs-string">&quot;    &quot;</span>)
+    <span class="hljs-keyword">if</span> err := enc.Encode(v); err != <span class="hljs-literal">nil</span> {
+        fmt.Printf(<span class="hljs-string">&quot;error: %v\n&quot;</span>, err)
+    }
+}
+</code></pre>
+<h3 id="&#x670D;&#x52A1;&#x5668;&#x7AEF;&#x6E32;&#x67D3;"><a name="&#x670D;&#x52A1;&#x5668;&#x7AEF;&#x6E32;&#x67D3;" class="anchor-navigation-ex-anchor" href="#&#x670D;&#x52A1;&#x5668;&#x7AEF;&#x6E32;&#x67D3;"><i class="fa fa-link" aria-hidden="true"></i></a>2.1.4. &#x670D;&#x52A1;&#x5668;&#x7AEF;&#x6E32;&#x67D3;</h3>
+<h4 id="&#x3010;&#x5FC5;&#x987B;&#x3011;&#x6A21;&#x677F;&#x6E32;&#x67D3;&#x8FC7;&#x6EE4;&#x9A8C;&#x8BC1;"><a name="&#x3010;&#x5FC5;&#x987B;&#x3011;&#x6A21;&#x677F;&#x6E32;&#x67D3;&#x8FC7;&#x6EE4;&#x9A8C;&#x8BC1;" class="anchor-navigation-ex-anchor" href="#&#x3010;&#x5FC5;&#x987B;&#x3011;&#x6A21;&#x677F;&#x6E32;&#x67D3;&#x8FC7;&#x6EE4;&#x9A8C;&#x8BC1;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x3010;&#x5FC5;&#x987B;&#x3011;&#x6A21;&#x677F;&#x6E32;&#x67D3;&#x8FC7;&#x6EE4;&#x9A8C;&#x8BC1;" class="plugin-anchor" href="#&#x3010;&#x5FC5;&#x987B;&#x3011;&#x6A21;&#x677F;&#x6E32;&#x67D3;&#x8FC7;&#x6EE4;&#x9A8C;&#x8BC1;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x3010;&#x5FC5;&#x987B;&#x3011;&#x6A21;&#x677F;&#x6E32;&#x67D3;&#x8FC7;&#x6EE4;&#x9A8C;&#x8BC1;</h4>
+<ul>
+<li>&#x4F7F;&#x7528;<code>text/template</code>&#x6216;&#x8005;<code>html/template</code>&#x6E32;&#x67D3;&#x6A21;&#x677F;&#x65F6;&#x7981;&#x6B62;&#x5C06;&#x5916;&#x90E8;&#x8F93;&#x5165;&#x53C2;&#x6570;&#x5F15;&#x5165;&#x6A21;&#x677F;&#xFF0C;&#x6216;&#x4EC5;&#x5141;&#x8BB8;&#x5F15;&#x5165;&#x767D;&#x540D;&#x5355;&#x5185;&#x5B57;&#x7B26;&#x3002;</li>
+</ul>
+<pre><code class="lang-go"><span class="hljs-comment">// bad</span>
+<span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">handler</span><span class="hljs-params">(w http.ResponseWriter, r *http.Request)</span></span> {
+    r.ParseForm()
+    x := r.Form.Get(<span class="hljs-string">&quot;name&quot;</span>)
+    <span class="hljs-keyword">var</span> tmpl = <span class="hljs-string">`&lt;!DOCTYPE html&gt;&lt;html&gt;&lt;body&gt;
+    &lt;form action=&quot;/&quot; method=&quot;post&quot;&gt;
+        First name:&lt;br&gt;
+    &lt;input type=&quot;text&quot; name=&quot;name&quot; value=&quot;&quot;&gt;
+    &lt;input type=&quot;submit&quot; value=&quot;Submit&quot;&gt;
+    &lt;/form&gt;&lt;p&gt;`</span> + x + <span class="hljs-string">` &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;`</span>
+    t := template.New(<span class="hljs-string">&quot;main&quot;</span>)
+    t, _ = t.Parse(tmpl)
+    t.Execute(w, <span class="hljs-string">&quot;Hello&quot;</span>)
+}
+<span class="hljs-comment">// good</span>
+<span class="hljs-keyword">import</span> (
+    <span class="hljs-string">&quot;fmt&quot;</span>
+    <span class="hljs-string">&quot;github.com/go-playground/validator/v10&quot;</span>
+)
+<span class="hljs-keyword">var</span> validate *validator.Validate
+validate = validator.New()
+<span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">validateVariable</span><span class="hljs-params">(val)</span></span> {
+    errs := validate.Var(val, <span class="hljs-string">&quot;gte=1,lte=100&quot;</span>) <span class="hljs-comment">// &#x9650;&#x5236;&#x5FC5;&#x987B;&#x662F;1-100&#x7684;&#x6B63;&#x6574;&#x6570;</span>
+    <span class="hljs-keyword">if</span> errs != <span class="hljs-literal">nil</span> {
+        fmt.Println(errs)
+        <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>
+    }
+    <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>
+}
+<span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">handler</span><span class="hljs-params">(w http.ResponseWriter, r *http.Request)</span></span> {
+    r.ParseForm()
+    x := r.Form.Get(<span class="hljs-string">&quot;name&quot;</span>)
+    <span class="hljs-keyword">if</span> validateVariable(x) {
+        <span class="hljs-keyword">var</span> tmpl = <span class="hljs-string">`&lt;!DOCTYPE html&gt;&lt;html&gt;&lt;body&gt;
+            &lt;form action=&quot;/&quot; method=&quot;post&quot;&gt;
+            First name:&lt;br&gt;
+            &lt;input type=&quot;text&quot; name=&quot;name&quot; value=&quot;&quot;&gt;
+            &lt;input type=&quot;submit&quot; value=&quot;Submit&quot;&gt;
+            &lt;/form&gt;&lt;p&gt;`</span> + x + <span class="hljs-string">` &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;`</span>
+        t := template.New(<span class="hljs-string">&quot;main&quot;</span>)
+        t, _ = t.Parse(tmpl)
+        t.Execute(w, <span class="hljs-string">&quot;Hello&quot;</span>)
+    } <span class="hljs-keyword">else</span> {
+        <span class="hljs-comment">// ...</span>
+    }
+}
+</code></pre>
+<h3 id="web&#x8DE8;&#x57DF;"><a name="web&#x8DE8;&#x57DF;" class="anchor-navigation-ex-anchor" href="#web&#x8DE8;&#x57DF;"><i class="fa fa-link" aria-hidden="true"></i></a>2.1.5. Web&#x8DE8;&#x57DF;</h3>
+<h4 id="&#x3010;&#x5FC5;&#x987B;&#x3011;&#x8DE8;&#x57DF;&#x8D44;&#x6E90;&#x5171;&#x4EAB;cors&#x9650;&#x5236;&#x8BF7;&#x6C42;&#x6765;&#x6E90;"><a name="&#x3010;&#x5FC5;&#x987B;&#x3011;&#x8DE8;&#x57DF;&#x8D44;&#x6E90;&#x5171;&#x4EAB;cors&#x9650;&#x5236;&#x8BF7;&#x6C42;&#x6765;&#x6E90;" class="anchor-navigation-ex-anchor" href="#&#x3010;&#x5FC5;&#x987B;&#x3011;&#x8DE8;&#x57DF;&#x8D44;&#x6E90;&#x5171;&#x4EAB;cors&#x9650;&#x5236;&#x8BF7;&#x6C42;&#x6765;&#x6E90;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x3010;&#x5FC5;&#x987B;&#x3011;&#x8DE8;&#x57DF;&#x8D44;&#x6E90;&#x5171;&#x4EAB;cors&#x9650;&#x5236;&#x8BF7;&#x6C42;&#x6765;&#x6E90;" class="plugin-anchor" href="#&#x3010;&#x5FC5;&#x987B;&#x3011;&#x8DE8;&#x57DF;&#x8D44;&#x6E90;&#x5171;&#x4EAB;cors&#x9650;&#x5236;&#x8BF7;&#x6C42;&#x6765;&#x6E90;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x3010;&#x5FC5;&#x987B;&#x3011;&#x8DE8;&#x57DF;&#x8D44;&#x6E90;&#x5171;&#x4EAB;CORS&#x9650;&#x5236;&#x8BF7;&#x6C42;&#x6765;&#x6E90;</h4>
+<ul>
+<li>CORS&#x8BF7;&#x6C42;&#x4FDD;&#x62A4;&#x4E0D;&#x5F53;&#x53EF;&#x5BFC;&#x81F4;&#x654F;&#x611F;&#x4FE1;&#x606F;&#x6CC4;&#x6F0F;&#xFF0C;&#x56E0;&#x6B64;&#x5E94;&#x5F53;&#x4E25;&#x683C;&#x8BBE;&#x7F6E;Access-Control-Allow-Origin&#x4F7F;&#x7528;&#x540C;&#x6E90;&#x7B56;&#x7565;&#x8FDB;&#x884C;&#x4FDD;&#x62A4;&#x3002;</li>
+</ul>
+<pre><code class="lang-go"><span class="hljs-comment">// good</span>
+c := cors.New(cors.Options{
+    AllowedOrigins:   []<span class="hljs-keyword">string</span>{<span class="hljs-string">&quot;http://qq.com&quot;</span>, <span class="hljs-string">&quot;https://qq.com&quot;</span>},
+    AllowCredentials: <span class="hljs-literal">true</span>,
+    Debug:            <span class="hljs-literal">false</span>,
+})
+<span class="hljs-comment">// &#x5F15;&#x5165;&#x4E2D;&#x95F4;&#x4EF6;</span>
+handler = c.Handler(handler)
+</code></pre>
+<h3 id="&#x54CD;&#x5E94;&#x8F93;&#x51FA;"><a name="&#x54CD;&#x5E94;&#x8F93;&#x51FA;" class="anchor-navigation-ex-anchor" href="#&#x54CD;&#x5E94;&#x8F93;&#x51FA;"><i class="fa fa-link" aria-hidden="true"></i></a>2.1.6. &#x54CD;&#x5E94;&#x8F93;&#x51FA;</h3>
+<h4 id="&#x3010;&#x5FC5;&#x987B;&#x3011;&#x8BBE;&#x7F6E;&#x6B63;&#x786E;&#x7684;http&#x54CD;&#x5E94;&#x5305;&#x7C7B;&#x578B;"><a name="&#x3010;&#x5FC5;&#x987B;&#x3011;&#x8BBE;&#x7F6E;&#x6B63;&#x786E;&#x7684;http&#x54CD;&#x5E94;&#x5305;&#x7C7B;&#x578B;" class="anchor-navigation-ex-anchor" href="#&#x3010;&#x5FC5;&#x987B;&#x3011;&#x8BBE;&#x7F6E;&#x6B63;&#x786E;&#x7684;http&#x54CD;&#x5E94;&#x5305;&#x7C7B;&#x578B;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x3010;&#x5FC5;&#x987B;&#x3011;&#x8BBE;&#x7F6E;&#x6B63;&#x786E;&#x7684;http&#x54CD;&#x5E94;&#x5305;&#x7C7B;&#x578B;" class="plugin-anchor" href="#&#x3010;&#x5FC5;&#x987B;&#x3011;&#x8BBE;&#x7F6E;&#x6B63;&#x786E;&#x7684;http&#x54CD;&#x5E94;&#x5305;&#x7C7B;&#x578B;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x3010;&#x5FC5;&#x987B;&#x3011;&#x8BBE;&#x7F6E;&#x6B63;&#x786E;&#x7684;HTTP&#x54CD;&#x5E94;&#x5305;&#x7C7B;&#x578B;</h4>
+<ul>
+<li>&#x54CD;&#x5E94;&#x5934;Content-Type&#x4E0E;&#x5B9E;&#x9645;&#x54CD;&#x5E94;&#x5185;&#x5BB9;&#xFF0C;&#x5E94;&#x4FDD;&#x6301;&#x4E00;&#x81F4;&#x3002;&#x5982;&#xFF1A;API&#x54CD;&#x5E94;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x662F;json&#xFF0C;&#x5219;&#x54CD;&#x5E94;&#x5934;&#x4F7F;&#x7528;<code>application/json</code>&#xFF1B;&#x82E5;&#x4E3A;xml&#xFF0C;&#x5219;&#x8BBE;&#x7F6E;&#x4E3A;<code>text/xml</code>&#x3002;</li>
+</ul>
+<h4 id="&#x3010;&#x5FC5;&#x987B;&#x3011;&#x6DFB;&#x52A0;&#x5B89;&#x5168;&#x54CD;&#x5E94;&#x5934;"><a name="&#x3010;&#x5FC5;&#x987B;&#x3011;&#x6DFB;&#x52A0;&#x5B89;&#x5168;&#x54CD;&#x5E94;&#x5934;" class="anchor-navigation-ex-anchor" href="#&#x3010;&#x5FC5;&#x987B;&#x3011;&#x6DFB;&#x52A0;&#x5B89;&#x5168;&#x54CD;&#x5E94;&#x5934;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x3010;&#x5FC5;&#x987B;&#x3011;&#x6DFB;&#x52A0;&#x5B89;&#x5168;&#x54CD;&#x5E94;&#x5934;" class="plugin-anchor" href="#&#x3010;&#x5FC5;&#x987B;&#x3011;&#x6DFB;&#x52A0;&#x5B89;&#x5168;&#x54CD;&#x5E94;&#x5934;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x3010;&#x5FC5;&#x987B;&#x3011;&#x6DFB;&#x52A0;&#x5B89;&#x5168;&#x54CD;&#x5E94;&#x5934;</h4>
+<ul>
+<li>&#x6240;&#x6709;&#x63A5;&#x53E3;&#x3001;&#x9875;&#x9762;&#xFF0C;&#x6DFB;&#x52A0;&#x54CD;&#x5E94;&#x5934; <code>X-Content-Type-Options: nosniff</code>&#x3002;</li>
+<li>&#x6240;&#x6709;&#x63A5;&#x53E3;&#x3001;&#x9875;&#x9762;&#xFF0C;&#x6DFB;&#x52A0;&#x54CD;&#x5E94;&#x5934;<code>X-Frame-Options</code>&#x3002;&#x6309;&#x9700;&#x5408;&#x7406;&#x8BBE;&#x7F6E;&#x5176;&#x5141;&#x8BB8;&#x8303;&#x56F4;&#xFF0C;&#x5305;&#x62EC;&#xFF1A;<code>DENY</code>&#x3001;<code>SAMEORIGIN</code>&#x3001;<code>ALLOW-FROM origin</code>&#x3002;&#x7528;&#x6CD5;&#x53C2;&#x8003;&#xFF1A;<a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/X-Frame-Options" target="_blank">MDN&#x6587;&#x6863;</a></li>
+</ul>
+<h4 id="&#x3010;&#x5FC5;&#x987B;&#x3011;&#x5916;&#x90E8;&#x8F93;&#x5165;&#x62FC;&#x63A5;&#x5230;http&#x54CD;&#x5E94;&#x5934;&#x4E2D;&#x9700;&#x8FDB;&#x884C;&#x8FC7;&#x6EE4;"><a name="&#x3010;&#x5FC5;&#x987B;&#x3011;&#x5916;&#x90E8;&#x8F93;&#x5165;&#x62FC;&#x63A5;&#x5230;http&#x54CD;&#x5E94;&#x5934;&#x4E2D;&#x9700;&#x8FDB;&#x884C;&#x8FC7;&#x6EE4;" class="anchor-navigation-ex-anchor" href="#&#x3010;&#x5FC5;&#x987B;&#x3011;&#x5916;&#x90E8;&#x8F93;&#x5165;&#x62FC;&#x63A5;&#x5230;http&#x54CD;&#x5E94;&#x5934;&#x4E2D;&#x9700;&#x8FDB;&#x884C;&#x8FC7;&#x6EE4;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x3010;&#x5FC5;&#x987B;&#x3011;&#x5916;&#x90E8;&#x8F93;&#x5165;&#x62FC;&#x63A5;&#x5230;http&#x54CD;&#x5E94;&#x5934;&#x4E2D;&#x9700;&#x8FDB;&#x884C;&#x8FC7;&#x6EE4;" class="plugin-anchor" href="#&#x3010;&#x5FC5;&#x987B;&#x3011;&#x5916;&#x90E8;&#x8F93;&#x5165;&#x62FC;&#x63A5;&#x5230;http&#x54CD;&#x5E94;&#x5934;&#x4E2D;&#x9700;&#x8FDB;&#x884C;&#x8FC7;&#x6EE4;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x3010;&#x5FC5;&#x987B;&#x3011;&#x5916;&#x90E8;&#x8F93;&#x5165;&#x62FC;&#x63A5;&#x5230;HTTP&#x54CD;&#x5E94;&#x5934;&#x4E2D;&#x9700;&#x8FDB;&#x884C;&#x8FC7;&#x6EE4;</h4>
+<ul>
+<li>&#x5E94;&#x5C3D;&#x91CF;&#x907F;&#x514D;&#x5916;&#x90E8;&#x53EF;&#x63A7;&#x53C2;&#x6570;&#x62FC;&#x63A5;&#x5230;HTTP&#x54CD;&#x5E94;&#x5934;&#x4E2D;&#xFF0C;&#x5982;&#x4E1A;&#x52A1;&#x9700;&#x8981;&#x5219;&#x9700;&#x8981;&#x8FC7;&#x6EE4;&#x6389;<code>\r</code>&#x3001;<code>\n</code>&#x7B49;&#x6362;&#x884C;&#x7B26;&#xFF0C;&#x6216;&#x8005;&#x62D2;&#x7EDD;&#x643A;&#x5E26;&#x6362;&#x884C;&#x7B26;&#x53F7;&#x7684;&#x5916;&#x90E8;&#x8F93;&#x5165;&#x3002;</li>
+</ul>
+<h4 id="&#x3010;&#x5FC5;&#x987B;&#x3011;&#x5916;&#x90E8;&#x8F93;&#x5165;&#x62FC;&#x63A5;&#x5230;response&#x9875;&#x9762;&#x524D;&#x8FDB;&#x884C;&#x7F16;&#x7801;&#x5904;&#x7406;"><a name="&#x3010;&#x5FC5;&#x987B;&#x3011;&#x5916;&#x90E8;&#x8F93;&#x5165;&#x62FC;&#x63A5;&#x5230;response&#x9875;&#x9762;&#x524D;&#x8FDB;&#x884C;&#x7F16;&#x7801;&#x5904;&#x7406;" class="anchor-navigation-ex-anchor" href="#&#x3010;&#x5FC5;&#x987B;&#x3011;&#x5916;&#x90E8;&#x8F93;&#x5165;&#x62FC;&#x63A5;&#x5230;response&#x9875;&#x9762;&#x524D;&#x8FDB;&#x884C;&#x7F16;&#x7801;&#x5904;&#x7406;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x3010;&#x5FC5;&#x987B;&#x3011;&#x5916;&#x90E8;&#x8F93;&#x5165;&#x62FC;&#x63A5;&#x5230;response&#x9875;&#x9762;&#x524D;&#x8FDB;&#x884C;&#x7F16;&#x7801;&#x5904;&#x7406;" class="plugin-anchor" href="#&#x3010;&#x5FC5;&#x987B;&#x3011;&#x5916;&#x90E8;&#x8F93;&#x5165;&#x62FC;&#x63A5;&#x5230;response&#x9875;&#x9762;&#x524D;&#x8FDB;&#x884C;&#x7F16;&#x7801;&#x5904;&#x7406;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x3010;&#x5FC5;&#x987B;&#x3011;&#x5916;&#x90E8;&#x8F93;&#x5165;&#x62FC;&#x63A5;&#x5230;response&#x9875;&#x9762;&#x524D;&#x8FDB;&#x884C;&#x7F16;&#x7801;&#x5904;&#x7406;</h4>
+<ul>
+<li>&#x76F4;&#x51FA;html&#x9875;&#x9762;&#x6216;&#x4F7F;&#x7528;&#x6A21;&#x677F;&#x751F;&#x6210;html&#x9875;&#x9762;&#x7684;&#xFF0C;&#x63A8;&#x8350;&#x4F7F;&#x7528;<code>text/template</code>&#x81EA;&#x52A8;&#x7F16;&#x7801;&#xFF0C;&#x6216;&#x8005;&#x4F7F;&#x7528;<code>html.EscapeString</code>&#x6216;<code>text/template</code>&#x5BF9;<code>&lt;, &gt;, &amp;, &apos;,&quot;</code>&#x7B49;&#x5B57;&#x7B26;&#x8FDB;&#x884C;&#x7F16;&#x7801;&#x3002;</li>
+</ul>
+<pre><code class="lang-go"><span class="hljs-keyword">import</span> (
+    <span class="hljs-string">&quot;html/template&quot;</span>
+)
+<span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">outtemplate</span><span class="hljs-params">(w http.ResponseWriter, r *http.Request)</span></span> {
+    param1 := r.URL.Query().Get(<span class="hljs-string">&quot;param1&quot;</span>)
+    tmpl := template.New(<span class="hljs-string">&quot;hello&quot;</span>)
+    tmpl, _ = tmpl.Parse(<span class="hljs-string">`{{define &quot;T&quot;}}{{.}}{{end}}`</span>)
+    tmpl.ExecuteTemplate(w, <span class="hljs-string">&quot;T&quot;</span>, param1)
+}
+</code></pre>
+<h3 id="&#x4F1A;&#x8BDD;&#x7BA1;&#x7406;"><a name="&#x4F1A;&#x8BDD;&#x7BA1;&#x7406;" class="anchor-navigation-ex-anchor" href="#&#x4F1A;&#x8BDD;&#x7BA1;&#x7406;"><i class="fa fa-link" aria-hidden="true"></i></a>2.1.7. &#x4F1A;&#x8BDD;&#x7BA1;&#x7406;</h3>
+<h4 id="&#x3010;&#x5FC5;&#x987B;&#x3011;&#x5B89;&#x5168;&#x7EF4;&#x62A4;session&#x4FE1;&#x606F;"><a name="&#x3010;&#x5FC5;&#x987B;&#x3011;&#x5B89;&#x5168;&#x7EF4;&#x62A4;session&#x4FE1;&#x606F;" class="anchor-navigation-ex-anchor" href="#&#x3010;&#x5FC5;&#x987B;&#x3011;&#x5B89;&#x5168;&#x7EF4;&#x62A4;session&#x4FE1;&#x606F;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x3010;&#x5FC5;&#x987B;&#x3011;&#x5B89;&#x5168;&#x7EF4;&#x62A4;session&#x4FE1;&#x606F;" class="plugin-anchor" href="#&#x3010;&#x5FC5;&#x987B;&#x3011;&#x5B89;&#x5168;&#x7EF4;&#x62A4;session&#x4FE1;&#x606F;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x3010;&#x5FC5;&#x987B;&#x3011;&#x5B89;&#x5168;&#x7EF4;&#x62A4;session&#x4FE1;&#x606F;</h4>
+<ul>
+<li>&#x7528;&#x6237;&#x767B;&#x5F55;&#x65F6;&#x5E94;&#x91CD;&#x65B0;&#x751F;&#x6210;session&#xFF0C;&#x9000;&#x51FA;&#x767B;&#x5F55;&#x540E;&#x5E94;&#x6E05;&#x7406;session&#x3002;<pre><code class="lang-go"><span class="hljs-keyword">import</span> (
+  <span class="hljs-string">&quot;github.com/gorilla/handlers&quot;</span>
+  <span class="hljs-string">&quot;github.com/gorilla/mux&quot;</span>
+  <span class="hljs-string">&quot;net/http&quot;</span>
+)
+<span class="hljs-comment">// &#x521B;&#x5EFA;cookie</span>
+<span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">setToken</span><span class="hljs-params">(res http.ResponseWriter, req *http.Request)</span></span> {
+  expireToken := time.Now().Add(time.Minute * <span class="hljs-number">30</span>).Unix()
+  expireCookie := time.Now().Add(time.Minute * <span class="hljs-number">30</span>)
+  <span class="hljs-comment">//...</span>
+  cookie := http.Cookie{
+      Name:     <span class="hljs-string">&quot;Auth&quot;</span>,
+      Value:    signedToken,
+      Expires:  expireCookie, <span class="hljs-comment">// &#x8FC7;&#x671F;&#x5931;&#x6548;</span>
+      HttpOnly: <span class="hljs-literal">true</span>,
+      Path:     <span class="hljs-string">&quot;/&quot;</span>,
+      Domain:   <span class="hljs-string">&quot;127.0.0.1&quot;</span>,
+      Secure:   <span class="hljs-literal">true</span>,
+  }
+  http.SetCookie(res, &amp;cookie)
+  http.Redirect(res, req, <span class="hljs-string">&quot;/profile&quot;</span>, <span class="hljs-number">307</span>)
+}
+<span class="hljs-comment">// &#x5220;&#x9664;cookie</span>
+<span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">logout</span><span class="hljs-params">(res http.ResponseWriter, req *http.Request)</span></span> {
+  deleteCookie := http.Cookie{
+      Name:    <span class="hljs-string">&quot;Auth&quot;</span>,
+      Value:   <span class="hljs-string">&quot;none&quot;</span>,
+      Expires: time.Now(),
+  }
+  http.SetCookie(res, &amp;deleteCookie)
+  <span class="hljs-keyword">return</span>
+}
+</code></pre>
+</li>
+</ul>
+<h4 id="&#x3010;&#x5FC5;&#x987B;&#x3011;csrf&#x9632;&#x62A4;"><a name="&#x3010;&#x5FC5;&#x987B;&#x3011;csrf&#x9632;&#x62A4;" class="anchor-navigation-ex-anchor" href="#&#x3010;&#x5FC5;&#x987B;&#x3011;csrf&#x9632;&#x62A4;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x3010;&#x5FC5;&#x987B;&#x3011;csrf&#x9632;&#x62A4;" class="plugin-anchor" href="#&#x3010;&#x5FC5;&#x987B;&#x3011;csrf&#x9632;&#x62A4;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x3010;&#x5FC5;&#x987B;&#x3011;CSRF&#x9632;&#x62A4;</h4>
+<ul>
+<li>&#x6D89;&#x53CA;&#x7CFB;&#x7EDF;&#x654F;&#x611F;&#x64CD;&#x4F5C;&#x6216;&#x53EF;&#x8BFB;&#x53D6;&#x654F;&#x611F;&#x4FE1;&#x606F;&#x7684;&#x63A5;&#x53E3;&#x5E94;&#x6821;&#x9A8C;<code>Referer</code>&#x6216;&#x6DFB;&#x52A0;<code>csrf_token</code>&#x3002;</li>
+</ul>
+<pre><code class="lang-go"><span class="hljs-comment">// good</span>
+<span class="hljs-keyword">import</span> (
+    <span class="hljs-string">&quot;github.com/gorilla/csrf&quot;</span>
+    <span class="hljs-string">&quot;github.com/gorilla/mux&quot;</span>
+    <span class="hljs-string">&quot;net/http&quot;</span>
+)
+<span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span> {
+    r := mux.NewRouter()
+    r.HandleFunc(<span class="hljs-string">&quot;/signup&quot;</span>, ShowSignupForm)
+    r.HandleFunc(<span class="hljs-string">&quot;/signup/post&quot;</span>, SubmitSignupForm)
+    <span class="hljs-comment">// &#x4F7F;&#x7528;csrf_token&#x9A8C;&#x8BC1;</span>
+    http.ListenAndServe(<span class="hljs-string">&quot;:8000&quot;</span>,
+        csrf.Protect([]<span class="hljs-keyword">byte</span>(<span class="hljs-string">&quot;32-byte-long-auth-key&quot;</span>))(r))
+}
+</code></pre>
+<h3 id="&#x8BBF;&#x95EE;&#x63A7;&#x5236;"><a name="&#x8BBF;&#x95EE;&#x63A7;&#x5236;" class="anchor-navigation-ex-anchor" href="#&#x8BBF;&#x95EE;&#x63A7;&#x5236;"><i class="fa fa-link" aria-hidden="true"></i></a>2.1.8. &#x8BBF;&#x95EE;&#x63A7;&#x5236;</h3>
+<h4 id="&#x3010;&#x5FC5;&#x987B;&#x3011;&#x9ED8;&#x8BA4;&#x9274;&#x6743;"><a name="&#x3010;&#x5FC5;&#x987B;&#x3011;&#x9ED8;&#x8BA4;&#x9274;&#x6743;" class="anchor-navigation-ex-anchor" href="#&#x3010;&#x5FC5;&#x987B;&#x3011;&#x9ED8;&#x8BA4;&#x9274;&#x6743;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x3010;&#x5FC5;&#x987B;&#x3011;&#x9ED8;&#x8BA4;&#x9274;&#x6743;" class="plugin-anchor" href="#&#x3010;&#x5FC5;&#x987B;&#x3011;&#x9ED8;&#x8BA4;&#x9274;&#x6743;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x3010;&#x5FC5;&#x987B;&#x3011;&#x9ED8;&#x8BA4;&#x9274;&#x6743;</h4>
+<ul>
+<li><p>&#x9664;&#x975E;&#x8D44;&#x6E90;&#x5B8C;&#x5168;&#x53EF;&#x5BF9;&#x5916;&#x5F00;&#x653E;&#xFF0C;&#x5426;&#x5219;&#x7CFB;&#x7EDF;&#x9ED8;&#x8BA4;&#x8FDB;&#x884C;&#x8EAB;&#x4EFD;&#x8BA4;&#x8BC1;&#xFF0C;&#x4F7F;&#x7528;&#x767D;&#x540D;&#x5355;&#x7684;&#x65B9;&#x5F0F;&#x653E;&#x5F00;&#x4E0D;&#x9700;&#x8981;&#x8BA4;&#x8BC1;&#x7684;&#x63A5;&#x53E3;&#x6216;&#x9875;&#x9762;&#x3002;</p>
+</li>
+<li><p>&#x6839;&#x636E;&#x8D44;&#x6E90;&#x7684;&#x673A;&#x5BC6;&#x7A0B;&#x5EA6;&#x548C;&#x7528;&#x6237;&#x89D2;&#x8272;&#xFF0C;&#x4EE5;&#x6700;&#x5C0F;&#x6743;&#x9650;&#x539F;&#x5219;&#xFF0C;&#x8BBE;&#x7F6E;&#x4E0D;&#x540C;&#x7EA7;&#x522B;&#x7684;&#x6743;&#x9650;&#xFF0C;&#x5982;&#x5B8C;&#x5168;&#x516C;&#x5F00;&#x3001;&#x767B;&#x5F55;&#x53EF;&#x8BFB;&#x3001;&#x767B;&#x5F55;&#x53EF;&#x5199;&#x3001;&#x7279;&#x5B9A;&#x7528;&#x6237;&#x53EF;&#x8BFB;&#x3001;&#x7279;&#x5B9A;&#x7528;&#x6237;&#x53EF;&#x5199;&#x7B49;</p>
+</li>
+<li><p>&#x6D89;&#x53CA;&#x7528;&#x6237;&#x81EA;&#x8EAB;&#x76F8;&#x5173;&#x7684;&#x6570;&#x636E;&#x7684;&#x8BFB;&#x5199;&#x5FC5;&#x987B;&#x9A8C;&#x8BC1;&#x767B;&#x5F55;&#x6001;&#x7528;&#x6237;&#x8EAB;&#x4EFD;&#x53CA;&#x5176;&#x6743;&#x9650;&#xFF0C;&#x907F;&#x514D;&#x8D8A;&#x6743;&#x64CD;&#x4F5C;</p>
+<pre><code class="lang-sql"><span class="hljs-comment">-- &#x4F2A;&#x4EE3;&#x7801;</span>
+<span class="hljs-keyword">select</span> <span class="hljs-keyword">id</span> <span class="hljs-keyword">from</span> <span class="hljs-keyword">table</span> <span class="hljs-keyword">where</span> <span class="hljs-keyword">id</span>=:<span class="hljs-keyword">id</span> <span class="hljs-keyword">and</span> userid=session.userid
+</code></pre>
+</li>
+<li><p>&#x6CA1;&#x6709;&#x72EC;&#x7ACB;&#x8D26;&#x53F7;&#x4F53;&#x7CFB;&#x7684;&#x5916;&#x7F51;&#x670D;&#x52A1;&#x4F7F;&#x7528;<code>QQ</code>&#x6216;<code>&#x5FAE;&#x4FE1;</code>&#x767B;&#x5F55;&#xFF0C;&#x5185;&#x7F51;&#x670D;&#x52A1;&#x4F7F;&#x7528;<code>&#x7EDF;&#x4E00;&#x767B;&#x5F55;&#x670D;&#x52A1;</code>&#x767B;&#x5F55;&#xFF0C;&#x5176;&#x4ED6;&#x4F7F;&#x7528;&#x8D26;&#x53F7;&#x5BC6;&#x7801;&#x767B;&#x5F55;&#x7684;&#x670D;&#x52A1;&#x9700;&#x8981;&#x589E;&#x52A0;&#x9A8C;&#x8BC1;&#x7801;&#x7B49;&#x4E8C;&#x6B21;&#x9A8C;&#x8BC1;</p>
+</li>
+</ul>
+<h3 id="&#x5E76;&#x53D1;&#x4FDD;&#x62A4;"><a name="&#x5E76;&#x53D1;&#x4FDD;&#x62A4;" class="anchor-navigation-ex-anchor" href="#&#x5E76;&#x53D1;&#x4FDD;&#x62A4;"><i class="fa fa-link" aria-hidden="true"></i></a>2.1.9. &#x5E76;&#x53D1;&#x4FDD;&#x62A4;</h3>
+<h4 id="&#x3010;&#x5FC5;&#x987B;&#x3011;&#x7981;&#x6B62;&#x5728;&#x95ED;&#x5305;&#x4E2D;&#x76F4;&#x63A5;&#x8C03;&#x7528;&#x5FAA;&#x73AF;&#x53D8;&#x91CF;"><a name="&#x3010;&#x5FC5;&#x987B;&#x3011;&#x7981;&#x6B62;&#x5728;&#x95ED;&#x5305;&#x4E2D;&#x76F4;&#x63A5;&#x8C03;&#x7528;&#x5FAA;&#x73AF;&#x53D8;&#x91CF;" class="anchor-navigation-ex-anchor" href="#&#x3010;&#x5FC5;&#x987B;&#x3011;&#x7981;&#x6B62;&#x5728;&#x95ED;&#x5305;&#x4E2D;&#x76F4;&#x63A5;&#x8C03;&#x7528;&#x5FAA;&#x73AF;&#x53D8;&#x91CF;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x3010;&#x5FC5;&#x987B;&#x3011;&#x7981;&#x6B62;&#x5728;&#x95ED;&#x5305;&#x4E2D;&#x76F4;&#x63A5;&#x8C03;&#x7528;&#x5FAA;&#x73AF;&#x53D8;&#x91CF;" class="plugin-anchor" href="#&#x3010;&#x5FC5;&#x987B;&#x3011;&#x7981;&#x6B62;&#x5728;&#x95ED;&#x5305;&#x4E2D;&#x76F4;&#x63A5;&#x8C03;&#x7528;&#x5FAA;&#x73AF;&#x53D8;&#x91CF;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x3010;&#x5FC5;&#x987B;&#x3011;&#x7981;&#x6B62;&#x5728;&#x95ED;&#x5305;&#x4E2D;&#x76F4;&#x63A5;&#x8C03;&#x7528;&#x5FAA;&#x73AF;&#x53D8;&#x91CF;</h4>
+<ul>
+<li>&#x5728;&#x5FAA;&#x73AF;&#x4E2D;&#x542F;&#x52A8;&#x534F;&#x7A0B;&#xFF0C;&#x5F53;&#x534F;&#x7A0B;&#x4E2D;&#x4F7F;&#x7528;&#x5230;&#x4E86;&#x5FAA;&#x73AF;&#x7684;&#x7D22;&#x5F15;&#x503C;&#xFF0C;&#x7531;&#x4E8E;&#x591A;&#x4E2A;&#x534F;&#x7A0B;&#x540C;&#x65F6;&#x4F7F;&#x7528;&#x540C;&#x4E00;&#x4E2A;&#x53D8;&#x91CF;&#x4F1A;&#x4EA7;&#x751F;&#x6570;&#x636E;&#x7ADE;&#x4E89;&#xFF0C;&#x9020;&#x6210;&#x6267;&#x884C;&#x7ED3;&#x679C;&#x5F02;&#x5E38;&#x3002;</li>
+</ul>
+<pre><code class="lang-go"><span class="hljs-comment">// bad</span>
+<span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span> {
+    runtime.GOMAXPROCS(runtime.NumCPU())
+    <span class="hljs-keyword">var</span> group sync.WaitGroup
+    <span class="hljs-keyword">for</span> i := <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">5</span>; i++ {
+        group.Add(<span class="hljs-number">1</span>)
+        <span class="hljs-keyword">go</span> <span class="hljs-function"><span class="hljs-keyword">func</span><span class="hljs-params">()</span></span> {
+            <span class="hljs-keyword">defer</span> group.Done()
+            fmt.Printf(<span class="hljs-string">&quot;%-2d&quot;</span>, i) <span class="hljs-comment">// &#x8FD9;&#x91CC;&#x6253;&#x5370;&#x7684;i&#x4E0D;&#x662F;&#x6240;&#x671F;&#x671B;&#x7684;</span>
+        }()
+    }
+    group.Wait()
+}
+<span class="hljs-comment">// good</span>
+<span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span> {
+    runtime.GOMAXPROCS(runtime.NumCPU())
+    <span class="hljs-keyword">var</span> group sync.WaitGroup
+    <span class="hljs-keyword">for</span> i := <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">5</span>; i++ {
+        group.Add(<span class="hljs-number">1</span>)
+        <span class="hljs-keyword">go</span> <span class="hljs-function"><span class="hljs-keyword">func</span><span class="hljs-params">(j <span class="hljs-keyword">int</span>)</span></span> {
+            <span class="hljs-keyword">defer</span> <span class="hljs-function"><span class="hljs-keyword">func</span><span class="hljs-params">()</span></span> {
+                <span class="hljs-keyword">if</span> r := <span class="hljs-built_in">recover</span>(); r != <span class="hljs-literal">nil</span> {
+                    fmt.Println(<span class="hljs-string">&quot;Recovered in start()&quot;</span>)
+                }
+                group.Done()
+            }()
+            fmt.Printf(<span class="hljs-string">&quot;%-2d&quot;</span>, j) <span class="hljs-comment">// &#x95ED;&#x5305;&#x5185;&#x90E8;&#x4F7F;&#x7528;&#x5C40;&#x90E8;&#x53D8;&#x91CF;</span>
+        }(i) <span class="hljs-comment">// &#x628A;&#x5FAA;&#x73AF;&#x53D8;&#x91CF;&#x663E;&#x5F0F;&#x5730;&#x4F20;&#x7ED9;&#x534F;&#x7A0B;</span>
+    }
+    group.Wait()
+}
+</code></pre>
+<h4 id="&#x3010;&#x5FC5;&#x987B;&#x3011;&#x7981;&#x6B62;&#x5E76;&#x53D1;&#x5199;map"><a name="&#x3010;&#x5FC5;&#x987B;&#x3011;&#x7981;&#x6B62;&#x5E76;&#x53D1;&#x5199;map" class="anchor-navigation-ex-anchor" href="#&#x3010;&#x5FC5;&#x987B;&#x3011;&#x7981;&#x6B62;&#x5E76;&#x53D1;&#x5199;map"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x3010;&#x5FC5;&#x987B;&#x3011;&#x7981;&#x6B62;&#x5E76;&#x53D1;&#x5199;map" class="plugin-anchor" href="#&#x3010;&#x5FC5;&#x987B;&#x3011;&#x7981;&#x6B62;&#x5E76;&#x53D1;&#x5199;map"><i class="fa fa-link" aria-hidden="true"></i></a>&#x3010;&#x5FC5;&#x987B;&#x3011;&#x7981;&#x6B62;&#x5E76;&#x53D1;&#x5199;map</h4>
+<ul>
+<li>&#x5E76;&#x53D1;&#x5199;map&#x5BB9;&#x6613;&#x9020;&#x6210;&#x7A0B;&#x5E8F;&#x5D29;&#x6E83;&#x5E76;&#x5F02;&#x5E38;&#x9000;&#x51FA;&#xFF0C;&#x5EFA;&#x8BAE;&#x52A0;&#x9501;&#x4FDD;&#x62A4;<pre><code class="lang-go"><span class="hljs-comment">// bad</span>
+<span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span> {
+  m := <span class="hljs-built_in">make</span>(<span class="hljs-keyword">map</span>[<span class="hljs-keyword">int</span>]<span class="hljs-keyword">int</span>)
+  <span class="hljs-comment">// &#x5E76;&#x53D1;&#x8BFB;&#x5199;</span>
+  <span class="hljs-keyword">go</span> <span class="hljs-function"><span class="hljs-keyword">func</span><span class="hljs-params">()</span></span> {
+      <span class="hljs-keyword">for</span> {
+          _ = m[<span class="hljs-number">1</span>]
+      }
+  }()
+  <span class="hljs-keyword">go</span> <span class="hljs-function"><span class="hljs-keyword">func</span><span class="hljs-params">()</span></span> {
+      <span class="hljs-keyword">for</span> {
+          m[<span class="hljs-number">2</span>] = <span class="hljs-number">1</span>
+      }
+  }()
+  <span class="hljs-keyword">select</span> {}
+}
+</code></pre>
+<h4 id="&#x3010;&#x5FC5;&#x987B;&#x3011;&#x786E;&#x4FDD;&#x5E76;&#x53D1;&#x5B89;&#x5168;"><a name="&#x3010;&#x5FC5;&#x987B;&#x3011;&#x786E;&#x4FDD;&#x5E76;&#x53D1;&#x5B89;&#x5168;" class="anchor-navigation-ex-anchor" href="#&#x3010;&#x5FC5;&#x987B;&#x3011;&#x786E;&#x4FDD;&#x5E76;&#x53D1;&#x5B89;&#x5168;"><i class="fa fa-link" aria-hidden="true"></i></a><a name="&#x3010;&#x5FC5;&#x987B;&#x3011;&#x786E;&#x4FDD;&#x5E76;&#x53D1;&#x5B89;&#x5168;" class="plugin-anchor" href="#&#x3010;&#x5FC5;&#x987B;&#x3011;&#x786E;&#x4FDD;&#x5E76;&#x53D1;&#x5B89;&#x5168;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x3010;&#x5FC5;&#x987B;&#x3011;&#x786E;&#x4FDD;&#x5E76;&#x53D1;&#x5B89;&#x5168;</h4>
+</li>
+</ul>
+<p>&#x654F;&#x611F;&#x64CD;&#x4F5C;&#x5982;&#x679C;&#x672A;&#x4F5C;&#x5E76;&#x53D1;&#x5B89;&#x5168;&#x9650;&#x5236;&#xFF0C;&#x53EF;&#x5BFC;&#x81F4;&#x6570;&#x636E;&#x8BFB;&#x5199;&#x5F02;&#x5E38;&#xFF0C;&#x9020;&#x6210;&#x4E1A;&#x52A1;&#x903B;&#x8F91;&#x9650;&#x5236;&#x88AB;&#x7ED5;&#x8FC7;&#x3002;&#x53EF;&#x901A;&#x8FC7;&#x540C;&#x6B65;&#x9501;&#x6216;&#x8005;&#x539F;&#x5B50;&#x64CD;&#x4F5C;&#x8FDB;&#x884C;&#x9632;&#x62A4;&#x3002;</p>
+<p>&#x901A;&#x8FC7;&#x540C;&#x6B65;&#x9501;&#x5171;&#x4EAB;&#x5185;&#x5B58;</p>
+<pre><code class="lang-go"><span class="hljs-comment">// good</span>
+<span class="hljs-keyword">var</span> count <span class="hljs-keyword">int</span>
+<span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">Count</span><span class="hljs-params">(lock *sync.Mutex)</span></span> {
+    lock.Lock() <span class="hljs-comment">// &#x52A0;&#x5199;&#x9501;</span>
+    count++
+    fmt.Println(count)
+    lock.Unlock() <span class="hljs-comment">// &#x89E3;&#x5199;&#x9501;&#xFF0C;&#x4EFB;&#x4F55;&#x4E00;&#x4E2A;Lock()&#x6216;RLock()&#x5747;&#x9700;&#x8981;&#x4FDD;&#x8BC1;&#x5BF9;&#x5E94;&#x6709;Unlock()&#x6216;RUnlock()</span>
+}
+<span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span> {
+    lock := &amp;sync.Mutex{}
+    <span class="hljs-keyword">for</span> i := <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">10</span>; i++ {
+        <span class="hljs-keyword">go</span> Count(lock) <span class="hljs-comment">// &#x4F20;&#x9012;&#x6307;&#x9488;&#x662F;&#x4E3A;&#x4E86;&#x9632;&#x6B62;&#x51FD;&#x6570;&#x5185;&#x7684;&#x9501;&#x548C;&#x8C03;&#x7528;&#x9501;&#x4E0D;&#x4E00;&#x81F4;</span>
+    }
+    <span class="hljs-keyword">for</span> {
+        lock.Lock()
+        c := count
+        lock.Unlock()
+        runtime.Gosched() <span class="hljs-comment">// &#x4EA4;&#x51FA;&#x65F6;&#x95F4;&#x7247;&#x7ED9;&#x534F;&#x7A0B;</span>
+        <span class="hljs-keyword">if</span> c &gt; <span class="hljs-number">10</span> {
+            <span class="hljs-keyword">break</span>
+        }
+    }
+}
+</code></pre>
+<ul>
+<li>&#x4F7F;&#x7528;<code>sync/atomic</code>&#x6267;&#x884C;&#x539F;&#x5B50;&#x64CD;&#x4F5C;</li>
+</ul>
+<pre><code class="lang-go"><span class="hljs-comment">// good</span>
+<span class="hljs-keyword">import</span> (
+    <span class="hljs-string">&quot;sync&quot;</span>
+    <span class="hljs-string">&quot;sync/atomic&quot;</span>
+)
+<span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span> {
+    <span class="hljs-keyword">type</span> Map <span class="hljs-keyword">map</span>[<span class="hljs-keyword">string</span>]<span class="hljs-keyword">string</span>
+    <span class="hljs-keyword">var</span> m atomic.Value
+    m.Store(<span class="hljs-built_in">make</span>(Map))
+    <span class="hljs-keyword">var</span> mu sync.Mutex <span class="hljs-comment">// used only by writers</span>
+    read := <span class="hljs-function"><span class="hljs-keyword">func</span><span class="hljs-params">(key <span class="hljs-keyword">string</span>)</span> <span class="hljs-params">(val <span class="hljs-keyword">string</span>)</span></span> {
+        m1 := m.Load().(Map)
+        <span class="hljs-keyword">return</span> m1[key]
+    }
+    insert := <span class="hljs-function"><span class="hljs-keyword">func</span><span class="hljs-params">(key, val <span class="hljs-keyword">string</span>)</span></span> {
+        mu.Lock() <span class="hljs-comment">// &#x4E0E;&#x6F5C;&#x5728;&#x5199;&#x5165;&#x540C;&#x6B65;</span>
+        <span class="hljs-keyword">defer</span> mu.Unlock()
+        m1 := m.Load().(Map) <span class="hljs-comment">// &#x5BFC;&#x5165;struct&#x5F53;&#x524D;&#x6570;&#x636E;</span>
+        m2 := <span class="hljs-built_in">make</span>(Map)      <span class="hljs-comment">// &#x521B;&#x5EFA;&#x65B0;&#x503C;</span>
+        <span class="hljs-keyword">for</span> k, v := <span class="hljs-keyword">range</span> m1 {
+            m2[k] = v
+        }
+        m2[key] = val
+        m.Store(m2) <span class="hljs-comment">// &#x7528;&#x65B0;&#x7684;&#x66FF;&#x4EE3;&#x5F53;&#x524D;&#x5BF9;&#x8C61;</span>
+    }
+    _, _ = read, insert
+}
+</code></pre>
+<footer class="page-footer"><span class="copyright">Copyright &#xA9; Lsc 2019 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
+2021-04-16 08:35:59
+</span></footer><script>var _hmt = _hmt || [];(function() {var hm = document.createElement('script');hm.src = '//hm.baidu.com/hm.js?181780a9962d5f58cb82c8ce32b1ff71';var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(hm, s);})();</script>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="gin/base.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: gin基础">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"腾讯发布Go安全指南","level":"1.15","depth":1,"previous":{"title":"gin基础","level":"1.14.1","depth":2,"path":"go/gin/base.md","ref":"go/gin/base.md","articles":[]},"dir":"ltr"},"config":{"plugins":["fontsettings","highlight","-livereload","-search","search-pro","sharing","anchors","anchor-navigation-ex","ba","-expandable-chapters","expandable-chapters-small","toggle-chapters","splitter","tbfed-pagefooter","code","copy-code-button","-todo","-advanced-emoji","-chapter-fold"],"styles":{"website":"styles/website.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy Lsc 2019","modify_label":"修订时间：","modify_format":"2021-MM-DD HH:mm:ss"},"splitter":{},"search-pro":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":false},"fontsettings":{"family":"sans","size":2,"theme":"night"},"highlight":{},"anchor-navigation-ex":{"mode":"float","pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"isRewritePageTitle":false,"showLevel":true,"showGoTop":true,"printLog":false,"multipleH1":true,"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false}},"expandable-chapters-small":{},"copy-code-button":{},"sharing":{"all":["facebook","google","twitter","weibo","instapaper"],"facebook":true,"google":false,"instapaper":false,"twitter":true,"vk":false,"weibo":true},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{},"toggle-chapters":{},"ba":{"token":"181780a9962d5f58cb82c8ce32b1ff71"}},"theme":"default","author":"LiuShuaicai","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Lsc'Go","language":"zh-hans","links":{"sidebar":{"Lsc'Home":"http://blog.liushuaicai.com"}},"gitbook":"3.2.3","description":"为了自己的野心要不断努力！","theme-default":{"showLevel":true}},"file":{"path":"go/safety_guide.md","mtime":"2022-04-16T00:35:59.214Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-05-10T01:27:36.922Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-toggle-chapters/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+
+    </body>
+</html>
+
